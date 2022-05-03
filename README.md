@@ -1,5 +1,7 @@
 # Magic.TXD
  RenderWare TXD editor created by DK22Pac and The_GTA. Aims to support RW texture files of all commercially released RW games, such as 3D-era GTA. Based on the magic-rw and Qt framework. Runs on Windows and Linux operating systems.
+
+Official source: https://osdn.net/projects/magic-txd/
  
  # Used technology:
 
