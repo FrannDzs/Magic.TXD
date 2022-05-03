@@ -4,12 +4,21 @@
  # Used technology:
 
 [Compressonator](http://gpuopen.com/gaming-product/compressonator/) by Advanced Micro Devices
-[libimagequant](https://github.com/pornel/pngquant/tree/master/lib) libimagequant by pornel
-libjpeg by Tom Lane and the Independent JPEG Group (IJG)
-libpng
-libsquish
-libtiff by Sam Leffler, Frank Warmerdam, Andrey Kiselev, Mike Welles and Dwight Kelly.
-LZO by Markus F.X.J. Oberhumer
-PVRTexLib by Imagination Technologies Limited
-Qt5
-zlib by Jean-loup Gailly and Mark Adler
+
+[libimagequant](https://github.com/pornel/pngquant/tree/master/lib) libimagequant by [pornel](https://github.com/pornel)
+
+[libjpeg](http://libjpeg.sourceforge.net/) by Tom Lane and the Independent JPEG Group (IJG)
+
+[libpng](http://www.libpng.org/pub/png/libpng.html) 
+
+[libsquish](https://sourceforge.net/projects/libsquish/)
+
+[libtiff](http://www.libtiff.org/) by Sam Leffler, Frank Warmerdam, Andrey Kiselev, Mike Welles and Dwight Kelly.
+
+[LZO](http://www.oberhumer.com/opensource/lzo/) by Markus F.X.J. Oberhumer
+
+[PVRTexLib](https://community.imgtec.com/developers/powervr/graphics-sdk/) by Imagination Technologies Limited
+
+[Qt5](https://www.qt.io/)
+
+[zlib](https://www.zlib.net/) by Jean-loup Gailly and Mark Adler
