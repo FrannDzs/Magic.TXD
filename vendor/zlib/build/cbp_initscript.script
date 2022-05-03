@@ -1,0 +1,16 @@
+function SetBuildOptions(base)
+{
+    OPTIONS <- {
+        Z_SOLO_NOMEMHLP = true
+    };
+    
+    if (IO.FileExists(_T("../../_repoconfig/zlib.sq")))
+    {
+        Require(_T("../../_repoconfig/zlib.sq"));
+    }
+    
+    if (OPTIONS.Z_SOLO_NOMEMHLP)
+    {
+        base.AddCompilerOption(_T("-D Z_SOLO_NOMEMHLP"));
+    }
+}

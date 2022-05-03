@@ -1,0 +1,392 @@
+﻿MAGL|2|English|English|ENG|en|none|Magic.TXD Team
+
+# language
+Lang.Lang              Language:
+Lang.Authors           by _PARAM_1
+
+# textures list        
+Main.TexInfo.Level     level
+Main.TexInfo.Levels    levels
+Main.TexInfo.NoTex     No Texture
+Main.TexInfo.Invalid   invalid
+Main.Undo              Undo
+Main.Redo              Redo
+Main.Cut               Cut
+Main.Copy              Copy
+Main.Paste             Paste
+Main.Delete            Delete
+Main.SelectA           Select All
+
+# main menu            
+Main.File              File
+Main.Edit              Edit
+Main.Tools             Tools
+Main.Export            Export
+Main.View              View
+Main.Info              Info
+
+# main menu - File     
+Main.File.New          New
+Main.File.Open         Open
+Main.File.Save         Save
+Main.File.SaveAs       Save as...
+Main.File.Close        Close current
+Main.File.Quit         Quit
+
+# main menu - Edit   
+Main.Edit.Add          Add
+Main.Edit.Replace      Replace
+Main.Edit.Remove       Remove
+Main.Edit.Rename       Rename
+Main.Edit.Resize       Resize
+Main.Edit.Modify       Manipulate
+Main.Edit.SetupML      Setup mip-levels
+Main.Edit.ClearML      Clear mip-levels
+Main.Edit.SetupRP      Setup rendering properties
+Main.Edit.SetupTV      Setup TXD version
+Main.Edit.Options      Options
+
+# Rename
+Main.Rename.Desc       Texture Name
+Main.Rename.Name       Name:
+Main.Rename.Set        Set
+Main.Rename.Cancel     Cancel
+
+# Resize
+Main.Resize.Desc       Texture Resize
+Main.Resize.Width      Width:
+Main.Resize.Height     Height:
+Main.Resize.Set        Set
+Main.Resize.Cancel     Cancel
+
+# Modify
+Modify.Desc.Add        Add texture...
+Modify.Desc.Replace    Replace texture...
+Modify.Desc.Modify     Modify texture...
+Modify.Add             Add
+Modify.Replace         Replace
+Modify.Modify          Modify
+Modify.TexName         Texture Name:
+Modify.MskName         Mask Name:
+Modify.Plat            Platform:
+Modify.RasFmt          Raster Format:
+Modify.Origin          Original
+Modify.RawRas          Raw Raster
+Modify.Comp            compressed
+Modify.Pal             palettized
+Modify.PixFmt          Pixel Format:
+Modify.GenML           Generate mipmaps
+Modify.Scaled          Scaled
+Modify.Fill            Fill
+Modify.Bckgr           Background
+Modify.Cancel          Cancel
+
+[Modify.Help.DXTNotice]
+You have selected DXT compression. DXT is a very efficient compression
+type for world textures. Textures stored in DXT use far less space, but
+they degrade the image quality significantly. It is NOT recommended to
+compress GUI textures.
+
+DXT1 is good for textures that use alpha for cut-out regions.
+DXT2/3 is good for textures with sharp alpha.
+DXT4/5 is good for textures with smooth alpha.
+If your image has no alpha, just pick DXT1.
+
+Be careful which textures you compress and which type you choose!
+[END]
+
+[Modify.Help.PALNotice]
+You have selected palette format. Images are palettized by selecting
+the most important colors and putting them into an array. The actual
+texture surface contains indices into the palette buffer, greatly
+decreasing the texture size.
+
+Note that palette format is legacy technology and is no longer supported
+by modern hardware.
+[END]
+
+# Render Props
+Main.SetupRP.Desc      Rendering Props
+Main.SetupRP.Filter    Filtering:
+Main.SetupRP.UAddr     U Addressing:
+Main.SetupRP.VAddr     V Addressing:
+Main.SetupRP.Set       Set
+Main.SetupRP.Cancel    Cancel
+
+# Setup TXD Version
+Main.SetupTV.Desc      TXD Version Setup
+Main.SetupTV.Set       Set
+Main.SetupTV.Plat      Platform
+Main.SetupTV.Data      Data type
+Main.SetupTV.Version   Version
+Main.SetupTV.Build     Build
+Main.SetupTV.Accept    Accept
+Main.SetupTV.Cancel    Cancel
+Main.SetupTV.Custom    Custom
+
+# Options
+Main.Options.Desc      _MAGIC_TXD_NAME Options
+Main.Options.MainTab   Main
+Main.Options.ShowLog   Show TXD log on warning
+Main.Options.DispIcn   Display game icon
+Main.Options.AdvTab    Advanced
+Main.Options.SerSpc    Deserialize without blocklengths
+Main.Options.WarnLvl   Warning level
+Main.Options.WDisabled disabled
+Main.Options.WLow      low
+Main.Options.WMedium   medium
+Main.Options.WHigh     high
+Main.Options.WAll      all
+Main.Options.Accept    Accept
+Main.Options.Cancel    Cancel
+
+# main menu - Tools    
+Main.Tools.MassCnv     Mass convert
+Main.Tools.MassExp     Mass export
+Main.Tools.MassBld     Mass build
+
+# main menu - Export   
+Main.Export.ExpAll     Export all
+Main.Export.Desc       Save _PARAM_1 as...
+
+# Export All
+Main.ExpAll.Desc       Export all textures...
+Main.ExpAll.Format     Format:
+Main.ExpAll.Export     Export
+Main.ExpAll.Cancel     Cancel
+Main.ExpAll.ExpTarg    Select Export Target...
+
+# Log
+Main.Log.Desc          Log
+Main.Log.Save          Save
+Main.Log.Copy          Copy
+Main.Log.CopyAll       Copy All
+Main.Log.Clear         Clear
+Main.Log.Close         Close
+Main.Log.SaveAs        Save Log as...
+
+# View   
+Main.View.FullImg      Show full image
+Main.View.Backgr       Background
+Main.View.DispML       Display mip-levels
+Main.View.ShowLog      Show log
+Main.View.DarkThm      Dark theme
+Main.View.LightTm      Light theme
+
+# Info     
+Main.Info.Website      Website
+Main.Info.About        About
+
+# File - Open
+Main.Open.Desc         Open TXD file...
+
+# File - Save As
+Main.SaveAs.Desc       Save TXD as...
+
+# Edit - Add
+Main.Edit.Add.Desc     Import texture...
+
+# About
+Main.About.Desc        About us
+Main.About.Credits     created by _AUTHOR_NAME_1 and _AUTHOR_NAME_2
+Main.About.ComUse1     This tool MUST NOT be used commercially without the explicit, written authorization of all third-parties that contributed to this tool. See the licenses for more information.
+Main.About.ComUse2     The _MAGIC_TXD_NAME team welcomes your support!
+Main.About.SpecThx     Special thanks to:
+
+# Save changes
+[Main.SavChange.Warn]
+There are unsaved changes in the open TXD archive.
+Do you want to save them now?
+[END]
+Main.SavChange.Save    Save
+Main.SavChange.Ignore  Ignore
+Main.SavChange.Cancel  Cancel
+Main.SavChange.Title   Unsaved changes
+
+# Tools
+Tools.Browse           Browse
+Tools.BrwDesc          Browse Directory...
+Tools.GameRt           Game root:
+Tools.Output           Output root:
+Tools.Plat             Platform
+Tools.Game             Game
+Tools.GenMips          Generate mipmaps
+Tools.MaxMips          Max:
+
+# Mass export
+Tools.MassExp.Desc     Mass Exporting
+Tools.MassExp.ImgFmt   Image format:
+Tools.MassExp.TxNmOnl  with texture name only
+Tools.MassExp.PrTxdNm  prefixed with TXD name
+Tools.MassExp.SepFld   in separate folders
+Tools.MassExp.Export   Export
+Tools.MassExp.Cancel   Cancel
+
+# Mass build
+Tools.MassBld.Desc     Mass Build
+Tools.MassBld.Build    Build
+Tools.MassBld.Cancel   Cancel
+Tools.MassBld.CloseOnCmplt  Close on completion
+Tools.MassBld.Cmprs    Compressed
+Tools.MassBld.DescQual Quality
+Tools.MassBld.DoPal    Palettized
+Tools.MassBld.DescPType    Type
+
+[Tools.MassBld.Welcome]
+Welcome to the Mass Build tool! This tool creates TXD files out of image<br>
+files inside of a folder hierarchy. You can use INI files inside of those<br>
+folders to specialize the building process. Try building some random folders<br>
+and see the results!<br><br>
+Wiki: <a href="http://www.gtamodding.com/wiki/Magic.TXD/Build_System/" style="color: #0063b1">http://www.gtamodding.com/wiki/Magic.TXD/Build_System/</a>
+[END]
+
+# Mass convert
+Tools.MassCnv.Desc     Mass Conversion
+Tools.MassCnv.ClearML  Clear mipmaps
+Tools.MassCnv.ImpFilt  Improve filtering
+Tools.MassCnv.CompTex  Compress textures
+Tools.MassCnv.RecIMG   Reconstruct IMG archives
+Tools.MassCnv.CompIMG  Compressed IMG
+Tools.MassCnv.Convert  Convert
+Tools.MassCnv.Cancel   Cancel
+
+# New txd
+New.Desc               Create new txd
+New.Name               Name
+New.Create             Create
+New.Cancel             Cancel
+
+# Helper runtime generics.
+Helper.Confirm         OK
+Helper.Title           Notice
+Helper.NotShowAgain    Do not show again
+
+# New Tokens since 18.09.2020
+General.TXDFail             Failed to create TXD: _PARAM_1
+General.TXDFailUnk          Unknown error in TXD creation
+New.ActionTitle             Creating new TXD archive
+General.TXDLoad             Loading TXD
+General.TXDLoadFail         Failed to load the TXD archive: _PARAM_1
+General.TXDClose            Closing TXD
+General.NotATXD             Found _PARAM_1 but expected a texture dictionary
+General.NotATex             Found _PARAM_1 but expected a texture
+General.BitmapFail          Failed to get bitmap from texture: _PARAM_1
+General.PlatformFail        Failed to change platform of texture '_PARAM_1': _PARAM_2
+Tasks.Cancelled             Cancelled task
+General.TexCreateFail       Failed to create texture
+General.TexAddFail          Failed to add texture: _PARAM_1
+Main.TexDragNDrop           Adding texture bx drag&drop
+General.MipGen              Generating mipmaps
+General.MipGenFail          Failed to generate mipmaps for raster: _PARAM_1
+General.MipClear            Clearing mipmaps
+General.MipClearFail        Failed to clear mipmaps for raster: _PARAM_1
+General.TexRemove           Removing texture
+General.ExportTex           Exporting single texture
+General.ExportTexFail       Failed to export single texture: _PARAM_1
+General.TXDSave             Saving TXD
+General.TXDSaveFail         Failed to save the TXD: _PARAM_1
+General.TXDStreamFail       Failed to open RW stream for TXD writing
+General.TXDTempStreamFail   Failed to create temporary file for TXD writing (lack of permission?)
+
+Tools.MassBld.TaskWndTitle          Building...
+Tools.MassBld.TaskWndInitialText    Preparing the build process...
+Tools.MassCnv.StartConv             Starting conversion...
+Tools.MassCnv.EndConv               Conversion finished!
+Tools.MassCnv.Term                  Terminated conversion.
+Tools.MassExp.Proc                  Processing: _PARAM_1 ...
+Tools.MassExp.TaskWndTitle          Exporting...
+Tools.MassExp.TsakWndInitialText    Preparing the export process...
+
+Main.Options.BlockAcq           Block Acquisition
+Main.Options.BAExpected         expected
+Main.Options.BAFind             find
+
+Main.SetupRP.SetProps           Setting rendering properties
+General.NoRaster                Parsed texture contains no raster
+General.WrongFmt                Tried parsing "_PARAM_1" but found "_PARAM_2"
+General.ImageLoadError          Error while loading image data: _PARAM_1
+General.SetTXDVer               Setting TXD version
+General.TexVersionFail          Failed to set version for texture "_PARAM_1": _PARAM_2
+General.TXDPlatChanged          Changed the TXD platform to match version (_PARAM_1>_PARAM_2)
+
+TaskCompl.Cancel        Cancel
+
+General.PreviewFail             Error while building texture preview: _PARAM_1
+Modify.RasterConfigFail         Failed to configure raster
+Modify.RasterCreateFail         Failed to create raster: _PARAM_1
+
+MagicFmt.PluginLoad             Loaded plugin _PARAM_1 (_PARAM_2)
+MagicFmt.IncorrectVer           Texture format plugin (_PARAM_1) has an incorrect version
+MagicFmt.ErrCorrupted           Texture format plugin (_PARAM_1) does not provide essential exports
+MagicFmt.LoadError              Failed to load texture format plugin (_PARAM_1, code _PARAM_2)
+
+General.TexRename               Renaming texture
+General.ExportTexAll            Exporting all textures
+General.ExportTexFailNamed      Failed to export texture '_PARAM_1': _PARAM_2
+General.StreamFailTex           Failed to create stream for texture _PARAM_1
+General.RasPlatFail             Failed to convert raster to platform '_PARAM_1'
+General.TexResize               Resizing texture
+General.TexResizeFail           Failed to resize raster: _PARAM_1
+Main.Log.ErrorLabel             error
+Main.Log.WarningLabel           warning
+Main.Log.InfoLabel              info
+
+ModifiedState.WaitingTitle      Pending actions...
+ModifiedState.WaitingText       Waiting for action queue completion...
+
+# Tokens for the tools.
+DirTools.Processing             Processing %(what) ...
+DirTools.Writing                Writing ...
+DirTools.WritingNoChange        Writing (no change) ...
+DirTools.WritingFinished        Done.
+DirTools.ArchiveFinished        Finished.
+DirTools.NotAnIMG               Not an IMG archive.
+TxdBuild.ImportWarning          Import Warning: %(msg)
+TxdBuild.ImportError            Import Error: %(msg)
+TxdBuild.ProcessEntry           *** %(what) ...
+TxdBuild.NotAPlatform           Not a platform: %(what)
+TxdBuild.GameVerMapFail         Failed to map game version: %(what)
+TxdBuild.GameVerParseFail       Failed to parse game version: %(what)
+TxdBuild.GameMapFail            Failed to map game: %(what)
+TxdBuild.GameParseFail          Failed to parse game: %(what)
+TxdBuild.NotAFilterMode         Not a filter mode: %(what)
+TxdBuild.NotAUAddrMode          Not a U addressing mode: %(what)
+TxdBuild.NotAVAddrMode          Not a V addressing mode: %(what)
+TxdBuild.NotAPalType            Not a palette type: %(what)
+TxdBuild.BuildMsg               Building '%(what)' ...
+TxdBuild.NoTexturesInDir        No Textures in %(dir).
+TxdBuild.TexBuildFail           Failed to build texture: %(why)
+TxdBuild.TexOpenFail            Failed to open image or texture: %(path)
+TxdBuild.TXDOpenWriteFail       Failed to open TXD for writing
+TxdBuild.TXDBuildFail           Failed to build TXD: %(why)
+TxdBuild.StartProc              Started build process
+TxdBuild.DestDirFail            Failed to get access to the destination directory
+TxdBuild.SrcDirFail             Failed to get access to the source directory
+TxdBuild.UnexpectedTerm         Unexpected build termination
+TxdBuild.Finished               Finished!
+TxdBuild.Warn                   Warning: %(msg)
+
+TxdGen.TexConvFail              Failed to convert texture %(texname)
+TxdGen.NotATXD                  Not a texture dictionary: %(what)
+TxdGen.UnkRWStream              Unknown RenderWare stream (maybe compressed)
+TxdGen.TXDLoadError             Error reading TXD: %(msg)
+TxdGen.TexProcError             Error processing textures: %(msg)
+TxdGen.TXDWriteError            Error writing TXD: %(msg)
+TxdGen.ProcItem                 *** %(what) ...
+TxdGen.OK                       OK
+[TxdGen.Error]
+Error:
+%(msg)
+[END]
+TxdGen.IMGArchiveFail           Failed to create new IMG archive for processing; defaulting to file-copy ...
+[TxdGen.ConfigHeader]
+=========================
+Configuration:
+=========================
+[END]
+TxdGen.BuildRootConflict        Build root conflict detected; might not process all files
+TxdGen.Termination              Terminated module prematurely
+TxdGen.GameRootFail             Could not get a filesystem handle to the game root
+TxdGen.OutputRootFail           Could not get a filesystem handle to the output root
+TxdGen.InternErr.Config         Error: incompatible RenderWare environment.
+TxdGen.HeaderWarnList           - Warnings:

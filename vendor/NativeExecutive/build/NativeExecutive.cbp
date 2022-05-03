@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="NativeExecutive" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Script file="cbp_initscript.script" />
+			<Target title="Debug">
+				<Option output="../lib/linux/Debug/natexec" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../obj/linux/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-D_DEBUG" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="../lib/linux/Release/natexec" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../obj/linux/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-Wall" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wno-invalid-offsetof -std=c++2a" />
+			<Add directory="../include/NativeExecutive" />
+			<Add directory="../../eirrepo" />
+		</Compiler>
+		<UnitsGlob directory="../src" recursive="1" wildcard="*.cpp" />
+		<UnitsGlob directory="../src" recursive="1" wildcard="*.h" />
+		<UnitsGlob directory="../src" recursive="1" wildcard="*.hxx" />
+		<UnitsGlob directory="../include" recursive="1" wildcard="*.h" />
+		<Unit filename="../src/native_routines_linux.S" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,1 @@
+This directory is supposed to contain local vendor dependencies of rwlib.

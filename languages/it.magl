@@ -1,0 +1,262 @@
+﻿MAGL|1|Italian|Italiano|ITA|Craank_AG
+
+# language
+Lang.Lang              Lingua:
+Lang.Authors           di _PARAM_1
+
+# textures list        
+Main.TexInfo.Level     Livello
+Main.TexInfo.Levels    Livelli
+Main.TexInfo.NoTex     Nessuna Texture
+Main.TexInfo.Invalid   non valido
+Main.Undo              Indietro
+Main.Redo              Avanti
+Main.Cut               Taglia
+Main.Copy              Copia
+Main.Paste             Incolla
+Main.Delete            Elimina
+Main.SelectA           Seleziona Tutto
+
+# main menu            
+Main.File              File
+Main.Edit              Modifica
+Main.Tools             Strumenti
+Main.Export            Esporta
+Main.View              Visualizza
+Main.Info              Informazioni
+
+# main menu - File     
+Main.File.New          Nuovo
+Main.File.Open         Apri
+Main.File.Save         Salva
+Main.File.SaveAs       Salva come...
+Main.File.Close        Chiudi
+Main.File.Quit         Esci
+
+# main menu - Edit   
+Main.Edit.Add          Aggiungi
+Main.Edit.Replace      Sostituisci
+Main.Edit.Remove       Rimuovi
+Main.Edit.Rename       Rinomina
+Main.Edit.Resize       Ridimensiona
+Main.Edit.Modify       Manipola
+Main.Edit.SetupML      Imposta mip-levels
+Main.Edit.ClearML      Cancella mip-levels
+Main.Edit.SetupRP      Imposta proprietà di rendering
+Main.Edit.SetupTV      Imposta versione TXD
+Main.Edit.Options      Preferenze
+
+# Rename
+Main.Rename.Desc       Nome Texture
+Main.Rename.Name       Nome:
+Main.Rename.Set        Imposta
+Main.Rename.Cancel     Annulla
+
+# Resize
+Main.Resize.Desc       Ridimensiona Texture
+Main.Resize.Width      Larghezza:
+Main.Resize.Height     Altezza:
+Main.Resize.Set        Imposta
+Main.Resize.Cancel     Annulla
+
+# Modify
+Modify.Desc.Add        Aggiungi texture...
+Modify.Desc.Replace    Sostituisci texture...
+Modify.Desc.Modify     Modifica texture...
+Modify.Add             Aggiungi
+Modify.Replace         Sostituisci
+Modify.Modify          Modifica
+Modify.TexName         Nome Texture:
+Modify.MskName         Nome Maschera:
+Modify.Plat            Piattaforma:
+Modify.RasFmt          Formato Griglia:
+Modify.Origin          Originale
+Modify.RawRas          Griglia Normale
+Modify.Comp            Compresso
+Modify.Pal             Riduzione colore
+Modify.PixFmt          Formato Pixel:
+Modify.GenML           Genera mipmaps
+Modify.Scaled          In Scala
+Modify.Fill            Riempi
+Modify.Bckgr           Sfondo Posteriore
+Modify.Cancel          Annulla
+
+[Modify.Help.DXTNotice]
+È stata selezionata la compressione DXT. DXT è una compressione particolarmente
+adatta per salvare Textures. Le Textures memorizzate nel DXT usano molto meno spazio, ma
+degradano la qualità dell'immagine in modo significativo. Non è consigliato
+comprimere GUI Texture.
+
+DXT1 serve per Textures con sfondo tagliato.
+DXT2/3 serve per Textures con trasparenza nitida.
+DXT4/5 serve per Textures con trasparenza morbida.
+Se l'immagine non ha trasparenza, seleziona DXT1.
+
+Attenzione al tipo di compressione selezionato.
+[END]
+
+[Modify.Help.PALNotice]
+Hai selezionato il formato Riduzione del colore. Le immagini
+sono a colori ridotti, i principali colori dell' immagine sono
+confezionati in ordine e l'area effettiva dell' immagine  
+contiene indici nella memoria colore, diminuendo notevolmente le dimensioni.
+
+Nota che il formato Riduzione del colore è una tecnologia non più
+supportata da hardware moderno
+[END]
+
+# Render Props
+Main.SetupRP.Desc      Opzioni di visualizzazione
+Main.SetupRP.Filter    Filtri:
+Main.SetupRP.UAddr     Indirizzamento a U:
+Main.SetupRP.VAddr     Indirizzamento a V:
+Main.SetupRP.Set       Imposta
+Main.SetupRP.Cancel    Annulla
+
+# Setup TXD Version
+Main.SetupTV.Desc      Imposta Versione TXD
+Main.SetupTV.Set       Imposta
+Main.SetupTV.Plat      Piattaforma
+Main.SetupTV.Data      Tipo di dati
+Main.SetupTV.Version   Versione
+Main.SetupTV.Build     Numero Build
+Main.SetupTV.Accept    Accetta
+Main.SetupTV.Cancel    Annulla
+Main.SetupTV.Custom    Personalizzato
+
+# Options
+Main.Options.Desc      _MAGIC_TXD_NAME Preferenze
+Main.Options.MainTab   Principale
+Main.Options.ShowLog   Mostra avvertimenti
+Main.Options.DispIcn   Mostra Icona
+Main.Options.AdvTab    Avanzate
+Main.Options.SerSpc    Tratta dati senza lunghezze di blocco
+Main.Options.WarnLvl   Livello di allarme
+Main.Options.WDisabled disabilitato
+Main.Options.WLow      basso
+Main.Options.WMedium   medio
+Main.Options.WHigh     alto
+Main.Options.WAll      completo
+Main.Options.Accept    Accetta
+Main.Options.Cancel    Annulla
+
+# main menu - Tools    
+Main.Tools.MassCnv     Conversione in Massa
+Main.Tools.MassExp     Esportazione in Massa
+Main.Tools.MassBld     Creazione in Massa
+
+# main menu - Export   
+Main.Export.ExpAll     Esporta tutto
+Main.Export.Desc       Salva _PARAM_1 come...
+
+# Export All
+Main.ExpAll.Desc       Esporta tutte le Textures come...
+Main.ExpAll.Format     Formato:
+Main.ExpAll.Export     Esporta
+Main.ExpAll.Cancel     Annulla
+Main.ExpAll.ExpTarg    Seleziona formato destinazione
+
+# Log
+Main.Log.Desc          Avvertimenti
+Main.Log.Save          Salva
+Main.Log.Copy          Copia
+Main.Log.CopyAll       Copia tutto
+Main.Log.Clear         Pulisci
+Main.Log.Close         Chiudi
+Main.Log.SaveAs        Salva come...
+
+# View   
+Main.View.FullImg      Mostra immagine completa
+Main.View.Backgr       Sfondo posteriore
+Main.View.DispML       Mostra mip-levels
+Main.View.ShowLog      Mostra avvertimenti
+Main.View.DarkThm      Tema scuro
+Main.View.LightTm      Tema chiaro
+
+# Info     
+Main.Info.Website      Sito web
+Main.Info.About        Chi siamo
+
+# File - Open
+Main.Open.Desc         Apri file...
+
+# File - Save As
+Main.SaveAs.Desc       Salva come...
+
+# Edit - Add
+Main.Edit.Add.Desc     Importa texture...
+
+# About
+Main.About.Desc        Chi siamo
+Main.About.Credits     Sviluppato da _AUTHOR_NAME_1 e _AUTHOR_NAME_2
+Main.About.ComUse1     Questo strumento non deve essere utilizzato a fini commerciali senza l'esplicita autorizzazione, scritta da tutte le terze parti che hanno contribuito a questo strumento. Vedere le licenze per ulteriori informazioni.
+Main.About.ComUse2     Il team di _MAGIC_TXD_NAME accoglie il vostro sostegno!
+Main.About.SpecThx     Un ringraziamento speciale a:
+
+# Save changes
+[Main.SavChange.Warn]
+Ci sono modifiche non salvate nell'archivio TXD aperto.
+Vuoi salvare adesso?
+[END]
+Main.SavChange.Save    Salva
+Main.SavChange.Ignore  Ignora
+Main.SavChange.Cancel  Annulla
+Main.SavChange.Title   Modifiche non salvate
+
+# Tools
+Tools.Browse           Sfoglia
+Tools.BrwDesc          Sfoglia in...
+Tools.GameRt           Percorso di gioco:
+Tools.Output           Percorso di uscita:
+Tools.Plat             Piattaforma
+Tools.Game             Gioco
+Tools.GenMips          Genera mipmaps
+Tools.MaxMips          Massimo:
+
+# Mass export
+Tools.MassExp.Desc     Esportazione in Massa
+Tools.MassExp.ImgFmt   Formato Immagine:
+Tools.MassExp.TxNmOnl  solo con nome Texture
+Tools.MassExp.PrTxdNm  Prestampato con nome TXD
+Tools.MassExp.SepFld   in cartella separata
+Tools.MassExp.Export   Esporta
+Tools.MassExp.Cancel   Annulla
+
+# Mass build
+Tools.MassBld.Desc     Creazione in Massa
+Tools.MassBld.Build    Crea
+Tools.MassBld.Cancel   Annulla
+Tools.MassBld.CloseOnCmplt  Chiudi al termine
+Tools.MassBld.Cmprs    Compresso
+Tools.MassBld.DescQual Qualità
+Tools.MassBld.DoPal    Colore ridotto
+Tools.MassBld.DescPType    Tipo
+
+[Tools.MassBld.Welcome]
+Benvenuti nel tool di Creazione in Massa! Questo strumento crea file TXD di immagine<br>
+all'interno di una gerarchia di cartelle. È possibile utilizzare i file INI all'interno di<br>
+cartelle per specializzare il processo di creazione. Prova a costruire alcune cartelle di prova<br>
+e vedi i risultati!<br><br>
+Wiki: <a href="http://www.gtamodding.com/wiki/Magic.TXD/Build_System/" style="color: #0063b1">http://www.gtamodding.com/wiki/Magic.TXD/Build_System/</a>
+[END]
+
+# Mass convert
+Tools.MassCnv.Desc     Conversione in Massa
+Tools.MassCnv.ClearML  Cancella mipmaps
+Tools.MassCnv.ImpFilt  Migliora filtraggio
+Tools.MassCnv.CompTex  Comprimi Textures
+Tools.MassCnv.RecIMG   Ricostruisci archivi IMG
+Tools.MassCnv.CompIMG  Comprimi IMG
+Tools.MassCnv.Convert  Converti
+Tools.MassCnv.Cancel   Annulla
+
+# New txd
+New.Desc               Crea nuovo file txd
+New.Name               Nome
+New.Create             Crea
+New.Cancel             Annulla
+
+# Helper runtime generics.
+Helper.Confirm         OK
+Helper.Title           Avviso
+Helper.NotShowAgain    Non mostrare più

@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{f526d02a-0831-4429-8078-c8011e76a6db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zipExtension">
+      <UniqueIdentifier>{d823b4c8-e11b-4cdc-b90c-35972e987b86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zipExtension\include">
+      <UniqueIdentifier>{5ad48d5f-90fe-4ba9-a850-c465f58fc032}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgExtension">
+      <UniqueIdentifier>{c2fd7030-8163-4e6b-b72c-804ae2b6964a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgExtension\Include">
+      <UniqueIdentifier>{8342bc35-567f-4e33-ba69-c76958955485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debug Visualizers">
+      <UniqueIdentifier>{e7c3060e-d71f-4521-b48b-ac68cf11a0a9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.internal.common.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.internal.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.internal.repo.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.stream.buffered.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.stream.raw.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.translator.pathutil.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.translator.system.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CFileSystem.Utils.hxx">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.vfs.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\StdInc.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.zip.internal.h">
+      <Filter>zipExtension\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.zip.utils.hxx">
+      <Filter>zipExtension\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.img.internal.h">
+      <Filter>imgExtension\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.internal.nativeimpl.hxx">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.translator.widewrap.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.config.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.random.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CFileSystem.lock.hxx">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.internal.lockutil.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.platform.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.platformutils.hxx">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.FileDataPresence.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.stream.memory.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystemInterface.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.common.datautil.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.common.filePath.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.common.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.common.stl.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.img.h">
+      <Filter>imgExtension\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.zip.h">
+      <Filter>zipExtension\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.img.public.h">
+      <Filter>imgExtension\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.zip.public.h">
+      <Filter>zipExtension\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.qol.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.common.alloc.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.img.serialize.hxx">
+      <Filter>imgExtension\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.ramdisk.internal.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.stream.chunkbuf.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.translator.scanutil.hxx">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.pathlogic.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.rtvars.hxx">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.DiskManager.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fsinternal\CFileSystem.native.win32.hxx">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CFileSystem.rwcb.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\CFileSystem.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.stream.buffered.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.stream.raw.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.translator.pathutil.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.translator.system.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.vfs.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.zip.translator.cpp">
+      <Filter>zipExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CFileSystem.zip.cpp">
+      <Filter>zipExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fsinternal\CFileSystem.img.translator.compress.cpp">
+      <Filter>imgExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CFileSystem.img.cpp">
+      <Filter>imgExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fsinternal\CFileSystem.img.translator.cpp">
+      <Filter>imgExtension</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fsinternal\CFileSystem.translator.widewrap.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.config.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.random.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.FileDataPresence.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.stream.memory.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.translator.system.win32.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.translator.system.linux.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.memory.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.stream.fixedbuf.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.ramdisk.translator.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.DiskManager.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.native.win32.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.stream.rwcb.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\eirrepo\sdk\Endian.natvis">
+      <Filter>Debug Visualizers</Filter>
+    </Natvis>
+    <Natvis Include="..\..\eirrepo\sdk\String.natvis">
+      <Filter>Debug Visualizers</Filter>
+    </Natvis>
+    <Natvis Include="..\..\eirrepo\sdk\Vector.natvis">
+      <Filter>Debug Visualizers</Filter>
+    </Natvis>
+    <Natvis Include="..\..\eirrepo\sdk\DynamicTypeSystem.natvis">
+      <Filter>Debug Visualizers</Filter>
+    </Natvis>
+    <Natvis Include="..\..\eirrepo\sdk\MultiString.natvis">
+      <Filter>Debug Visualizers</Filter>
+    </Natvis>
+    <Natvis Include="..\..\eirrepo\sdk\Map.natvis">
+      <Filter>Debug Visualizers</Filter>
+    </Natvis>
+    <Natvis Include="..\..\eirrepo\sdk\MemoryUtils.natvis">
+      <Filter>Debug Visualizers</Filter>
+    </Natvis>
+    <Natvis Include="..\..\eirrepo\sdk\Set.natvis">
+      <Filter>Debug Visualizers</Filter>
+    </Natvis>
+    <Natvis Include="..\..\eirrepo\sdk\FixedString.natvis">
+      <Filter>Debug Visualizers</Filter>
+    </Natvis>
+  </ItemGroup>
+</Project>

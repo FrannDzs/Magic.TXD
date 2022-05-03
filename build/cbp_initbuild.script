@@ -1,0 +1,90 @@
+function SetBuildOptions(base)
+{
+    // It is very annoying that we cannot automatically retrieve the path variables of Qt, like include directory
+    // or Qt version!
+    OPTIONS <- {
+        MGTXD_LINUX_USE_SYSTEM_QT = false,
+        MGTXD_LINUX_SYSTEM_QT_INCLUDE_DIR = "/usr/include/x86_64-linux-gnu/qt5",
+        MGTXD_LINUX_SYSTEM_QT_VERSION = "5.12.8"
+    };
+    
+    if (IO.FileExists(_T("cbp_customprops.script")))
+    {
+        Require(_T("cbp_customprops.script"));
+    }
+    
+	base.AddLinkerOption(_T("-lQt5Widgets"));
+    if (OPTIONS.MGTXD_LINUX_USE_SYSTEM_QT == false)
+    {
+        base.AddLinkerOption(_T("-lqxcb"));
+        base.AddLinkerOption(_T("-lQt5XcbQpa"));
+        base.AddLinkerOption(_T("-lQt5EventDispatcherSupport"));
+        base.AddLinkerOption(_T("-lQt5ThemeSupport"));
+        base.AddLinkerOption(_T("-lQt5FontDatabaseSupport"));
+        base.AddLinkerOption(_T("-lQt5ServiceSupport"));
+        base.AddLinkerOption(_T("-lQt5EdidSupport"));
+        base.AddLinkerOption(_T("-lQt5LinuxAccessibilitySupport"));
+        base.AddLinkerOption(_T("-lQt5AccessibilitySupport"));
+        base.AddLinkerOption(_T("-lQt5XkbCommonSupport"));
+        base.AddLinkerOption(_T("-lQt5DBus"));
+    }
+	base.AddLinkerOption(_T("-lQt5Gui"));
+	base.AddLinkerOption(_T("-lQt5Core"));
+    if (OPTIONS.MGTXD_LINUX_USE_SYSTEM_QT == false)
+    {
+        base.AddLinkerOption(_T("-lfreetype"));
+        base.AddLinkerOption(_T("-ldl"));
+        base.AddLinkerOption(_T("-ldbus-1"));
+        base.AddLinkerOption(_T("-lqtlibpng -lqtharfbuzz"));
+        base.AddLinkerOption(_T("`pkg-config --libs --cflags icu-uc icu-io icu-i18n`"));
+        base.AddLinkerOption(_T("-lqtpcre2"));
+        base.AddLinkerOption(_T("-lglib-2.0"));
+        base.AddLinkerOption(_T("-lqminimal"));
+        base.AddLinkerOption(_T("-lqvnc"));
+        base.AddLinkerOption(_T("-lqoffscreen"));
+        base.AddLinkerOption(_T("-lqlinuxfb"));
+        base.AddLinkerOption(_T("-lXrender"));
+        base.AddLinkerOption(_T("-lfontconfig"));
+        base.AddLinkerOption(_T("-lqgif"));
+        base.AddLinkerOption(_T("-lxkbcommon-x11"));
+        base.AddLinkerOption(_T("-lxkbcommon"));
+        base.AddLinkerOption(_T("-lxcb"));
+        base.AddLinkerOption(_T("-lxcb-xkb"));
+        base.AddLinkerOption(_T("-lxcb-keysyms"));
+        base.AddLinkerOption(_T("-lxcb-icccm"));
+        base.AddLinkerOption(_T("-lxcb-sync"));
+        base.AddLinkerOption(_T("-lxcb-xfixes"));
+        base.AddLinkerOption(_T("-lxcb-shape"));
+        base.AddLinkerOption(_T("-lxcb-shm"));
+        base.AddLinkerOption(_T("-lxcb-render"));
+        base.AddLinkerOption(_T("-lxcb-render-util"));
+        base.AddLinkerOption(_T("-lxcb-image"));
+        base.AddLinkerOption(_T("-lxcb-xinerama"));
+        base.AddLinkerOption(_T("-lxcb-randr"));
+        base.AddLinkerOption(_T("-lxcb-xinput"));
+        base.AddLinkerOption(_T("-lX11"));
+        base.AddLinkerOption(_T("-lX11-xcb"));
+        base.AddLinkerOption(_T("-lXi"));
+        base.AddLinkerOption(_T("-lSM"));
+        base.AddLinkerOption(_T("-lICE"));
+    }
+	base.AddLinkerOption(_T("-lfs -lgtaconfig -lrwlib"));
+    
+    if (OPTIONS.MGTXD_LINUX_USE_SYSTEM_QT)
+    {
+        base.AddIncludeDir(_T(OPTIONS.MGTXD_LINUX_SYSTEM_QT_INCLUDE_DIR));
+        base.AddIncludeDir(_T(OPTIONS.MGTXD_LINUX_SYSTEM_QT_INCLUDE_DIR + "/QtCore/" + OPTIONS.MGTXD_LINUX_SYSTEM_QT_VERSION));
+        base.AddIncludeDir(_T(OPTIONS.MGTXD_LINUX_SYSTEM_QT_INCLUDE_DIR + "/QtCore"));
+        // TODO.
+    }
+    else
+    {
+        base.AddCompilerOption(_T("-D QT_STATIC"));
+        base.AddIncludeDir(_T("../vendor/Qt5.15/include"));
+        base.AddIncludeDir(_T("../vendor/Qt5.15/include/QtCore/5.15.2"));
+        base.AddIncludeDir(_T("../vendor/Qt5.15/include/QtCore"));
+        base.AddLibDir(_T("../vendor/Qt5.15/lib/linux/"));
+        base.AddLibDir(_T("../vendor/Qt5.15/lib/linux/plugins/platforms/"));
+        base.AddLibDir(_T("../vendor/Qt5.15/lib/linux/plugins/imageformats/"));
+    }
+}

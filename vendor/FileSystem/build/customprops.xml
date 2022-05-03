@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectSchemaDefinitions  xmlns="http://schemas.microsoft.com/build/2009/properties"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- https://docs.microsoft.com/en-us/dotnet/api/microsoft.build.framework.xamltypes.projectschemadefinitions?view=msbuild-16 !-->
+
+    <!-- Adjust Name and DisplayName to your liking !-->
+    <Rule Name="customtool_config" PageTemplate="generic" DisplayName="Custom Configuration">
+        <Rule.Categories>
+            <!-- Put your own categories here !-->
+            <Category Name="filesys_main" DisplayName="Main Configuration" />
+        </Rule.Categories>
+        <Rule.DataSource>
+            <DataSource Persistence="UserFile" ItemType="" />
+        </Rule.DataSource>
+        <!-- Put your own properties here. !-->
+        <BoolProperty Name="FILESYS_MULTI_THREADING" IsRequired="true"
+            DisplayName="Enable Multi Threading"
+            Description="Enables multi-threading using the NativeExecutive library." />
+        <BoolProperty Name="FILESYS_DEFAULT_ENABLE_RAWFILE_BUFFERING" IsRequired="true"
+            DisplayName="Enable system file buffering"
+            Description="Enables buffering of system-level I/O provided by the framework." />
+    </Rule>
+
+</ProjectSchemaDefinitions>

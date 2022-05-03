@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+    <Type Name="eir::String &lt;*,*&gt;">
+        <DisplayString>{this->data.char_data,[this->data.num_chars]na}</DisplayString>
+        <Expand HideRawView="true">
+            <Item Name="[cp_count]">this->data.num_chars</Item>
+            <ArrayItems>
+                <Size>this->data.num_chars</Size>
+                <LowerBound>0</LowerBound>
+                <ValuePointer>this->data.char_data</ValuePointer>
+            </ArrayItems>
+        </Expand>
+    </Type>
+</AutoVisualizer>

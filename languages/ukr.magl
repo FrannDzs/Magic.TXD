@@ -1,0 +1,260 @@
+﻿MAGL|1|Ukrainian|Українська|UKR|Magic.TXD Team
+
+# language
+Lang.Lang                Мова:
+Lang.Authors             від _PARAM_1
+
+# textures list
+Main.TexInfo.Level       рівень
+Main.TexInfo.Levels      рівнів
+Main.TexInfo.Lvl2        рівня
+Main.TexInfo.Lvl3        ріаня
+Main.TexInfo.Lvl4        рівня
+Main.TexInfo.NoTex       Без текстури
+Main.TexInfo.Invalid     без даних
+Main.Undo                Відміна
+Main.Redo                Повтор
+Main.Cut                 Вирізати
+Main.Copy                Копіювати
+Main.Paste               Вставити
+Main.Delete              Видалити
+Main.SelectA             Виділити все
+
+# main menu
+Main.File                Файл
+Main.Edit                Змінити
+Main.Tools               Інструменти
+Main.Export              Експорт
+Main.View                Вигляд
+Main.Info                Інфо
+
+# main menu - File       
+Main.File.New            Створити
+Main.File.Open           Відкрити
+Main.File.Save           Зберегти
+Main.File.SaveAs         Зберегти як...
+Main.File.Close          Закрити поточний
+Main.File.Quit           Вийти
+
+# main menu - Edit       
+Main.Edit.Add            Додати
+Main.Edit.Replace        Замінити
+Main.Edit.Remove         Видалити
+Main.Edit.Rename         Перейменувати
+Main.Edit.Resize         Змінити розмір
+Main.Edit.Modify         Змінити формат
+Main.Edit.SetupML        Генерувати міп-рівні
+Main.Edit.ClearML        Видалити міп-рівні
+Main.Edit.SetupRP        Налаштування рендерингу
+Main.Edit.SetupTV        Налаштувати весрію TXD
+Main.Edit.Options        Опції
+
+# Rename
+Main.Rename.Desc         Ім'я текстури
+Main.Rename.Name         Ім'я:
+Main.Rename.Set          Прийняти
+Main.Rename.Cancel       Скасувати
+
+# Resize
+Main.Resize.Desc         Зміна розміру текстури
+Main.Resize.Width        Ширина:
+Main.Resize.Height       Висота:
+Main.Resize.Set          Прийняти
+Main.Resize.Cancel       Скасувати
+
+# Modify
+Modify.Desc.Add          Додати текстуру...
+Modify.Desc.Replace      Замінити текстуру...
+Modify.Desc.Modify       Змінити текстуру...
+Modify.Add               Додати
+Modify.Replace           Замінити
+Modify.Modify            Змінити
+Modify.TexName           Ім'я текстури:
+Modify.MskName           Ім'я маски:
+Modify.Plat              Платформа:
+Modify.RasFmt            Формат растру:
+Modify.Origin            Вихідний
+Modify.RawRas            Стандартний
+Modify.Comp              Стиснутий
+Modify.Pal               Палітра
+Modify.PixFmt            Формат пікселів:
+Modify.GenML             Генерувати міп-рівні
+Modify.Scaled            Масштаб
+Modify.Fill              Заповнити
+Modify.Bckgr             Фон
+Modify.Cancel            Скасувати
+
+[Modify.Help.DXTNotice]
+Ви вибрали DXT-компресію. DXT-компресія забезпечує дуже ефективне стиснення текстур.
+Текстури, стиснені DXT-алгоритмом, займають набагато менше місця, але разом з цим, якість
+таких текстур погіршується. Не рекомендується стискати текстури 2d-інтерфейсу.
+
+DXT1 рекомендується, якщо на текстурі немає прозорих ділянок, або коли всі прозорі
+ділянки повністю прозорі (альфа дорівнює нулю)
+DXT2/3 рекомендується, коли прозорі ділянки текстури мають чіткі межі.
+DXT4/5 рекомендується, коли прозорі ділянки текстури мають розмиті межі.
+
+Будьте уважні при виборі формату і компресії текстур!
+[END]
+
+[Modify.Help.PALNotice]
+Ви вибрали формат палітри. Палітровое зображення використовує обмежений набір кольорів,
+що зберігаються в спеціальній таблиці - палітрі. Кожен тексель текстури представлений у
+вигляді індексу кольору в цій таблиці, що значно зменшує розмір текстури.
+
+Зверніть увагу, що формат палітри є старою технологією і не підтримується новими
+версіями RenderWare.
+[END]
+
+# Render Props
+Main.SetupRP.Desc        Налаштування рендерингу
+Main.SetupRP.Filter      Фільтрація:
+Main.SetupRP.UAddr       U-Адресація:
+Main.SetupRP.VAddr       V-Адресація:
+Main.SetupRP.Set         Прийняти
+Main.SetupRP.Cancel      Скасувати
+
+# Setup TXD Version dialog
+Main.SetupTV.Desc        Налаштування версії TXD
+Main.SetupTV.Set         Сет
+Main.SetupTV.Plat        Платформа
+Main.SetupTV.Data        Тип даних
+Main.SetupTV.Version     Версія
+Main.SetupTV.Build       Збірка
+Main.SetupTV.Accept      Прийняти
+Main.SetupTV.Cancel      Скасувати
+Main.SetupTV.Custom      Свій
+
+# Options
+Main.Options.Desc        Налаштування _MAGIC_TXD_NAME
+Main.Options.MainTab     Загальні
+Main.Options.ShowLog     Відкрити лог при попередженнях
+Main.Options.DispIcn     Показувати значок гри
+Main.Options.AdvTab      Розширені
+Main.Options.SerSpc      Ігнорувати розмір секцій TXD
+Main.Options.WarnLvl     Рівень попереджень
+Main.Options.WDisabled   відключити всі
+Main.Options.WLow        низький
+Main.Options.WMedium     середній
+Main.Options.WHigh       високий
+Main.Options.WAll        показати всі
+Main.Options.Accept      Прийняти
+Main.Options.Cancel      Скасувати
+
+# main menu - Tools      
+Main.Tools.MassCnv       Масовий конверт
+Main.Tools.MassExp       Масовий експорт
+Main.Tools.MassBld       Масова збірка
+
+# main menu - Export
+Main.Export.ExpAll       Всі текстури
+Main.Export.Desc         Зберегти _PARAM_1 як...
+
+# Export All
+Main.ExpAll.Desc         Експорт усіх текстур...
+Main.ExpAll.Format       Формат:
+Main.ExpAll.Export       Експорт
+Main.ExpAll.Cancel       Скасувати
+Main.ExpAll.ExpTarg      Виберіть папку...
+
+# Log
+Main.Log.Desc            Лог
+Main.Log.Save            Зберегти
+Main.Log.Copy            Копіювати
+Main.Log.CopyAll         Копіювати все
+Main.Log.Clear           Очистити
+Main.Log.Close           Закрити
+Main.Log.SaveAs          Зберегти лог як...
+
+# View
+Main.View.FullImg        Показати повне зображення
+Main.View.Backgr         Прозорий фон
+Main.View.DispML         Показати міп-рівні
+Main.View.ShowLog        Відкрити лог
+Main.View.DarkThm        Темний інтерфейс
+Main.View.LightTm        Світлий інтерфейс
+
+# Info
+Main.Info.Website        Сайт програми
+Main.Info.About          Про програму
+
+# File - Open
+Main.Open.Desc           Відкрити TXD файл...
+
+# File - Save As
+Main.SaveAs.Desc         Зберегти TXD як...
+
+# Edit - Add
+Main.Edit.Add.Desc       Імпортувати текстуру...
+
+# About
+Main.About.Desc          Про нас
+Main.About.Credits       автори: _AUTHOR_NAME_1 та _AUTHOR_NAME_2
+Main.About.ComUse1       Ця програма НЕ ПОВИННА використовуватися в комерційних цілях без явного письмового дозволу всіх третіх осіб, задіяних у розробці цієї програми. Ознайомтеся з ліцензійними угодами для отримання додаткової інформації.
+Main.About.ComUse2       Команда _MAGIC_TXD_NAME вітає вашу підтримку!
+Main.About.SpecThx       Особлива подяка:
+
+# Save changes
+Main.SavChange.Warn      Відкритий TXD був змінений. Зберегти зміни?
+Main.SavChange.Save      Зберегти
+Main.SavChange.Ignore    Пропустити
+Main.SavChange.Cancel    Скасувати
+Main.SavChange.Title     Незбережені зміни
+
+# Tools
+Tools.Browse             Вибрати
+Tools.BrwDesc            Вибір папки...
+Tools.GameRt             Вихідна папка:
+Tools.Output             Папка призначення:
+Tools.Plat               Платформа
+Tools.Game               Гра
+Tools.GenMips            Генерувати міп-рівні
+Tools.MaxMips            Макс.:
+
+# Mass export
+Tools.MassExp.Desc       Масовий експорт
+Tools.MassExp.ImgFmt     Формат зображень:
+Tools.MassExp.TxNmOnl    в назві лише ім'я текстури
+Tools.MassExp.PrTxdNm    в назві ім'я TXD
+Tools.MassExp.SepFld     розділити по папках
+Tools.MassExp.Export     Експорт
+Tools.MassExp.Cancel     Скасувати
+
+# Mass build
+Tools.MassBld.Desc       Масова збірка
+Tools.MassBld.Build      Зібрати
+Tools.MassBld.Cancel     Скасувати
+Tools.MassBld.CloseOnCmplt  Закрити після завершення
+Tools.MassBld.Cmprs      Стиснення
+Tools.MassBld.DescQual   Якість
+Tools.MassBld.DoPal      Палітра
+Tools.MassBld.DescPType  Тип
+
+[Tools.MassBld.Welcome]
+Ласкаво просимо в інструмент Масової збірки! Цей інструмент створює TXD файли з<br>
+файлів текстур, що знаходяться в папках. Для настроювання процесу збірки можна<br>
+використовувати INI файли в цих папках. Спробуйте зібрати TXD на основі якої-небудь папки,<br>
+щоб побачити, як це працює!<br><br>
+Вікі: <a href="http://www.gtamodding.com/wiki/Magic.TXD/Build_System/" style="color: #0063b1">http://www.gtamodding.com/wiki/Magic.TXD/Build_System/</a>
+[END]
+
+# Mass convert
+Tools.MassCnv.Desc       Масова конвертація
+Tools.MassCnv.ClearML    Видалити міп-рівні
+Tools.MassCnv.ImpFilt    Покращити фільтрацію
+Tools.MassCnv.CompTex    Стиснути текстури
+Tools.MassCnv.RecIMG     Перебудувати IMG-архіви
+Tools.MassCnv.CompIMG    Стиснути IMG
+Tools.MassCnv.Convert    Конвертувати
+Tools.MassCnv.Cancel     Скасувати
+
+# New txd
+New.Desc                 Створення нового TXD-архіву
+New.Name                 Ім'я
+New.Create               Створити
+New.Cancel               Скасувати
+
+# Helper runtime generics.
+Helper.Confirm           OK
+Helper.Title             Замітка
+Helper.NotShowAgain      Більше не показувати

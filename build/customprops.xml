@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectSchemaDefinitions  xmlns="http://schemas.microsoft.com/build/2009/properties"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    
+    <Rule Name="magictxd_config" PageTemplate="generic" DisplayName="Magic.TXD Configuration">
+        <Rule.Categories>
+            <Category Name="magictxd_main" DisplayName="General" />
+            <Category Name="magictxd_qt" DisplayName="Qt Configuration" />
+        </Rule.Categories>
+        <Rule.DataSource>
+            <DataSource Persistence="UserFile" ItemType="" />
+        </Rule.DataSource>
+        <BoolProperty Name="MGTXD_ENABLE_EMBEDDED_RESOURCES" Category="magictxd_main"
+            DisplayName="Enable embedded resources"
+            Description="Adds a special export called '_export_embedded_resources' to the output executable. It can be used in connection with the peresembed tool to create a portable executable."
+            />
+        <BoolProperty Name="MGTXD_BETA_BUILD" Category="magictxd_main"
+            DisplayName="Enable beta"
+            Description="Enables beta build specializations for Magic.TXD, such as window title adjustment."
+            />
+        <StringProperty Name="MGTXD_PERSONALIZED_DETAILS" Category="magictxd_main"
+            DisplayName="Personalization"
+            Description="Embedds a string into this executable for build personalization."
+            />
+        <BoolProperty Name="MGTXD_WIN32_SYSTEM_QT" Category="magictxd_qt"
+            DisplayName="Use system Qt"
+            Description="Takes system-provided Qt binaries for the compilation process. If you configure building this way then you do not have to build Qt from source yourself." />
+        <StringProperty Name="MGTXD_WIN32_SYSTEM_QT_PATH" Category="magictxd_qt"
+            DisplayName="Qt path"
+            Description="Directory path of the Qt system installation." />
+        <StringProperty Name="MGTXD_WIN32_SYSTEM_QT_VERSION" Category="magictxd_qt"
+            DisplayName="Qt version"
+            Description="The version string of the installed Qt binaries. Has to be in the format x.y.z ." />
+    </Rule>
+    
+</ProjectSchemaDefinitions>

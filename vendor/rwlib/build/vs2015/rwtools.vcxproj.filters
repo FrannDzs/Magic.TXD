@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{2c597b37-2332-4899-858b-a20cbb74e405}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shared_api">
+      <UniqueIdentifier>{31e26d9e-925e-4242-9704-d77235644973}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="helper">
+      <UniqueIdentifier>{79a5bf29-d654-48c5-a8c3-5dfad634bcf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\private">
+      <UniqueIdentifier>{99710650-314d-47c0-a992-5e456f939324}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\renderware.blockapi.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.bmp.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.dff.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.file.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.material.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.stream.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.txd.d3d.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.txd.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\rwconf.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.imaging.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.windowing.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.events.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.threading.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.driver.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.drawing.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.math.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.math.matview.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.utils.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\rwframework.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\pixelformat.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\pixelutil.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\native.win32.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\natimage.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\pluginutil.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwcommon.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwconf.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwdrawing.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwdriver.d3d12.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwdriver.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwdriver.immbuf.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwdriver.progman.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwfile.system.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwimaging.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwinterface.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwserialize.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwstatesort.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwthreading.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwwindowing.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\streamutil.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.atc.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.common.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.d3d.dxt.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.d3d.genmip.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.d3d.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.d3d8.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.d3d9.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.dxtmobile.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.gc.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.gc.miptrans.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.memcodec.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.miputil.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.natcompat.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.nativetex.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.palette.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.ps2.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.ps2gsman.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.ps2shared.enc.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.ps2shared.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.psp.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.psp.mem.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.pvr.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.rasterplg.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.size.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.unc.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.xbox.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwprivate.imaging.h">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StdInc.h">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwprivate.txd.h">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwprivate.utils.h">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwprivate.warnings.h">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.raster.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.xbox.layerpipe.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.d3d8.layerpipe.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.d3d9.layerpipe.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwprivate.bmp.h">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwprivate.txd.pixelformat.h">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\MemoryUtils.stream.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\OSUtils.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\PluginHelpers.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\rwlist.hpp">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\ABIHelpers.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\DataUtil.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\DynamicTypeSystem.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\Endian.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\MemoryRaw.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\MemoryUtils.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.objutil.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.shader.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.gpures.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwprivate.driver.h">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwprivate.common.h">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.common.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.qol.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.plg.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.lateinit.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwprivate.locale.h">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.errsys.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.errsys.common.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.errsys.ext.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.serialize.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.ps2.registers.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\txdread.ps2mem.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwimaging.rasterread.hxx">
+      <Filter>Include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\Set.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\Map.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\Vector.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderware.txd.ps2.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\FixedString.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\eirrepo\sdk\String.h">
+      <Filter>shared_api</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\dffread.cpp" />
+    <ClCompile Include="..\..\src\dffwrite.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\oglnative.cpp" />
+    <ClCompile Include="..\..\src\ps2native.cpp" />
+    <ClCompile Include="..\..\src\renderware.cpp" />
+    <ClCompile Include="..\..\src\rwblockapi.cpp" />
+    <ClCompile Include="..\..\src\rwbmp.cpp" />
+    <ClCompile Include="..\..\src\rwfile.cpp" />
+    <ClCompile Include="..\..\src\rwinterface.cpp" />
+    <ClCompile Include="..\..\src\rwmem.cpp" />
+    <ClCompile Include="..\..\src\rwobjextensions.cpp" />
+    <ClCompile Include="..\..\src\rwserialize.cpp" />
+    <ClCompile Include="..\..\src\rwstream.cpp" />
+    <ClCompile Include="..\..\src\txdread.atc.cpp" />
+    <ClCompile Include="..\..\src\txdread.cpp" />
+    <ClCompile Include="..\..\src\txdread.debugutil.cpp" />
+    <ClCompile Include="..\..\src\txdread.dxtmobile.cpp" />
+    <ClCompile Include="..\..\src\txdread.mipmaps.cpp" />
+    <ClCompile Include="..\..\src\txdread.palette.cpp" />
+    <ClCompile Include="..\..\src\txdread.pixelconv.cpp" />
+    <ClCompile Include="..\..\src\txdread.ps2.cpp" />
+    <ClCompile Include="..\..\src\txdread.ps2mem.cpp" />
+    <ClCompile Include="..\..\src\txdread.pvr.cpp" />
+    <ClCompile Include="..\..\src\txdread.unc.cpp" />
+    <ClCompile Include="..\..\src\txdread.xbox.cpp" />
+    <ClCompile Include="..\..\src\txdread.xbox.swizzle.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.atc.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.dxtmobile.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.ps2.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.pvr.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.unc.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.xbox.cpp" />
+    <ClCompile Include="..\..\src\xboxnative.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.tga.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.bmp.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.d3d9.cpp" />
+    <ClCompile Include="..\..\src\txdread.d3d9.cpp" />
+    <ClCompile Include="..\..\src\txdread.d3d8.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.d3d8.cpp" />
+    <ClCompile Include="..\..\src\txdread.d3d9.formats.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.png.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.jpeg.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.tiff.cpp" />
+    <ClCompile Include="..\..\src\txdread.gc.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.gc.cpp" />
+    <ClCompile Include="..\..\src\rwwindowing.cpp" />
+    <ClCompile Include="..\..\src\rwevents.cpp" />
+    <ClCompile Include="..\..\src\rwthreading.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.geom.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.mat.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.raster.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.swap.cpp" />
+    <ClCompile Include="..\..\src\rwdrawing.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.immbuf.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.pso.cpp" />
+    <ClCompile Include="..\..\src\txdread.size.cpp" />
+    <ClCompile Include="..\..\src\txdread.size.blur.cpp" />
+    <ClCompile Include="..\..\src\txdread.size.linear.cpp" />
+    <ClCompile Include="..\..\src\txdread.compress.cpp" />
+    <ClCompile Include="..\..\src\rwconf.cpp" />
+    <ClCompile Include="..\..\src\rwconf.dispatch.cpp" />
+    <ClCompile Include="..\..\src\rwinterface.warnings.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.utils.cpp" />
+    <ClCompile Include="..\..\src\rwutils.cpp" />
+    <ClCompile Include="..\..\src\txdread.psp.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.psp.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.progman.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.progman.hlsl.cpp" />
+    <ClCompile Include="..\..\src\rwfile.system.cpp" />
+    <ClCompile Include="..\..\src\natimage.cpp" />
+    <ClCompile Include="..\..\src\txdread.raster.cpp" />
+    <ClCompile Include="..\..\src\txdread.raster.nativetex.cpp" />
+    <ClCompile Include="..\..\src\txdread.raster.fmt.cpp" />
+    <ClCompile Include="..\..\src\txdread.raster.imaging.cpp" />
+    <ClCompile Include="..\..\src\txdread.raster.utils.cpp" />
+    <ClCompile Include="..\..\src\natimage.dds.cpp" />
+    <ClCompile Include="..\..\src\natimage.pvr.cpp" />
+    <ClCompile Include="..\..\src\txdread.fmttest.cpp" />
+    <ClCompile Include="..\..\src\texturebase.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.cmd.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.resources.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.gpumem.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.gpures.cpp" />
+    <ClCompile Include="..\..\src\rwinterface.typesys.cpp" />
+    <ClCompile Include="..\..\src\rwinterface.plugins.cpp" />
+    <ClCompile Include="..\..\src\rwinterface.lateinit.cpp" />
+    <ClCompile Include="..\..\src\rwlocalization.cpp" />
+    <ClCompile Include="..\..\src\rwerrorsys.cpp" />
+    <ClCompile Include="..\..\src\txdread.ps2mem.gsdefs.cpp" />
+    <ClCompile Include="..\..\src\txdread.ps2.gstrace.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rwtools.natvis">
+      <Filter>helper</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\..\eirrepo\sdk\MemoryUtils.natvis">
+      <Filter>shared_api</Filter>
+    </Natvis>
+    <Natvis Include="..\..\..\eirrepo\sdk\DynamicTypeSystem.natvis">
+      <Filter>shared_api</Filter>
+    </Natvis>
+    <Natvis Include="ps2structs.natvis">
+      <Filter>helper</Filter>
+    </Natvis>
+    <Natvis Include="..\..\..\eirrepo\sdk\Map.natvis">
+      <Filter>shared_api</Filter>
+    </Natvis>
+    <Natvis Include="..\..\..\eirrepo\sdk\Set.natvis">
+      <Filter>shared_api</Filter>
+    </Natvis>
+    <Natvis Include="..\..\..\eirrepo\sdk\Vector.natvis">
+      <Filter>shared_api</Filter>
+    </Natvis>
+    <Natvis Include="..\..\..\eirrepo\sdk\Endian.natvis">
+      <Filter>shared_api</Filter>
+    </Natvis>
+    <Natvis Include="..\..\..\eirrepo\sdk\String.natvis">
+      <Filter>shared_api</Filter>
+    </Natvis>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="customprops.xml">
+      <Filter>helper</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>

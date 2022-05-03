@@ -1,0 +1,38 @@
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+    <Type Name="eir::Map &lt;*,*,*,*,*&gt;">
+        <Expand>
+            <CustomListItems>
+                <Variable Name="travelNode" InitialValue="(AVLNode*)this->data.avlKeyTree.root" />
+                <Variable Name="nodevar" InitialValue="(Node*)nullptr" />
+                <Loop Condition="travelNode != nullptr &amp;&amp; travelNode->left != nullptr">
+                    <Exec>travelNode = travelNode->left</Exec>
+                </Loop>
+                <Loop Condition="travelNode != nullptr">
+                    <Exec>nodevar = (Node*)( (char*)travelNode - (size_t)&amp;( (Node*)0 )->sortedByKeyNode )</Exec>
+                    <Item Name="[{nodevar->key}]">*nodevar</Item>
+                    <If Condition="travelNode->right != nullptr">
+                        <Exec>travelNode = travelNode->right</Exec>
+                        <Loop Condition="travelNode->left != nullptr">
+                            <Exec>travelNode = travelNode->left</Exec>
+                        </Loop>
+                    </If>
+                    <Else>
+                        <Loop Condition="travelNode->parent != nullptr &amp;&amp; travelNode->parent->left != travelNode">
+                            <Exec>travelNode = travelNode->parent</Exec>
+                        </Loop>
+                        <Exec>travelNode = travelNode->parent</Exec>
+                    </Else>
+                </Loop>
+            </CustomListItems>
+        </Expand>
+    </Type>
+    <Type Name="eir::Map &lt;*,*,*,*,*&gt;::Node">
+        <DisplayString>
+            {this->value}
+        </DisplayString>
+        <Expand>
+            <Item Name="[Key]">key</Item>
+            <Item Name="[Value]">value</Item>
+        </Expand>
+    </Type>
+</AutoVisualizer>

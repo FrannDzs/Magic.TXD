@@ -1,0 +1,102 @@
+function SetBuildOptions(base)
+{
+    OPTIONS <- {
+        NATEXEC_DISABLE_NATIVE_IMPL = false,
+        NATEXEC_FIRST_ENTRY_POINT = false,
+        NATEXEC_GLOBALMEM_OVERRIDE = true,
+        NATEXEC_LOG_GLOBAL_ALLOC = false,
+        NATEXEC_EXCEPTION_COPYPUSH = true,
+        NATEXEC_NO_HEAPPTR_VERIFY = true,
+        NATEXEC_FEP_TYPE = "main",
+        USE_HEAP_DEBUGGING = false,
+        USE_FULL_PAGE_HEAP = true,
+        PAGE_HEAP_INTEGRITY_CHECK = true,
+        PAGE_HEAP_MEMORY_STATS = false,
+        USE_HEAP_STACK_TRACE = false,
+        NATEXEC_ENABLE_PTHREADS_IMPLEMENTATION = false,
+        NATEXEC_LINUX_THREAD_SELF_CLEANUP = true,
+        NATEXEC_LINUX_FREE_STACKMEM_THREAD_STACKSIZE = 8096,
+        NATEXEC_LINUX_TSC_USE_DUMMY_TLD = true,
+        NATEXEC_LINUX_PIC = false,
+        NATEXEC_PTHREADS_DEFAULT_STACKSIZE = (1 << 18)
+    };
+
+    if (IO.FileExists(_T("../../_repoconfig/NativeExecutive.sq")))
+    {
+        Require(_T("../../_repoconfig/NativeExecutive.sq"));
+    }
+    
+    if (OPTIONS.NATEXEC_DISABLE_NATIVE_IMPL)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_DISABLE_NATIVE_IMPL"));
+    }
+    if (OPTIONS.NATEXEC_FIRST_ENTRY_POINT)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_FIRST_ENTRY_POINT"));
+    }
+    if (OPTIONS.NATEXEC_GLOBALMEM_OVERRIDE)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_GLOBALMEM_OVERRIDE"));
+    }
+    if (OPTIONS.NATEXEC_LOG_GLOBAL_ALLOC)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_LOG_GLOBAL_ALLOC"));
+    }
+    if (OPTIONS.NATEXEC_EXCEPTION_COPYPUSH)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_EXCEPTION_COPYPUSH"));
+    }
+    if (OPTIONS.NATEXEC_NO_HEAPPTR_VERIFY)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_NO_HEAPPTR_VERIFY"));
+    }
+    if (OPTIONS.USE_HEAP_DEBUGGING)
+    {
+        base.AddCompilerOption(_T("-D USE_HEAP_DEBUGGING"));
+        
+        if (OPTIONS.USE_FULL_PAGE_HEAP)
+        {
+            base.AddCompilerOption(_T("-D USE_FULL_PAGE_HEAP"));
+        }
+        if (OPTIONS.PAGE_HEAP_INTEGRITY_CHECK)
+        {
+            base.AddCompilerOption(_T("-D PAGE_HEAP_INTEGRITY_CHECK"));
+        }
+        if (OPTIONS.PAGE_HEAP_MEMORY_STATS)
+        {
+            base.AddCompilerOption(_T("-D PAGE_HEAP_MEMORY_STATS"));
+        }
+    }
+    if (OPTIONS.USE_HEAP_STACK_TRACE)
+    {
+        base.AddCompilerOption(_T("-D USE_HEAP_STACK_TRACE"));
+    }
+    if (OPTIONS.NATEXEC_ENABLE_PTHREADS_IMPLEMENTATION)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_ENABLE_PTHREADS_IMPLEMENTATION"));
+        base.AddCompilerOption(_T("-D NATEXEC_PTHREADS_DEFAULT_STACKSIZE=" + OPTIONS.NATEXEC_PTHREADS_DEFAULT_STACKSIZE));
+    }
+    if (OPTIONS.NATEXEC_LINUX_THREAD_SELF_CLEANUP)
+    {
+        base.AddCompilerOption(_T("-D NATEXEC_LINUX_THREAD_SELF_CLEANUP"));
+        base.AddCompilerOption(_T("-fno-stack-protector"));
+        
+        if (OPTIONS.NATEXEC_LINUX_TSC_USE_DUMMY_TLD)
+        {
+            base.AddCompilerOption(_T("-D NATEXEC_LINUX_TSC_USE_DUMMY_TLD"));
+        }
+    }
+    else
+    {
+        base.AddCompilerOption(
+            _T("-D NATEXEC_LINUX_FREE_STACKMEM_THREAD_STACKSIZE="
+            +
+            OPTIONS.NATEXEC_LINUX_FREE_STACKMEM_THREAD_STACKSIZE
+            )
+        );
+    }
+    if (OPTIONS.NATEXEC_LINUX_PIC)
+    {
+        base.AddCompilerOption(_T("-fPIC"));
+    }
+}

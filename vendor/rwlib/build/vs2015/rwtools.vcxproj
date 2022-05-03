@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_legacy|Win32">
+      <Configuration>Debug_legacy</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_legacy|x64">
+      <Configuration>Debug_legacy</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_legacy|Win32">
+      <Configuration>Release_legacy</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_legacy|x64">
+      <Configuration>Release_legacy</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3D409405-B557-4BB6-B9E1-43215019E381}</ProjectGuid>
+    <RootNamespace>rwtools</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_legacy|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_legacy|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_legacy|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_legacy|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_legacy|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_legacy|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_legacy|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_legacy|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="defaults.props" />
+  </ImportGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="customprops.xml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)..\..\output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\obj\$(Platform)_$(Configuration)_$(PlatformToolset)\</IntDir>
+    <TargetName>rwlib</TargetName>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_legacy|Win32'">
+    <OutDir>$(ProjectDir)..\..\output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\obj\$(Platform)_$(Configuration)_$(PlatformToolset)\</IntDir>
+    <TargetName>rwlib</TargetName>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>rwlib</TargetName>
+    <IntDir>$(ProjectDir)..\..\obj\$(Platform)_$(Configuration)_$(PlatformToolset)\</IntDir>
+    <OutDir>$(ProjectDir)..\..\output\$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_legacy|x64'">
+    <TargetName>rwlib</TargetName>
+    <IntDir>$(ProjectDir)..\..\obj\$(Platform)_$(Configuration)_$(PlatformToolset)\</IntDir>
+    <OutDir>$(ProjectDir)..\..\output\$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)..\..\output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\obj\$(Platform)_$(Configuration)_$(PlatformToolset)\</IntDir>
+    <TargetName>rwlib</TargetName>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_legacy|Win32'">
+    <OutDir>$(ProjectDir)..\..\output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\obj\$(Platform)_$(Configuration)_$(PlatformToolset)\</IntDir>
+    <TargetName>rwlib</TargetName>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>rwlib</TargetName>
+    <OutDir>$(ProjectDir)..\..\output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\obj\$(Platform)_$(Configuration)_$(PlatformToolset)\</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_legacy|x64'">
+    <TargetName>rwlib</TargetName>
+    <OutDir>$(ProjectDir)..\..\output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\..\obj\$(Platform)_$(Configuration)_$(PlatformToolset)\</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../include/;../../../eirrepo/;../../vendor/squish-1.11/include/;../../vendor/directx/12/Include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)_2015.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_legacy|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../include/;../../../eirrepo/;../../vendor/squish-1.11/include/;../../vendor/directx/12/Include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)_2015.pch</PrecompiledHeaderOutputFile>
+      <AdditionalOptions>/D _COMPILE_FOR_LEGACY %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../include/;../../../eirrepo/;../../vendor/squish-1.11/include/;../../vendor/directx/12/Include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)_2015.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_legacy|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../include/;../../../eirrepo/;../../vendor/squish-1.11/include/;../../vendor/directx/12/Include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)_2015.pch</PrecompiledHeaderOutputFile>
+      <AdditionalOptions>/D _COMPILE_FOR_LEGACY %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../../include/;../../../eirrepo/;../../vendor/squish-1.11/include/;../../vendor/directx/12/Include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)_2015.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_legacy|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../../include/;../../../eirrepo/;../../vendor/squish-1.11/include/;../../vendor/directx/12/Include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)_2015.pch</PrecompiledHeaderOutputFile>
+      <AdditionalOptions>/D _COMPILE_FOR_LEGACY %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../../include/;../../../eirrepo/;../../vendor/squish-1.11/include/;../../vendor/directx/12/Include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)_2015.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_legacy|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../../include/;../../../eirrepo/;../../vendor/squish-1.11/include/;../../vendor/directx/12/Include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)_2015.pch</PrecompiledHeaderOutputFile>
+      <AdditionalOptions>/D _COMPILE_FOR_LEGACY %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\eirrepo\sdk\ABIHelpers.h" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\DataUtil.h" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\DynamicTypeSystem.h" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\Endian.h" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\FixedString.h" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\Map.h" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\MemoryRaw.h" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\MemoryUtils.h" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\MemoryUtils.stream.h" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\OSUtils.h" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\PluginHelpers.h" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\rwlist.hpp" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\Set.h" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\String.h" />
+    <ClInclude Include="..\..\..\eirrepo\sdk\Vector.h" />
+    <ClInclude Include="..\..\include\renderware.blockapi.h" />
+    <ClInclude Include="..\..\include\renderware.bmp.h" />
+    <ClInclude Include="..\..\include\renderware.common.h" />
+    <ClInclude Include="..\..\include\renderware.dff.h" />
+    <ClInclude Include="..\..\include\renderware.drawing.h" />
+    <ClInclude Include="..\..\include\renderware.driver.h" />
+    <ClInclude Include="..\..\include\renderware.errsys.common.h" />
+    <ClInclude Include="..\..\include\renderware.errsys.ext.h" />
+    <ClInclude Include="..\..\include\renderware.errsys.h" />
+    <ClInclude Include="..\..\include\renderware.events.h" />
+    <ClInclude Include="..\..\include\renderware.file.h" />
+    <ClInclude Include="..\..\include\renderware.gpures.h" />
+    <ClInclude Include="..\..\include\renderware.h" />
+    <ClInclude Include="..\..\include\renderware.imaging.h" />
+    <ClInclude Include="..\..\include\renderware.lateinit.h" />
+    <ClInclude Include="..\..\include\renderware.material.h" />
+    <ClInclude Include="..\..\include\renderware.math.h" />
+    <ClInclude Include="..\..\include\renderware.math.matview.h" />
+    <ClInclude Include="..\..\include\renderware.plg.h" />
+    <ClInclude Include="..\..\include\renderware.qol.h" />
+    <ClInclude Include="..\..\include\renderware.serialize.h" />
+    <ClInclude Include="..\..\include\renderware.shader.h" />
+    <ClInclude Include="..\..\include\renderware.stream.h" />
+    <ClInclude Include="..\..\include\renderware.threading.h" />
+    <ClInclude Include="..\..\include\renderware.txd.d3d.h" />
+    <ClInclude Include="..\..\include\renderware.txd.h" />
+    <ClInclude Include="..\..\include\renderware.txd.ps2.h" />
+    <ClInclude Include="..\..\include\renderware.utils.h" />
+    <ClInclude Include="..\..\include\renderware.windowing.h" />
+    <ClInclude Include="..\..\include\rwframework.h" />
+    <ClInclude Include="..\..\rwconf.h" />
+    <ClInclude Include="..\..\src\natimage.hxx" />
+    <ClInclude Include="..\..\src\native.win32.hxx" />
+    <ClInclude Include="..\..\src\pixelformat.hxx" />
+    <ClInclude Include="..\..\src\pixelutil.hxx" />
+    <ClInclude Include="..\..\src\pluginutil.hxx" />
+    <ClInclude Include="..\..\src\rwcommon.hxx" />
+    <ClInclude Include="..\..\src\rwconf.hxx" />
+    <ClInclude Include="..\..\src\rwdrawing.hxx" />
+    <ClInclude Include="..\..\src\rwdriver.d3d12.hxx" />
+    <ClInclude Include="..\..\src\rwdriver.hxx" />
+    <ClInclude Include="..\..\src\rwdriver.immbuf.hxx" />
+    <ClInclude Include="..\..\src\rwdriver.progman.hxx" />
+    <ClInclude Include="..\..\src\rwfile.system.hxx" />
+    <ClInclude Include="..\..\src\rwimaging.hxx" />
+    <ClInclude Include="..\..\src\rwimaging.rasterread.hxx" />
+    <ClInclude Include="..\..\src\rwinterface.hxx" />
+    <ClInclude Include="..\..\src\rwprivate.bmp.h" />
+    <ClInclude Include="..\..\src\rwprivate.common.h" />
+    <ClInclude Include="..\..\src\rwprivate.driver.h" />
+    <ClInclude Include="..\..\src\rwprivate.imaging.h" />
+    <ClInclude Include="..\..\src\rwprivate.locale.h" />
+    <ClInclude Include="..\..\src\rwprivate.txd.h" />
+    <ClInclude Include="..\..\src\rwprivate.txd.pixelformat.h" />
+    <ClInclude Include="..\..\src\rwprivate.utils.h" />
+    <ClInclude Include="..\..\src\rwprivate.warnings.h" />
+    <ClInclude Include="..\..\src\rwserialize.hxx" />
+    <ClInclude Include="..\..\src\rwstatesort.hxx" />
+    <ClInclude Include="..\..\src\rwthreading.hxx" />
+    <ClInclude Include="..\..\src\rwwindowing.hxx" />
+    <ClInclude Include="..\..\src\StdInc.h" />
+    <ClInclude Include="..\..\src\streamutil.hxx" />
+    <ClInclude Include="..\..\src\txdread.atc.hxx" />
+    <ClInclude Include="..\..\src\txdread.common.hxx" />
+    <ClInclude Include="..\..\src\txdread.d3d.dxt.hxx" />
+    <ClInclude Include="..\..\src\txdread.d3d.genmip.hxx" />
+    <ClInclude Include="..\..\src\txdread.d3d.hxx" />
+    <ClInclude Include="..\..\src\txdread.d3d8.hxx" />
+    <ClInclude Include="..\..\src\txdread.d3d8.layerpipe.hxx" />
+    <ClInclude Include="..\..\src\txdread.d3d9.hxx" />
+    <ClInclude Include="..\..\src\txdread.d3d9.layerpipe.hxx" />
+    <ClInclude Include="..\..\src\txdread.dxtmobile.hxx" />
+    <ClInclude Include="..\..\src\txdread.gc.hxx" />
+    <ClInclude Include="..\..\src\txdread.gc.miptrans.hxx" />
+    <ClInclude Include="..\..\src\txdread.memcodec.hxx" />
+    <ClInclude Include="..\..\src\txdread.miputil.hxx" />
+    <ClInclude Include="..\..\src\txdread.natcompat.hxx" />
+    <ClInclude Include="..\..\src\txdread.nativetex.hxx" />
+    <ClInclude Include="..\..\src\txdread.objutil.hxx" />
+    <ClInclude Include="..\..\src\txdread.palette.hxx" />
+    <ClInclude Include="..\..\src\txdread.ps2.hxx" />
+    <ClInclude Include="..\..\src\txdread.ps2.registers.hxx" />
+    <ClInclude Include="..\..\src\txdread.ps2gsman.hxx" />
+    <ClInclude Include="..\..\src\txdread.ps2mem.hxx" />
+    <ClInclude Include="..\..\src\txdread.ps2shared.enc.hxx" />
+    <ClInclude Include="..\..\src\txdread.ps2shared.hxx" />
+    <ClInclude Include="..\..\src\txdread.psp.hxx" />
+    <ClInclude Include="..\..\src\txdread.psp.mem.hxx" />
+    <ClInclude Include="..\..\src\txdread.pvr.hxx" />
+    <ClInclude Include="..\..\src\txdread.raster.hxx" />
+    <ClInclude Include="..\..\src\txdread.rasterplg.hxx" />
+    <ClInclude Include="..\..\src\txdread.size.hxx" />
+    <ClInclude Include="..\..\src\txdread.unc.hxx" />
+    <ClInclude Include="..\..\src\txdread.xbox.hxx" />
+    <ClInclude Include="..\..\src\txdread.xbox.layerpipe.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\dffread.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_legacy|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_legacy|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_legacy|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_legacy|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dffwrite.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\natimage.cpp" />
+    <ClCompile Include="..\..\src\natimage.dds.cpp" />
+    <ClCompile Include="..\..\src\natimage.pvr.cpp" />
+    <ClCompile Include="..\..\src\oglnative.cpp" />
+    <ClCompile Include="..\..\src\ps2native.cpp" />
+    <ClCompile Include="..\..\src\renderware.cpp" />
+    <ClCompile Include="..\..\src\rwblockapi.cpp" />
+    <ClCompile Include="..\..\src\rwbmp.cpp" />
+    <ClCompile Include="..\..\src\rwconf.cpp" />
+    <ClCompile Include="..\..\src\rwconf.dispatch.cpp" />
+    <ClCompile Include="..\..\src\rwdrawing.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.cmd.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.geom.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.gpumem.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.gpures.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.mat.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.pso.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.raster.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.d3d12.swap.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.immbuf.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.progman.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.progman.hlsl.cpp" />
+    <ClCompile Include="..\..\src\rwdriver.resources.cpp" />
+    <ClCompile Include="..\..\src\rwerrorsys.cpp" />
+    <ClCompile Include="..\..\src\rwevents.cpp" />
+    <ClCompile Include="..\..\src\rwfile.cpp" />
+    <ClCompile Include="..\..\src\rwfile.system.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.bmp.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.jpeg.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.png.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.tga.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.tiff.cpp" />
+    <ClCompile Include="..\..\src\rwimaging.utils.cpp" />
+    <ClCompile Include="..\..\src\rwinterface.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rwinterface.lateinit.cpp" />
+    <ClCompile Include="..\..\src\rwinterface.plugins.cpp" />
+    <ClCompile Include="..\..\src\rwinterface.typesys.cpp" />
+    <ClCompile Include="..\..\src\rwinterface.warnings.cpp" />
+    <ClCompile Include="..\..\src\rwlocalization.cpp" />
+    <ClCompile Include="..\..\src\rwmem.cpp" />
+    <ClCompile Include="..\..\src\rwobjextensions.cpp" />
+    <ClCompile Include="..\..\src\rwserialize.cpp" />
+    <ClCompile Include="..\..\src\rwstream.cpp" />
+    <ClCompile Include="..\..\src\rwthreading.cpp" />
+    <ClCompile Include="..\..\src\rwutils.cpp" />
+    <ClCompile Include="..\..\src\rwwindowing.cpp" />
+    <ClCompile Include="..\..\src\texturebase.cpp" />
+    <ClCompile Include="..\..\src\txdread.atc.cpp" />
+    <ClCompile Include="..\..\src\txdread.compress.cpp" />
+    <ClCompile Include="..\..\src\txdread.cpp" />
+    <ClCompile Include="..\..\src\txdread.d3d8.cpp" />
+    <ClCompile Include="..\..\src\txdread.d3d9.cpp" />
+    <ClCompile Include="..\..\src\txdread.d3d9.formats.cpp" />
+    <ClCompile Include="..\..\src\txdread.debugutil.cpp" />
+    <ClCompile Include="..\..\src\txdread.dxtmobile.cpp" />
+    <ClCompile Include="..\..\src\txdread.fmttest.cpp" />
+    <ClCompile Include="..\..\src\txdread.gc.cpp" />
+    <ClCompile Include="..\..\src\txdread.mipmaps.cpp" />
+    <ClCompile Include="..\..\src\txdread.palette.cpp" />
+    <ClCompile Include="..\..\src\txdread.pixelconv.cpp" />
+    <ClCompile Include="..\..\src\txdread.ps2.cpp" />
+    <ClCompile Include="..\..\src\txdread.ps2.gstrace.cpp" />
+    <ClCompile Include="..\..\src\txdread.ps2mem.cpp" />
+    <ClCompile Include="..\..\src\txdread.ps2mem.gsdefs.cpp" />
+    <ClCompile Include="..\..\src\txdread.psp.cpp" />
+    <ClCompile Include="..\..\src\txdread.pvr.cpp" />
+    <ClCompile Include="..\..\src\txdread.raster.cpp" />
+    <ClCompile Include="..\..\src\txdread.raster.fmt.cpp" />
+    <ClCompile Include="..\..\src\txdread.raster.imaging.cpp" />
+    <ClCompile Include="..\..\src\txdread.raster.nativetex.cpp" />
+    <ClCompile Include="..\..\src\txdread.raster.utils.cpp" />
+    <ClCompile Include="..\..\src\txdread.size.blur.cpp" />
+    <ClCompile Include="..\..\src\txdread.size.cpp" />
+    <ClCompile Include="..\..\src\txdread.size.linear.cpp" />
+    <ClCompile Include="..\..\src\txdread.unc.cpp" />
+    <ClCompile Include="..\..\src\txdread.xbox.cpp" />
+    <ClCompile Include="..\..\src\txdread.xbox.swizzle.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.atc.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.d3d8.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.d3d9.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.dxtmobile.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.gc.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.ps2.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.psp.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.pvr.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.unc.cpp" />
+    <ClCompile Include="..\..\src\txdwrite.xbox.cpp" />
+    <ClCompile Include="..\..\src\xboxnative.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rwtools.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\..\eirrepo\sdk\DynamicTypeSystem.natvis" />
+    <Natvis Include="..\..\..\eirrepo\sdk\Endian.natvis" />
+    <Natvis Include="..\..\..\eirrepo\sdk\Map.natvis" />
+    <Natvis Include="..\..\..\eirrepo\sdk\MemoryUtils.natvis" />
+    <Natvis Include="..\..\..\eirrepo\sdk\Set.natvis" />
+    <Natvis Include="..\..\..\eirrepo\sdk\String.natvis" />
+    <Natvis Include="..\..\..\eirrepo\sdk\Vector.natvis" />
+    <Natvis Include="ps2structs.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="customprops.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\vendor\squish-1.11\build\squish.vcxproj" />
+  </ItemGroup>
+  <ImportGroup>
+    <Import Project="..\..\..\_repoconfig\$(ProjectName).props" Condition="Exists('..\..\..\_repoconfig\$(ProjectName).props')" />
+  </ImportGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_NATIVETEX_D3D8)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_NATIVETEX_D3D8;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_NATIVETEX_D3D9)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_NATIVETEX_D3D9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_NATIVETEX_PLAYSTATION2)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_NATIVETEX_PLAYSTATION2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_NATIVETEX_PSP)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_NATIVETEX_PSP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_NATIVETEX_XBOX)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_NATIVETEX_XBOX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_NATIVETEX_GAMECUBE)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_NATIVETEX_GAMECUBE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_NATIVETEX_S3TC_MOBILE)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_NATIVETEX_S3TC_MOBILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_NATIVETEX_POWERVR_MOBILE)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_NATIVETEX_POWERVR_MOBILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(RWLIB_INCLUDE_NATIVETEX_POWERVR_MOBILE)'=='true'">
+    <IncludePath>../../vendor/pvrtexlib/Include/;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_NATIVETEX_UNC_MOBILE)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_NATIVETEX_UNC_MOBILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_NATIVETEX_ATC_MOBILE)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_NATIVETEX_ATC_MOBILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib Condition="'$(Configuration)'=='Debug' Or '$(Configuration)'=='Debug_legacy'">
+      <AdditionalDependencies>Compressonator_MTd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib Condition="'$(Configuration)'=='Release' Or '$(Configuration)'=='Release_legacy'">
+      <AdditionalDependencies>Compressonator_MT.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>..\..\vendor\amdtc\Compressonator\Build\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup Condition="'$(RWLIB_INCLUDE_NATIVETEX_ATC_MOBILE)'=='true'">
+    <ProjectReference Include="..\..\vendor\amdtc\Compressonator\VisualStudio\CMP_CompressonatorLib.vcxproj" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(RWLIB_INCLUDE_NATIVETEX_ATC_MOBILE)'=='true'">
+    <IncludePath>../../vendor/amdtc/Compressonator/CMP_CompressonatorLib/;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(RWLIB_USE_XBOX_SDK)'=='true'">
+    <IncludePath>../../vendor/xdk/;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_USE_XBOX_SDK)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>_USE_XBOX_SDK_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_IMAGING)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_IMAGING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_TGA_IMAGING)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_TGA_IMAGING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_BMP_IMAGING)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_BMP_IMAGING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_PNG_IMAGING)'=='true' And Exists('$(ProjectDir)../../../libpng/')=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_PNG_IMAGING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup Condition="'$(RWLIB_INCLUDE_PNG_IMAGING)'=='true' And Exists('$(ProjectDir)../../../libpng/')=='true'">
+    <ProjectReference Include="..\..\..\libpng\build\libpng.vcxproj" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(RWLIB_INCLUDE_PNG_IMAGING)'=='true' And Exists('$(ProjectDir)../../../libpng/')=='true'">
+    <IncludePath>../../../libpng/include/;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_JPEG_IMAGING)'=='true' And Exists('$(ProjectDir)../../../libjpeg/')=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_JPEG_IMAGING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup Condition="'$(RWLIB_INCLUDE_JPEG_IMAGING)'=='true' And Exists('$(ProjectDir)../../../libjpeg/')=='true'">
+    <ProjectReference Include="..\..\..\libjpeg\build\libjpeg.vcxproj" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(RWLIB_INCLUDE_JPEG_IMAGING)'=='true' And Exists('$(ProjectDir)../../../libjpeg/')=='true'">
+    <IncludePath>../../../libjpeg/src/;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_GIF_IMAGING)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_GIF_IMAGING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_TIFF_IMAGING)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_TIFF_IMAGING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup Condition="'$(RWLIB_INCLUDE_TIFF_IMAGING)'=='true'">
+    <ProjectReference Include="..\..\vendor\libtiff\build\libtiff.vcxproj" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(RWLIB_INCLUDE_TIFF_IMAGING)'=='true'">
+    <IncludePath>../../vendor/libtiff/libtiff/;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_DDS_NATIVEIMG)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_DDS_NATIVEIMG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_PVR_NATIVEIMG)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_PVR_NATIVEIMG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_LIBIMAGEQUANT)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_LIBIMAGEQUANT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup Condition="'$(RWLIB_INCLUDE_LIBIMAGEQUANT)'=='true'">
+    <ProjectReference Include="..\..\vendor\libimagequant\build\libimagequant.vcxproj" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(RWLIB_INCLUDE_LIBIMAGEQUANT)'=='true'">
+    <IncludePath>../../vendor/libimagequant/include/;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_INCLUDE_FRAMEWORK_ENTRYPOINTS)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_INCLUDE_FRAMEWORK_ENTRYPOINTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_ENABLE_PS2GSTRACE)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_ENABLE_PS2GSTRACE;RWLIB_PS2GSTRACE_TYPE_$(RWLIB_PS2GSTRACE_TYPE);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_RESINIT_DISABLE_LOCALIZATION)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>RWLIB_RESINIT_DISABLE_LOCALIZATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>_RENDERWARE_CONFIGURATION_;RWLIB_DEFAULT_REPOSITORY_DIR=LR"($(RWLIB_DEFAULT_REPOSITORY_DIR))";RWLIB_APPLICATION_ENTRYPOINT_$(RWLIB_APPLICATION_ENTRYPOINT);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(RWLIB_DISABLE_THREADING)'!='true'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../NativeExecutive/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>RWLIB_ENABLE_THREADING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup Condition="'$(RWLIB_DISABLE_THREADING)'!='true'">
+    <ProjectReference Include="..\..\..\NativeExecutive\build\NativeExecutive.vcxproj" />
+  </ItemGroup>
+</Project>

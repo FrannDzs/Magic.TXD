@@ -1,0 +1,258 @@
+﻿MAGL|1|Chinese|天朝语言|CHE|Gensokyo_Guard
+
+# language
+Lang.Lang              语言:
+Lang.Authors           by _PARAM_1
+
+# textures list        
+Main.TexInfo.Level     等级
+Main.TexInfo.Levels    等级
+Main.TexInfo.NoTex     无贴图
+Main.TexInfo.Invalid   无效
+Main.Undo              撤销
+Main.Redo              重做
+Main.Cut               剪切
+Main.Copy              复制
+Main.Paste             粘贴
+Main.Delete            删除
+Main.SelectA           选择所有
+
+# main menu            
+Main.File              文件
+Main.Edit              修改
+Main.Tools             工具
+Main.Export            导出
+Main.View              窗口
+Main.Info              信息
+
+# main menu - File     
+Main.File.New          新建
+Main.File.Open         打开
+Main.File.Save         保存
+Main.File.SaveAs       另存为……
+Main.File.Close        关闭当前项目
+Main.File.Quit         关闭
+
+# main menu - Edit   
+Main.Edit.Add          添加
+Main.Edit.Replace      替换
+Main.Edit.Remove       删除
+Main.Edit.Rename       重命名
+Main.Edit.Resize       调整大小
+Main.Edit.Modify       修改
+Main.Edit.SetupML      设置mip等级
+Main.Edit.ClearML      清除mip等级
+Main.Edit.SetupRP      渲染属性设置
+Main.Edit.SetupTV      TXD版本设置
+Main.Edit.Options      设置
+
+# Rename
+Main.Rename.Desc       贴图名称
+Main.Rename.Name       名称：
+Main.Rename.Set        设定
+Main.Rename.Cancel     取消
+
+# Resize
+Main.Resize.Desc       调整贴图大小
+Main.Resize.Width      宽：
+Main.Resize.Height     高：
+Main.Resize.Set        设定
+Main.Resize.Cancel     取消
+
+# Modify
+Modify.Desc.Add        添加贴图……
+Modify.Desc.Replace    替换贴图……
+Modify.Desc.Modify     修改贴图……
+Modify.Add             添加
+Modify.Replace         替换
+Modify.Modify          修改
+Modify.TexName         贴图名称：
+Modify.MskName         次名：
+Modify.Plat            平台：
+Modify.RasFmt          网格格式：
+Modify.Origin          原生
+Modify.RawRas          原网格
+Modify.Comp            压缩
+Modify.Pal             调色板
+Modify.PixFmt          像素格式：
+Modify.GenML           生成mipmaps
+Modify.Scaled          缩放
+Modify.Fill            填充
+Modify.Bckgr           背景
+Modify.Cancel          取消
+
+[Modify.Help.DXTNotice]
+你选择了DXT压缩。DXT是世界上纹理类型里的
+一种高效的图片压缩方式。贴图虽然在压缩过程中体积会缩小
+但是贴图质量却大为降低。所以并不建议用此来压缩GUI贴图。
+
+DXT1适用于不含有Alpha通道的贴图。
+DXT2/3 适用于有锐利的Alpha通道的贴图。
+DXT4/5 适用于有柔滑的Alpha通道的贴图。
+如果你的贴图没有Alpha通道（不透明），选择DXT1吧。
+
+请务必谨慎地选择压缩类型！
+[END]
+
+[Modify.Help.PALNotice]
+你选择了调色板模式。 图片会被筛选最重要的颜色
+并将他们放入一组数据中来调色。实际的贴图表面会含有数据且
+进入调色缓冲区，这样会大大减小图片大小。
+
+值得注意的是调色板是个旧的东西并且它并不支持很多新的技术。
+[END]
+
+# Render Props
+Main.SetupRP.Desc      渲染设置
+Main.SetupRP.Filter    过滤：
+Main.SetupRP.UAddr     U地址：
+Main.SetupRP.VAddr     V地址：
+Main.SetupRP.Set       设置
+Main.SetupRP.Cancel    取消
+
+# Setup TXD Version
+Main.SetupTV.Desc      TXD版本设置
+Main.SetupTV.Set       设置
+Main.SetupTV.Plat      平台
+Main.SetupTV.Data      数据类型
+Main.SetupTV.Version   版本
+Main.SetupTV.Build     Build
+Main.SetupTV.Accept    确定
+Main.SetupTV.Cancel    取消
+Main.SetupTV.Custom    自定义
+
+# Options
+Main.Options.Desc      _MAGIC_TXD_NAME设置
+Main.Options.MainTab   主设置
+Main.Options.ShowLog   显示TXD警告日志
+Main.Options.DispIcn   显示游戏图标
+Main.Options.AdvTab    高级
+Main.Options.SerSpc    无块长度的反序列化
+Main.Options.WarnLvl   警告等级
+Main.Options.WDisabled 禁用
+Main.Options.WLow      低
+Main.Options.WMedium   中
+Main.Options.WHigh     高
+Main.Options.WAll      特么高
+Main.Options.Accept    确定
+Main.Options.Cancel    取消
+
+# main menu - Tools    
+Main.Tools.MassCnv     批量转换
+Main.Tools.MassExp     批量导出
+Main.Tools.MassBld     批量生成
+
+# main menu - Export   
+Main.Export.ExpAll     导出所有贴图
+Main.Export.Desc       导出为_PARAM_1到……
+
+# Export All
+Main.ExpAll.Desc       导出所有贴图……
+Main.ExpAll.Format     格式：
+Main.ExpAll.Export     导出
+Main.ExpAll.Cancel     取消
+Main.ExpAll.ExpTarg    选择导出文件夹
+
+# Log
+Main.Log.Desc          日志
+Main.Log.Save          保存
+Main.Log.Copy          复制
+Main.Log.CopyAll       复制所有
+Main.Log.Clear         清理
+Main.Log.Close         关闭
+Main.Log.SaveAs        另存日志为……
+
+# View   
+Main.View.FullImg      显示全图
+Main.View.Backgr       显示背景
+Main.View.DispML       显示mip等级
+Main.View.ShowLog      显示日志
+Main.View.DarkThm      暗色主题
+Main.View.LightTm      白色主题
+
+# Info     
+Main.Info.Website      咱家维基~
+Main.Info.About        关于我们~
+
+# File - Open
+Main.Open.Desc         打开TXD文件……
+
+# File - Save As
+Main.SaveAs.Desc       另存TXD为……
+
+# Edit - Add
+Main.Edit.Add.Desc     导入贴图……
+
+# About
+Main.About.Desc        关于我们
+Main.About.Credits     作者：_AUTHOR_NAME_1大大和_AUTHOR_NAME_2大大
+Main.About.ComUse1     此工具不得用于商业用途除非有对此软件作出贡献的第三方的明确而书面的授权。参见许可获取更多信息。
+Main.About.ComUse2     _MAGIC_TXD_NAME团队感谢大家的支持！
+Main.About.SpecThx     特别感谢哒:
+
+# Save changes
+[Main.SavChange.Warn]
+有未保存的更改
+现在要保存么？
+[END]
+Main.SavChange.Save    保存
+Main.SavChange.Ignore  不保存
+Main.SavChange.Cancel  取消
+Main.SavChange.Title   有未保存的更改
+
+# Tools
+Tools.Browse           浏览
+Tools.BrwDesc          浏览目录……
+Tools.GameRt           游戏目录：
+Tools.Output           输出目录：
+Tools.Plat             平台	
+Tools.Game             游戏
+Tools.GenMips          生成mipmaps
+Tools.MaxMips          最大：
+
+# Mass export
+Tools.MassExp.Desc     批量导出
+Tools.MassExp.ImgFmt   图片类型：
+Tools.MassExp.TxNmOnl  仅用贴图名称
+Tools.MassExp.PrTxdNm  预览TXD名称
+Tools.MassExp.SepFld   在单独文件夹中
+Tools.MassExp.Export   导出
+Tools.MassExp.Cancel   取消
+
+# Mass build
+Tools.MassBld.Desc     批量生成
+Tools.MassBld.Build    生成
+Tools.MassBld.Cancel   取消
+Tools.MassBld.CloseOnCmplt  完成后关闭
+Tools.MassBld.Cmprs    压缩
+Tools.MassBld.DescQual 质量
+Tools.MassBld.DoPal    调色板
+Tools.MassBld.DescPType    类型
+
+[Tools.MassBld.Welcome]
+欢迎使用批量生成工具！这玩艺儿能把一个文件夹<br>
+里面的一堆图片弄成TXD。你可以用那些文件夹里的ini文件<br>
+来看看创建过程。随机创建几个文件夹来试试吧！<br><br>
+我家维基: <a href="http://www.gtamodding.com/wiki/Magic.TXD/Build_System/" style="color: #0063b1">http://www.gtamodding.com/wiki/Magic.TXD/Build_System/</a>
+[END]
+
+# Mass convert
+Tools.MassCnv.Desc     批量转换
+Tools.MassCnv.ClearML  清除mipmaps
+Tools.MassCnv.ImpFilt  提高过滤
+Tools.MassCnv.CompTex  压缩贴图
+Tools.MassCnv.RecIMG   重建IMG
+Tools.MassCnv.CompIMG  压缩IMG
+Tools.MassCnv.Convert  转换
+Tools.MassCnv.Cancel   取消
+
+# New txd
+New.Desc               新建TXD
+New.Name               名称
+New.Create             创建
+New.Cancel             取消
+
+# Helper runtime generics.
+Helper.Confirm         好的
+Helper.Title           提示
+Helper.NotShowAgain    下次不再显示

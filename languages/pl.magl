@@ -1,0 +1,262 @@
+﻿MAGL|1|Polish|Polski|POL|barti
+
+# language
+Lang.Lang              Język:
+Lang.Authors           od _PARAM_1
+
+# textures list        
+Main.TexInfo.Level     poziom
+Main.TexInfo.Levels    poziomy
+Main.TexInfo.NoTex     Brak Tesktury
+Main.TexInfo.Invalid   nieprawidłowy
+Main.Undo              Cofnij
+Main.Redo              Powtórz
+Main.Cut               Wytnij
+Main.Copy              Kopiuj
+Main.Paste             Wklej
+Main.Delete            Usuń
+Main.SelectA           Zaznacz Wszystko
+
+# main menu            
+Main.File              Plik
+Main.Edit              Edytuj
+Main.Tools             Narzędzia
+Main.Export            Eksport
+Main.View              Widok
+Main.Info              Informacje
+
+# main menu - File     
+Main.File.New          Nowy
+Main.File.Open         Otwórz
+Main.File.Save         Zapisz
+Main.File.SaveAs       Zapisz jako...
+Main.File.Close        Zamknij ten plik
+Main.File.Quit         Wyjdź
+
+# main menu - Edit   
+Main.Edit.Add          Dodaj
+Main.Edit.Replace      Zamień
+Main.Edit.Remove       Usuń
+Main.Edit.Rename       Zmień nazwę
+Main.Edit.Resize       Zmień rozmiar
+Main.Edit.Modify       Manipuluj
+Main.Edit.SetupML      Stwórz mipmapy
+Main.Edit.ClearML      Usuń mipmapy
+Main.Edit.SetupRP      Ustaw właściwości renderowania
+Main.Edit.SetupTV      Ustaw wersję pliku TXD
+Main.Edit.Options      Opcje
+
+# Rename
+Main.Rename.Desc       Nazwa Tekstury
+Main.Rename.Name       Nazwa:
+Main.Rename.Set        Ustaw
+Main.Rename.Cancel     Anuluj
+
+# Resize
+Main.Resize.Desc       Zmień Rozmiar Tekstury
+Main.Resize.Width      Szerokość:
+Main.Resize.Height     Wysokość:
+Main.Resize.Set        Ustaw
+Main.Resize.Cancel     Anuluj
+
+# Modify
+Modify.Desc.Add        Dodaj teksturę...
+Modify.Desc.Replace    Zamień teksturę...
+Modify.Desc.Modify     Modyfikuj teksturę...
+Modify.Add             Dodaj
+Modify.Replace         Zamień
+Modify.Modify          Modyfikuj
+Modify.TexName         Nazwa Tekstury:
+Modify.MskName         Nazwa Maski:
+Modify.Plat            Platforma:
+Modify.RasFmt          Format Rastru:
+Modify.Origin          Oryginalny
+Modify.RawRas          Nieskompresowany
+Modify.Comp            Skompresowany
+Modify.Pal             Spaletyzowany
+Modify.PixFmt          Format Pikseli:
+Modify.GenML           Generuj mipmapy
+Modify.Scaled          Skaluj
+Modify.Fill            Wypełnij
+Modify.Bckgr           Tło
+Modify.Cancel          Anuluj
+
+[Modify.Help.DXTNotice]
+Wybrałeś kompresję DXT. Kompresja DXT jest bardzo wydajna dla tekstur
+scenerii. Tekstury w formacie DXT zajmują zdecydownaie mniej miejsca,
+ale zauważalnie degradują jakość obrazu. Zaleca się aby NIE kompresować
+tekstur interfejsu graficznego.
+
+DXT1 jest najlepszy dla tekstur wycinających regiony kanałem alfa.
+DXT2/3 są najlepsze dla tekstur z ostrym kanałem alfa.
+DXT4/5 są najlepsze dla tekstur z gładkim kanałem alfa.
+Jeśli twoja tekstura nie ma kanału alfa, wybierz DXT1.
+
+Zwróć uwagę na odpowiedni dobór kompresji dla danej tekstury!
+[END]
+
+[Modify.Help.PALNotice]
+Wybrałeś format z paletą. Proces paletyzowania wybiera z obrazu
+najbardziej szczególne kolory i umieszcza je w tablicy. Powierzchnia
+tekstury zawiera tylko odwołania do konkretnych kolorów, co znacząco
+zmniejsza rozmiar tekstury.
+
+Należy pamiętać, że formaty spaletyzowane są starą technologią i mogą
+nie być wspierane przez współczesny sprzęt.
+[END]
+
+# Render Props
+Main.SetupRP.Desc      Właściwości Renderowania
+Main.SetupRP.Filter    Filtrowanie:
+Main.SetupRP.UAddr     Adresowanie U:
+Main.SetupRP.VAddr     Adresowanie V:
+Main.SetupRP.Set       Ustaw
+Main.SetupRP.Cancel    Anuluj
+
+# Setup TXD Version
+Main.SetupTV.Desc      Ustawienia Wersji TXD
+Main.SetupTV.Set       Środowisko
+Main.SetupTV.Plat      Platforma
+Main.SetupTV.Data      Typ Danych
+Main.SetupTV.Version   Wersja
+Main.SetupTV.Build     Build
+Main.SetupTV.Accept    Akceptuj
+Main.SetupTV.Cancel    Anuluj
+Main.SetupTV.Custom    Własne
+
+# Options
+Main.Options.Desc      Ustawienia _MAGIC_TXD_NAME
+Main.Options.MainTab   Główne
+Main.Options.ShowLog   Wyświetl log TXD przy ostrzeżeniu
+Main.Options.DispIcn   Wyświetl ikonę gry
+Main.Options.AdvTab    Zaawansowane
+Main.Options.SerSpc    Przetwarzaj dane bez długości bloków
+Main.Options.WarnLvl   Poziom ostrzeżeń
+Main.Options.WDisabled wyłączony
+Main.Options.WLow      niski
+Main.Options.WMedium   średni
+Main.Options.WHigh     wysoki
+Main.Options.WAll      wszystkie
+Main.Options.Accept    Akceptuj
+Main.Options.Cancel    Anuluj
+
+# main menu - Tools    
+Main.Tools.MassCnv     Masowa konwersja
+Main.Tools.MassExp     Masowy eksport
+Main.Tools.MassBld     Masowa budowa
+
+# main menu - Export   
+Main.Export.ExpAll     Eksportuj wszystkie
+Main.Export.Desc       Zapisz _PARAM_1 jako...
+
+# Export All
+Main.ExpAll.Desc       Eksportuj wszystkie tekstury...
+Main.ExpAll.Format     Format:
+Main.ExpAll.Export     Eksportuj
+Main.ExpAll.Cancel     Anuluj
+Main.ExpAll.ExpTarg    Wybierz miejsce docelowe eksportu...
+
+# Log
+Main.Log.Desc          Log
+Main.Log.Save          Zapisz
+Main.Log.Copy          Kopiuj
+Main.Log.CopyAll       Kopiuj Wszystko
+Main.Log.Clear         Wyczyść
+Main.Log.Close         Zamknij
+Main.Log.SaveAs        Zapisz Log jako...
+
+# View   
+Main.View.FullImg      Pokaż cały obraz
+Main.View.Backgr       Tło
+Main.View.DispML       Wyświetl mipmapy
+Main.View.ShowLog      Pokaż log
+Main.View.DarkThm      Ciemny motyw
+Main.View.LightTm      Jasny motyw
+
+# Info     
+Main.Info.Website      Strona internetowa
+Main.Info.About        O programie
+
+# File - Open
+Main.Open.Desc         Otwórz plik TXD...
+
+# File - Save As
+Main.SaveAs.Desc       Zapisz plik TXD jako...
+
+# Edit - Add
+Main.Edit.Add.Desc     Importuj teksturę...
+
+# About
+Main.About.Desc        O nas
+Main.About.Credits     stworzony przez _AUTHOR_NAME_1 i _AUTHOR_NAME_2
+Main.About.ComUse1     To narzędzie NIE MOŻE być wykorzystywane w celach komercyjnych bez wyraźnej, pisemnej zgody wszystkich osób trzecich które przyczyniły się do powstania tego narzędzia. Przeczytaj licencje aby uzyskać więcej szczegółów.
+Main.About.ComUse2     Zespół _MAGIC_TXD_NAME z chęcią przyjmie twoje wsparcie!
+Main.About.SpecThx     Specjalne podziękowania dla:
+
+# Save changes
+[Main.SavChange.Warn]
+W otwartym pliku TXD są niezapisane zmiany.
+Chcesz zapisać je teraz?
+[END]
+Main.SavChange.Save    Zapisz
+Main.SavChange.Ignore  Ignoruj
+Main.SavChange.Cancel  Anuluj
+Main.SavChange.Title   Niezapisane zmiany
+
+# Tools
+Tools.Browse           Przeglądaj
+Tools.BrwDesc          Przeglądaj Katalog...
+Tools.GameRt           Katalog Gry:
+Tools.Output           Katalog Wyjścia:
+Tools.Plat             Platforma
+Tools.Game             Gra
+Tools.GenMips          Generuj mipmapy
+Tools.MaxMips          Maks:
+
+# Mass export
+Tools.MassExp.Desc     Masowy Eksport
+Tools.MassExp.ImgFmt   Format obrazu:
+Tools.MassExp.TxNmOnl  tylko z nazwą tekstury
+Tools.MassExp.PrTxdNm  poprzedź nazwą TXD
+Tools.MassExp.SepFld   w osobnych folderach
+Tools.MassExp.Export   Eksportuj
+Tools.MassExp.Cancel   Anuluj
+
+# Mass build
+Tools.MassBld.Desc     Masowa budowa
+Tools.MassBld.Build    Buduj
+Tools.MassBld.Cancel   Anuluj
+Tools.MassBld.CloseOnCmplt  Zamknij po zakończeniu
+Tools.MassBld.Cmprs    Kompresuj
+Tools.MassBld.DescQual Jakość
+Tools.MassBld.DoPal    Spaletyzowany
+Tools.MassBld.DescPType    Typ
+
+[Tools.MassBld.Welcome]
+Witaj w narzędziu Masowej Budowy! To narzędzie tworzy pliki TXD z obrazów<br>
+znajdujących się w hierarchii folderów. Możesz użyć plików INI w tych folderach<br>
+aby sprecyzować proces budowania. Spróbuj zbudować kilka losowo wybranych<br>
+folderów i zaobserwuj rezultaty!<br><br>
+Wiki: <a href="http://www.gtamodding.com/wiki/Magic.TXD/Build_System/" style="color: #0063b1">http://www.gtamodding.com/wiki/Magic.TXD/Build_System/</a>
+[END]
+
+# Mass convert
+Tools.MassCnv.Desc     Masowa konwersja
+Tools.MassCnv.ClearML  Wyczyść mipmapy
+Tools.MassCnv.ImpFilt  Popraw filtrowanie
+Tools.MassCnv.CompTex  Kompresuj tekstury
+Tools.MassCnv.RecIMG   Odbuduj archiwa IMG
+Tools.MassCnv.CompIMG  Kompresuj IMG
+Tools.MassCnv.Convert  Konwertuj
+Tools.MassCnv.Cancel   Anuluj
+
+# New txd
+New.Desc               Stwórz nowy plik TXD
+New.Name               Nazwa
+New.Create             Stwórz
+New.Cancel             Anuluj
+
+# Helper runtime generics.
+Helper.Confirm         OK
+Helper.Title           Uwaga
+Helper.NotShowAgain    Nie pokazuj tej wiadomości

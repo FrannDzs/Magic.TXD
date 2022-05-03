@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectSchemaDefinitions  xmlns="http://schemas.microsoft.com/build/2009/properties"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <Rule Name="natexec_config" PageTemplate="generic" DisplayName="Custom Lib Config">
+        <Rule.Categories>
+            <Category Name="natexec_main" DisplayName="Main Configuration" />
+            <Category Name="natexec_dbgheap" DisplayName="DebugHeap Configuration" />
+            <Category Name="natexec_pthreads" DisplayName="pthreads Configuration" />
+        </Rule.Categories>
+        <Rule.DataSource>
+            <DataSource Persistence="UserFile" ItemType="" />
+        </Rule.DataSource>
+        <BoolProperty Name="NATEXEC_DISABLE_NATIVE_IMPL" Category="natexec_main" IsRequired="true">
+            <BoolProperty.DisplayName>
+                <sys:String>Disable native implementation</sys:String>
+            </BoolProperty.DisplayName>
+            <BoolProperty.Description>
+                <sys:String>Where possible, the native platform implementation is disabled in favor of NativeExecutive software implementations. This should be used if you do not trust the native implementation.</sys:String>
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="NATEXEC_FIRST_ENTRY_POINT" Category="natexec_main" IsRequired="true">
+            <BoolProperty.DisplayName>
+                <sys:String>Compile with first-entry-point</sys:String>
+            </BoolProperty.DisplayName>
+            <BoolProperty.Description>
+                <sys:String>Exports a symbol called "_native_executive_fep" that should be used as entry point to the program. If used, then the global memory allocator override can properly work. Initialization of the module is well defined.</sys:String>
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="NATEXEC_GLOBALMEM_OVERRIDE" Category="natexec_main" IsRequired="true">
+            <BoolProperty.DisplayName>
+                <sys:String>Override global memory</sys:String>
+            </BoolProperty.DisplayName>
+            <BoolProperty.Description>
+                <sys:String>All calls to global memory allocators (malloc, realloc, free, calloc, etc) are overriden with NativeExecutive memory allocation. Thread safety is guarranteed across all platforms.</sys:String>
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="NATEXEC_LOG_GLOBAL_ALLOC" Category="natexec_main" IsRequired="true">
+            <BoolProperty.DisplayName>
+                <sys:String>Global memory logging</sys:String>
+            </BoolProperty.DisplayName>
+            <BoolProperty.Description>
+                <sys:String>Puts global memory calls into logs (console for example) so that they can be debugged.</sys:String>
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="NATEXEC_EXCEPTION_COPYPUSH" Category="natexec_main" IsRequired="true">
+            <BoolProperty.DisplayName>
+                <sys:String>Smart exception forwarding</sys:String>
+            </BoolProperty.DisplayName>
+            <BoolProperty.Description>
+                <sys:String>Enables smart exception forwarding for fibers, so that the exact exception type is forwarded across yield and termination. Results in more usage of global memory allocators (depending on compiler implementation).</sys:String>
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="NATEXEC_NO_HEAPPTR_VERIFY" Category="natexec_main" IsRequired="true">
+            <BoolProperty.DisplayName>No heap-pointer verify</BoolProperty.DisplayName>
+            <BoolProperty.Description>
+                Disables the heap-pointer verification on every heap-redirector call to speed up debugging. Do only enable this if you are certain that no invalid heap pointers are used.
+            </BoolProperty.Description>
+        </BoolProperty>
+        <EnumProperty Name="NATEXEC_FEP_TYPE" Category="natexec_main" IsRequired="true">
+            <EnumProperty.DisplayName>FEP Type</EnumProperty.DisplayName>
+            <EnumProperty.Description>
+                Sets the entry-point signature type to be exported by NativeExecutive. This has to match the DLL/EXE requirement.
+            </EnumProperty.Description>
+            <EnumProperty.AdmissibleValues>
+                <EnumValue Name="main" DisplayName="main" />
+                <EnumValue Name="WinMain" DisplayName="WinMain" />
+                <EnumValue Name="DllMain" DisplayName="DllMain" />
+            </EnumProperty.AdmissibleValues>
+        </EnumProperty>
+        <BoolProperty Name="USE_HEAP_DEBUGGING" Category="natexec_dbgheap" IsRequired="true" DisplayName="Use Heap Debugging">
+            <BoolProperty.Description>
+                Enables the heap debugger. The global memory allocators are overloaded, so
+                that the memory allocations are monitored. When the module terminates, all its
+                memory is free'd. Requirement for DebugHeap to function.
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="USE_FULL_PAGE_HEAP" Category="natexec_dbgheap" IsRequired="true" DisplayName="Use Full Page Heap">
+            <BoolProperty.Description>
+                Enables full-page heap debugging. This option enables you to catch very crusty
+                memory corruption issues (heavy out-of-bounds read/writes, buffer overflows, ...).
+                For that the Windows Heap management is skipped. VirtualAlloc is used for every
+                memory allocation, so that objects reside on their own pages.
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="PAGE_HEAP_INTEGRITY_CHECK" Category="natexec_dbgheap" IsRequired="true" DisplayName="Page Heap Integrity Check">
+            <BoolProperty.Description>
+                The memory is guarded by checksums on the object intro and outro regions and the
+                remainder of the page is filled with a pattern. Once the memory is free'd or a
+                validation is requested, the checksums and the pattern are checked using MEM_INTERRUPT.
+
+                You have to enable this option if page heap memory should be free'd on termination.
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="PAGE_HEAP_MEMORY_STATS" Category="natexec_dbgheap" IsRequired="true" DisplayName="Page Heap Memory Stats">
+            <BoolProperty.Description>
+                Once the module terminates, all leaked memory is counted and free'd. Statistics
+                are printed using OutputDebugString. This option only works with PAGE_HEAP_INTEGRITY_CHECK.
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="USE_HEAP_STACK_TRACE" Category="natexec_dbgheap" IsRequired="true" DisplayName="Use Heap Stack Trace">
+            <BoolProperty.Description>
+                Performs a stacktrace for every allocation made. This setting is useful to track down complicated
+                memory leak situations. Use this only in very controlled scenarios, since it can use a lot of memory.
+            </BoolProperty.Description>
+        </BoolProperty>
+        <BoolProperty Name="NATEXEC_ENABLE_PTHREADS_IMPLEMENTATION" Category="natexec_pthreads" IsRequired="true" DisplayName="Enable pthreads">
+            <BoolProperty.Description>
+                Enables the pthreads implementation that is offered by NativeExecutive. This will override any pthreads system libraries. On certain architectures the compiler
+                might even report warnings if you do not disable the system implementation. Not required on Windows unless you have code that relies on pthreads API.
+            </BoolProperty.Description>
+        </BoolProperty>
+        <IntProperty Name="NATEXEC_PTHREADS_DEFAULT_STACKSIZE" Category="natexec_pthreads" IsRequired="true" DisplayName="pthreads default stacksize">
+            <IntProperty.Description>
+                Sets the default stacksize that is assigned to pthreads created through NativeExecutive. Adjust this value if you feel like performance problems are rooted in the
+                provided stack size. Under some implementations there may be no stack growth implemented thus you might have to adjust this value to prevent crashes.
+            </IntProperty.Description>
+        </IntProperty>
+    </Rule>
+</ProjectSchemaDefinitions>

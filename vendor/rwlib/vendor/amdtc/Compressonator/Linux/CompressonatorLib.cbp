@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="CompressonatorLib" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../Build/Linux/Debug/CompressonatorLib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../Build/Linux/Temp/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-D_DEBUG" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="../Build/Linux/Release/CompressonatorLib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../Build/Linux/Temp/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wno-conversion-null" />
+			<Add option="-Wno-class-memaccess" />
+			<Add option="-Wno-unused-variable" />
+			<Add option="-Wno-unknown-pragmas" />
+			<Add option="-Wno-switch" />
+			<Add option="-Wno-sign-compare" />
+			<Add option="-Wno-unused-value" />
+			<Add option="-Wno-unused-but-set-variable" />
+			<Add option="-Wno-parentheses" />
+			<Add option="-Wno-shift-overflow" />
+			<Add option="-Wno-write-strings" />
+			<Add directory="../CMP_CompressonatorLib" />
+			<Add directory="../CMP_CompressonatorLib/ASTC" />
+			<Add directory="../CMP_CompressonatorLib/ASTC/ARM" />
+			<Add directory="../CMP_CompressonatorLib/ATC" />
+			<Add directory="../CMP_CompressonatorLib/ATI" />
+			<Add directory="../CMP_CompressonatorLib/BASIS" />
+			<Add directory="../CMP_CompressonatorLib/BC6H" />
+			<Add directory="../CMP_CompressonatorLib/BC7" />
+			<Add directory="../CMP_CompressonatorLib/Block" />
+			<Add directory="../CMP_CompressonatorLib/Buffer" />
+			<Add directory="../CMP_CompressonatorLib/Common" />
+			<Add directory="../CMP_CompressonatorLib/DXT" />
+			<Add directory="../CMP_CompressonatorLib/DXTC" />
+			<Add directory="../CMP_CompressonatorLib/ETC" />
+			<Add directory="../CMP_CompressonatorLib/ETC/etcpack" />
+			<Add directory="../CMP_CompressonatorLib/GT" />
+			<Add directory="../CMP_Framework/Common" />
+			<Add directory="../CMP_Framework/Common/half" />
+		</Compiler>
+		<UnitsGlob directory="../CMP_CompressonatorLib" recursive="1" wildcard="*.cpp" />
+		<UnitsGlob directory="../CMP_CompressonatorLib" recursive="1" wildcard="*.cxx" />
+		<UnitsGlob directory="../CMP_CompressonatorLib" recursive="1" wildcard="*.c" />
+		<UnitsGlob directory="../CMP_CompressonatorLib" recursive="0" wildcard="*.h" />
+		<UnitsGlob directory="..\CMP_Framework\Common\half" recursive="1" wildcard="*.cpp" />
+		<UnitsGlob directory="..\CMP_Framework\Common\half" recursive="1" wildcard="*.h" />
+		<Unit filename="../Applications/_Plugins/Common/ATIFormats.cpp" />
+		<Unit filename="../Applications/_Plugins/Common/ATIFormats.h" />
+		<Unit filename="../CMP_Framework/Common/CMP_MIPS.cpp" />
+		<Unit filename="../CMP_Framework/Common/CMP_MIPS.h" />
+		<Unit filename="../CMP_Framework/Common/HDR_Encode.cpp" />
+		<Unit filename="../CMP_Framework/Common/HDR_Encode.h" />
+		<Unit filename="../CMP_Framework/Common/half/half.cpp" />
+		<Unit filename="../CMP_Framework/Common/half/half.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

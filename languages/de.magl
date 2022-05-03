@@ -1,0 +1,266 @@
+﻿MAGL|1|German|Deutsch|GER|Magic.TXD Team
+
+# translated by The_GTA (http://gtaforums.com/user/757437-the-gta/)
+
+# language
+Lang.Lang              Sprache:
+Lang.Authors           von _PARAM_1
+
+# textures list        
+Main.TexInfo.Level     Fläche
+Main.TexInfo.Levels    Flächen
+Main.TexInfo.NoTex     Keine Farbinformationen
+Main.TexInfo.Invalid   ungültig
+Main.Undo              Rückgängig
+Main.Redo              Wiederherstellen
+Main.Cut               Ausschneiden
+Main.Copy              Kopieren
+Main.Paste             Einfügen
+Main.Delete            Löschen
+Main.SelectA           Alles auswählen
+
+# main menu            
+Main.File              Datei
+Main.Edit              Bearbeite
+Main.Tools             Werkzeuge
+Main.Export            Export
+Main.View              Ansicht
+Main.Info              Info
+
+# main menu - File     
+Main.File.New          Neu
+Main.File.Open         Öffnen
+Main.File.Save         Speichern
+Main.File.SaveAs       Speichern als...
+Main.File.Close        Schließe
+Main.File.Quit         Beenden
+
+# main menu - Edit   
+Main.Edit.Add          Hinzufügen
+Main.Edit.Replace      Ersetzen
+Main.Edit.Remove       Löschen
+Main.Edit.Rename       Umbenennen
+Main.Edit.Resize       Größe ändern
+Main.Edit.Modify       Verwalten
+Main.Edit.SetupML      Setze Unterflächen auf
+Main.Edit.ClearML      Entferne Unterflächen
+Main.Edit.SetupRP      Darstellungsoptionen
+Main.Edit.SetupTV      Setze Version
+Main.Edit.Options      Einstellungen
+
+# Rename
+Main.Rename.Desc       Name der Fläche
+Main.Rename.Name       Name:
+Main.Rename.Set        Setzen
+Main.Rename.Cancel     Abbrechen
+
+# Resize
+Main.Resize.Desc       Größe der Farbfläche
+Main.Resize.Width      Breite:
+Main.Resize.Height     Höhe:
+Main.Resize.Set        Setzen
+Main.Resize.Cancel     Abbrechen
+
+# Modify
+Modify.Desc.Add        Farbfläche hinzufügen...
+Modify.Desc.Replace    Farbfläche ersetzen...
+Modify.Desc.Modify     Farbfläche verwalten...
+Modify.Add             Hinzufügen
+Modify.Replace         Ersetzen
+Modify.Modify          Ändern
+Modify.TexName         Name der Fläche:
+Modify.MskName         Name der Maske:
+Modify.Plat            Architektur:
+Modify.RasFmt          Gitterformat:
+Modify.Origin          Ursprung
+Modify.RawRas          Normalgitter
+Modify.Comp            komprimiert
+Modify.Pal             farbreduziert
+Modify.PixFmt          Pixelformat:
+Modify.GenML           Generiere Unterflächen
+Modify.Scaled          Skaliert
+Modify.Fill            Gefüllt
+Modify.Bckgr           Hintergrund
+Modify.Cancel          Abbrechen
+
+[Modify.Help.DXTNotice]
+Du hast DXT Komprimierung ausgewählt. Sie ist besonders gut geeignet,
+um Welttexturen zu speichern. DXT Texturen nehmen nur einen Bruchteil der
+Größe des Originalbildes ein, vermindern jedoch die Bildqualität beträchtlich.
+Auf KEINEN Fall solltest du GUI Bilder hiermit abspeichern.
+
+DXT1 ist gut für Texturen mit ausgeschnittenem Hintergrund.
+DXT2/3 ist gut für Texturen mit scharfer Transparenz.
+DXT4/5 ist gut für Texturen mit weicher Transparenz.
+Bei keiner Transparenz wähle DXT1 aus.
+
+Denke zweimal nach bevor du Texturen komprimierst und welchen Typ du nutzt!
+[END]
+
+[Modify.Help.PALNotice]
+Du hast Farbredduktion ausgewählt. Bilder werden farbreduziert, indem
+die wichtigsten Farben des Bildes in einen Array gepackt werden. Dann
+besteht die eigentliche Bildfläche nur aus Indizes in diesen Array,
+sodass die Textur viel kleiner ausfällt.
+
+Farbreduktion ist eine veraltete Technology die moderne Grafikkarten
+nicht mehr unterstützen.
+[END]
+
+# Render Props
+Main.SetupRP.Desc      Darstellungsoptionen
+Main.SetupRP.Filter    Filterung:
+Main.SetupRP.UAddr     U Addressierung:
+Main.SetupRP.VAddr     V Addressierung:
+Main.SetupRP.Set       Setzen
+Main.SetupRP.Cancel    Abbrechen
+
+# Setup TXD Version
+Main.SetupTV.Desc      TXD Version Setup
+Main.SetupTV.Set       Umgebung
+Main.SetupTV.Plat      Architektur
+Main.SetupTV.Data      Datentyp
+Main.SetupTV.Version   Version
+Main.SetupTV.Build     Baunummer
+Main.SetupTV.Accept    Nehmen
+Main.SetupTV.Cancel    Abbrechen
+Main.SetupTV.Custom    Anders
+
+# Options
+Main.Options.Desc      _MAGIC_TXD_NAME Einstellungen
+Main.Options.MainTab   Haupt
+Main.Options.ShowLog   Zeige das Protokol bei einer Warnung
+Main.Options.DispIcn   Stelle Spielsymbole dar
+Main.Options.AdvTab    Fortgeschritten
+Main.Options.SerSpc    Datenverarbeitung ohne Blocklängen
+Main.Options.WarnLvl   Warnstufe
+Main.Options.WDisabled aus
+Main.Options.WLow      gering
+Main.Options.WMedium   mitte
+Main.Options.WHigh     hoch
+Main.Options.WAll      alles
+Main.Options.Accept    Accept
+Main.Options.Cancel    Cancel
+Main.Options.Accept    Annehmen
+Main.Options.Cancel    Verwerfen
+
+# main menu - Tools    
+Main.Tools.MassCnv     Massenkonverter
+Main.Tools.MassExp     Massenextrahierer
+Main.Tools.MassBld     Massenerbauer
+
+# main menu - Export   
+Main.Export.ExpAll     Alle exportieren
+Main.Export.Desc       Speichere _PARAM_1 als...
+
+# Export All
+Main.ExpAll.Desc       Extrahiere alle Flächen...
+Main.ExpAll.Format     Format:
+Main.ExpAll.Export     Export
+Main.ExpAll.Cancel     Schießen
+Main.ExpAll.ExpTarg    Wähle Zielformat...
+
+# Log
+Main.Log.Desc          Protokoll
+Main.Log.Save          Speichern
+Main.Log.Copy          Kopiere
+Main.Log.CopyAll       Alles kopieren
+Main.Log.Clear         Säubern
+Main.Log.Close         Schließen
+Main.Log.SaveAs        Speicher Protokoll als...
+
+# View   
+Main.View.FullImg      Zeige Gesamtbild
+Main.View.Backgr       Hintergrund
+Main.View.DispML       Stelle Unterflächen dar
+Main.View.ShowLog      Protokoll zeigen
+Main.View.DarkThm      Dunkle Theme
+Main.View.LightTm      Helle Theme
+
+# Info     
+Main.Info.Website      Webseite
+Main.Info.About        Über uns
+
+# File - Open
+Main.Open.Desc         Öffne TXD Datei...
+
+# File - Save As
+Main.SaveAs.Desc       Speichere TXD als...
+
+# Edit - Add
+Main.Edit.Add.Desc     Importiere Farbfläche...
+
+# About
+Main.About.Desc        Über uns
+Main.About.Credits     erstellt von _AUTHOR_NAME_1 und _AUTHOR_NAME_2
+Main.About.ComUse1     Dieses Programm darf NICHT ohne Erlaubnis aller Parteien, die an der Erstellung mitgewirkt haben, kommerziell verwendet werden. Siehe die Lizensdokumente für weitere Informationen (auf Englisch).
+Main.About.ComUse2     Das _MAGIC_TXD_NAME Team freut sich auf deine Zusammenarbeit!
+Main.About.SpecThx     Besonderen Dank an:
+
+# Save changes
+[Main.SavChange.Warn]
+Es befinden sich ungespeicherte Änderungen in dem offenen TXD Archiv.
+Möchtest du speichern?
+[END]
+Main.SavChange.Save    Speichern
+Main.SavChange.Ignore  Verwerfen
+Main.SavChange.Cancel  Abbrechen
+Main.SavChange.Title   Ungespeicherte Änderungen
+
+# Tools
+Tools.Browse           Stöbern
+Tools.BrwDesc          Zielordner auswählen...
+Tools.GameRt           Spielpfad:
+Tools.Output           Ausgabepfad:
+Tools.Plat             Architektur
+Tools.Game             Spiel
+Tools.GenMips          Generiere Unterflächen
+Tools.MaxMips          Max:
+
+# Mass export
+Tools.MassExp.Desc     Massenextrahierung
+Tools.MassExp.ImgFmt   Bildformat:
+Tools.MassExp.TxNmOnl  nur mit Flächennamen
+Tools.MassExp.PrTxdNm  vorgeschobener TXD-Name
+Tools.MassExp.SepFld   in einzelne Ordner
+Tools.MassExp.Export   Export
+Tools.MassExp.Cancel   Abbrechen
+
+# Mass build
+Tools.MassBld.Desc     Massenerbauung
+Tools.MassBld.Build    Bauen
+Tools.MassBld.Cancel   Abbrechen
+Tools.MassBld.CloseOnCmplt  Nach Beendigung schließen
+Tools.MassBld.Cmprs    Komprimiert
+Tools.MassBld.DescQual Qualität
+Tools.MassBld.DoPal    Farbreduziert
+Tools.MassBld.DescPType    Typ
+
+[Tools.MassBld.Welcome]
+Willkommen zum Massenerbauer von TXDs! Mit diesem Werkzeug erstellst du<br>
+im Handumdrehen TXD Dateien aus einer Bild-Datei-Hierarchy. Du kannst<br>
+sogar INI Dateien in den Ordnern benutzen, um den Bauprozess speziell<br>
+auf deine Bedürfnisse zuzuschneiden.<br><br>
+Wiki: <a href="http://www.gtamodding.com/wiki/Magic.TXD/Build_System/" style="color: #0063b1">http://www.gtamodding.com/wiki/Magic.TXD/Build_System/</a>
+[END]
+
+# Mass convert
+Tools.MassCnv.Desc     Massenkonvertierung
+Tools.MassCnv.ClearML  Lösche Unterflächen
+Tools.MassCnv.ImpFilt  Verbessere Filterung
+Tools.MassCnv.CompTex  Komprimiere Farbflächen
+Tools.MassCnv.RecIMG   Stelle IMG wieder her
+Tools.MassCnv.CompIMG  Komprimiere IMG
+Tools.MassCnv.Convert  Konvertieren
+Tools.MassCnv.Cancel   Abbrechen
+
+# New txd
+New.Desc               Neue TXD Erstellen
+New.Name               Archivname
+New.Create             Erstelle
+New.Cancel             Abbrechen
+
+# Helper runtime generics.
+Helper.Confirm         OK
+Helper.Title           Nachricht
+Helper.NotShowAgain    Nicht nochmal zeigen

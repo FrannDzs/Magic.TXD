@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="LIBPNG Workspace">
+		<Project filename="libpng.cbp">
+			<Depends filename="../../zlib/build/zlib.cbp" />
+		</Project>
+		<Project filename="../../zlib/build/zlib.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

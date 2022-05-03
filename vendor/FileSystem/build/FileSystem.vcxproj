@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6E793DA8-5641-4BBB-BCB0-43BF10682E14}</ProjectGuid>
+    <RootNamespace>FileSystem</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <ImportGroup>
+    <Import Project="defaults.props" />
+    <Import Project="$(ProjectDir)../../_repoconfig/$(ProjectName).props" Condition="Exists('$(ProjectDir)../../_repoconfig/$(ProjectName).props')" />
+  </ImportGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="customprops.xml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <OutDir>$(ProjectDir)..\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\obj\$(Platform)_$(Configuration)_$(PlatformToolset)\</IntDir>
+    <TargetName>libfs</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../src/;../include/;../../eirrepo/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../src/;../include/;../../eirrepo/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../src/;../include/;../../eirrepo/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../src/;../include/;../../eirrepo/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\CFileSystem.common.alloc.h" />
+    <ClInclude Include="..\include\CFileSystem.common.datautil.h" />
+    <ClInclude Include="..\include\CFileSystem.common.filePath.h" />
+    <ClInclude Include="..\include\CFileSystem.common.h" />
+    <ClInclude Include="..\include\CFileSystem.common.stl.h" />
+    <ClInclude Include="..\include\CFileSystem.DiskManager.h" />
+    <ClInclude Include="..\include\CFileSystem.h" />
+    <ClInclude Include="..\include\CFileSystem.img.h" />
+    <ClInclude Include="..\include\CFileSystem.img.public.h" />
+    <ClInclude Include="..\include\CFileSystem.pathlogic.h" />
+    <ClInclude Include="..\include\CFileSystem.qol.h" />
+    <ClInclude Include="..\include\CFileSystem.rwcb.h" />
+    <ClInclude Include="..\include\CFileSystem.zip.h" />
+    <ClInclude Include="..\include\CFileSystem.zip.public.h" />
+    <ClInclude Include="..\include\CFileSystemInterface.h" />
+    <ClInclude Include="..\src\CFileSystem.lock.hxx" />
+    <ClInclude Include="..\src\CFileSystem.Utils.hxx" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.config.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.FileDataPresence.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.img.internal.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.img.serialize.hxx" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.internal.common.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.internal.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.internal.lockutil.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.internal.nativeimpl.hxx" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.internal.repo.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.native.win32.hxx" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.platform.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.platformutils.hxx" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.ramdisk.internal.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.random.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.rtvars.hxx" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.stream.buffered.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.stream.chunkbuf.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.stream.memory.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.stream.raw.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.translator.pathutil.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.translator.scanutil.hxx" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.translator.system.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.translator.widewrap.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.vfs.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.zip.internal.h" />
+    <ClInclude Include="..\src\fsinternal\CFileSystem.zip.utils.hxx" />
+    <ClInclude Include="..\src\StdInc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\CFileSystem.cpp" />
+    <ClCompile Include="..\src\CFileSystem.img.cpp" />
+    <ClCompile Include="..\src\CFileSystem.zip.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.config.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.DiskManager.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.FileDataPresence.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.img.translator.compress.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.img.translator.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.memory.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.native.win32.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.ramdisk.translator.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.random.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.stream.buffered.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.stream.fixedbuf.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.stream.memory.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.stream.raw.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.stream.rwcb.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.translator.pathutil.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.translator.system.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.translator.system.linux.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.translator.system.win32.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.translator.widewrap.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.vfs.cpp" />
+    <ClCompile Include="..\src\fsinternal\CFileSystem.zip.translator.cpp" />
+    <ClCompile Include="..\src\main.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\eirrepo\sdk\DynamicTypeSystem.natvis" />
+    <Natvis Include="..\..\eirrepo\sdk\Endian.natvis" />
+    <Natvis Include="..\..\eirrepo\sdk\FixedString.natvis" />
+    <Natvis Include="..\..\eirrepo\sdk\Map.natvis" />
+    <Natvis Include="..\..\eirrepo\sdk\MemoryUtils.natvis" />
+    <Natvis Include="..\..\eirrepo\sdk\MultiString.natvis" />
+    <Natvis Include="..\..\eirrepo\sdk\Set.natvis" />
+    <Natvis Include="..\..\eirrepo\sdk\String.natvis" />
+    <Natvis Include="..\..\eirrepo\sdk\Vector.natvis" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="Exists('$(ProjectDir)../../NativeExecutive/')=='true' AND $(FILESYS_MULTI_THREADING)=='true'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../NativeExecutive/include/NativeExecutive/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>FILESYS_MULTI_THREADING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>Setupapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup Condition="Exists('$(ProjectDir)../../NativeExecutive/')=='true' AND $(FILESYS_MULTI_THREADING)=='true'">
+    <ProjectReference Include="..\..\NativeExecutive\build\NativeExecutive.vcxproj" />
+  </ItemGroup>
+  <!-- Automatically detect presence of zlib/lzo and enable those components if necessary !-->
+  <ItemDefinitionGroup Condition="Exists('$(ProjectDir)../../zlib/')=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);FILESYS_ENABLE_ZIP</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../zlib/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup Condition="Exists('$(ProjectDir)../../zlib/')=='true'">
+    <ProjectReference Include="..\..\zlib\build\zlib.vcxproj" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="Exists('$(ProjectDir)../../lzo-2.08/')=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);FILESYS_ENABLE_LZO</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../lzo-2.08/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies);lzo2_$(PlatformToolset)</AdditionalDependencies>
+      <AdditionalDependencies Condition="$(Platform)=='x64'">%(AdditionalDependencies)_x64</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies).lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\lzo-2.08\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(FILESYS_DEFAULT_ENABLE_RAWFILE_BUFFERING)=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>FILESYS_DEFAULT_ENABLE_RAWFILE_BUFFERING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

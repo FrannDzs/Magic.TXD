@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectSchemaDefinitions  xmlns="http://schemas.microsoft.com/build/2009/properties"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    
+    <Rule Name="zlib_config" PageTemplate="generic" DisplayName="Custom Lib Config">
+        <Rule.Categories>
+            <Category Name="zlib_main" DisplayName="General" />
+        </Rule.Categories>
+        <Rule.DataSource>
+            <DataSource Persistence="UserFile" ItemType="" />
+        </Rule.DataSource>
+        <BoolProperty Name="Z_SOLO_NOMEMHLP" Category="zlib_main"
+            DisplayName="Exclude memory helpers"
+            Description="Remove any memory allocator SOLO definitions from the library (Patch by The_GTA). Can be used to include memory helpers for a SOLO build." />
+    </Rule>
+    
+</ProjectSchemaDefinitions>

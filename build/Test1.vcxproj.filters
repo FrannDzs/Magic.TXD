@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\texadddialog.cpp" />
+    <ClCompile Include="..\src\texformatextensions.cpp" />
+    <ClCompile Include="..\src\MagicExport.cpp" />
+    <ClCompile Include="..\src\renderpropwindow.cpp" />
+    <ClCompile Include="..\src\guiserialization.cpp" />
+    <ClCompile Include="..\src\rwfswrap.cpp" />
+    <ClCompile Include="..\src\tools\txdgen.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\massconvert.cpp" />
+    <ClCompile Include="..\src\massexport.cpp" />
+    <ClCompile Include="..\src\tools\txdexport.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\aboutdialog.cpp" />
+    <ClCompile Include="..\src\optionsdialog.cpp" />
+    <ClCompile Include="..\src\txdlog.cpp" />
+    <ClCompile Include="..\src\streamcompress.cpp" />
+    <ClCompile Include="..\src\streamcompress.lzo.cpp" />
+    <ClCompile Include="..\src\friendlyicons.cpp" />
+    <ClCompile Include="..\src\streamcompress.mh2z.cpp" />
+    <ClCompile Include="..\src\guiserialization.store.cpp" />
+    <ClCompile Include="..\src\mainwindow.serialize.cpp" />
+    <ClCompile Include="..\src\exportallwindow.cpp" />
+    <ClCompile Include="..\src\massbuild.cpp" />
+    <ClCompile Include="..\src\tools\txdbuild.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\taskcompletionwindow.cpp" />
+    <ClCompile Include="..\src\textureviewport.cpp" />
+    <ClCompile Include="..\src\languages.cpp" />
+    <ClCompile Include="..\src\qtutils.cpp" />
+    <ClCompile Include="..\src\languages.common.cpp" />
+    <ClCompile Include="..\src\createtxddlg.cpp" />
+    <ClCompile Include="..\src\rwversiondialog.cpp" />
+    <ClCompile Include="..\src\rwimageimporter.cpp" />
+    <ClCompile Include="..\src\tools\configtree.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\progresslogedit.cpp" />
+    <ClCompile Include="..\src\helperruntime.cpp" />
+    <ClCompile Include="..\src\mainwindow.safety.cpp" />
+    <ClCompile Include="..\src\texnamewindow.cpp" />
+    <ClCompile Include="..\src\mainwindow.actions.cpp" />
+    <ClCompile Include="..\src/mainwindow.cpp" />
+    <ClCompile Include="..\src\qtfilesystem.cpp" />
+    <ClCompile Include="..\src\embedded_resources.cpp" />
+    <ClCompile Include="..\src\mainwindow.txdprocessing.cpp" />
+    <ClCompile Include="..\src\expensivetasks.cpp" />
+    <ClCompile Include="..\src\mainwindow.events.cpp" />
+    <ClCompile Include="..\src\mainwindow.asynclog.cpp" />
+    <ClCompile Include="..\src\mainwindow.loadinganim.cpp" />
+    <ClCompile Include="..\src\mainwindow.themes.cpp" />
+    <ClCompile Include="..\src\mainwindow.menu.cpp" />
+    <ClCompile Include="..\src\mainwindow.parallel.cpp" />
+    <ClCompile Include="..\src\mainwindow.rwplugins.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../include/styles.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="../include/texinfoitem.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\defs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MagicExport.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\texformathelper.hxx">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\magic_api\magfapi.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\magic_api\MagicFormats.h">
+      <Filter>sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\qtrwutils.hxx">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rwversiondialog.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\texnamewindow.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\renderpropwindow.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\resizewindow.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mainwindow.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\txdlog.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\resource.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\guiserialization.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rwfswrap.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tools\txdgen.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tools\dirtools.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\massconvert.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\qtinteroputils.hxx">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\exportallwindow.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\taskcompletionwindow.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\massexport.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qtsharedlogic.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tools\txdexport.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tools\shared.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\aboutdialog.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\optionsdialog.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\streamcompress.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\guiserialization.hxx">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\massbuild.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\toolshared.hxx">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tools\txdbuild.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\versionsets.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\textureviewport.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\languages.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\testmessage.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qtutils.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\languages.hxx">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\createtxddlg.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\versionshared.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rwimageimporter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tools\configtree.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\progresslogedit.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\helperruntime.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tools\imagepipe.hxx">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\texnameutils.hxx">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mainwindow.actions.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\qtfilesystem.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\embedded_resources.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\expensivetasks.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mainwindow.asynclog.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mainwindow.events.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mainwindow.parallel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\mainwindow.loadinganim.hxx">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mainwindow.loadinganim.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\texadddialog.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{b0ae3eea-bf12-422e-9ee6-c80d0190421c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdk">
+      <UniqueIdentifier>{22069f19-de31-4428-800e-65881315cee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{b27ee640-2aa4-4644-92f5-957237f3e0f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools">
+      <UniqueIdentifier>{e1ccb885-3ab4-49fd-970f-7d53a71344ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="helpers">
+      <UniqueIdentifier>{62a54505-aa88-4dd4-935a-b27899374a78}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="qt5.natvis">
+      <Filter>include</Filter>
+    </Natvis>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\icon\magictxd.ico">
+      <Filter>resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\magic-txd.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\resources\light.shell">
+      <Filter>resources</Filter>
+    </None>
+    <None Include="..\resources\dark.shell">
+      <Filter>resources</Filter>
+    </None>
+    <None Include="defaults.props">
+      <Filter>helpers</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="customprops.xml">
+      <Filter>helpers</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>

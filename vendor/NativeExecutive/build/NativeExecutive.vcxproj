@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7E697733-5C68-49B4-82D4-A313210D49DF}</ProjectGuid>
+    <RootNamespace>NativeExecutive</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="NatExec_defaults">
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+    <NATEXEC_DISABLE_NATIVE_IMPL>false</NATEXEC_DISABLE_NATIVE_IMPL>
+    <NATEXEC_FIRST_ENTRY_POINT>false</NATEXEC_FIRST_ENTRY_POINT>
+    <NATEXEC_GLOBALMEM_OVERRIDE>true</NATEXEC_GLOBALMEM_OVERRIDE>
+    <NATEXEC_LOG_GLOBAL_ALLOC>false</NATEXEC_LOG_GLOBAL_ALLOC>
+    <NATEXEC_EXCEPTION_COPYPUSH>true</NATEXEC_EXCEPTION_COPYPUSH>
+    <NATEXEC_NO_HEAPPTR_VERIFY>true</NATEXEC_NO_HEAPPTR_VERIFY>
+    <NATEXEC_FEP_TYPE>main</NATEXEC_FEP_TYPE>
+    <USE_HEAP_DEBUGGING>false</USE_HEAP_DEBUGGING>
+    <USE_FULL_PAGE_HEAP>true</USE_FULL_PAGE_HEAP>
+    <PAGE_HEAP_INTEGRITY_CHECK>true</PAGE_HEAP_INTEGRITY_CHECK>
+    <PAGE_HEAP_MEMORY_STATS>false</PAGE_HEAP_MEMORY_STATS>
+    <USE_HEAP_STACK_TRACE>false</USE_HEAP_STACK_TRACE>
+    <NATEXEC_ENABLE_PTHREADS_IMPLEMENTATION>false</NATEXEC_ENABLE_PTHREADS_IMPLEMENTATION>
+    <NATEXEC_PTHREADS_DEFAULT_STACKSIZE>1 &lt;&lt; 18</NATEXEC_PTHREADS_DEFAULT_STACKSIZE>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemGroup>
+    <PropertyPageSchema Include="customprops.xml">
+      <Context>File;Project;</Context>
+    </PropertyPageSchema>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)../lib/$(Platform)_$(Configuration)_$(PlatformToolset)/</OutDir>
+    <IntDir>$(ProjectDir)../obj/$(Platform)_$(Configuration)_$(PlatformToolset)/</IntDir>
+    <TargetName>nativeexec</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>nativeexec</TargetName>
+    <OutDir>$(ProjectDir)../lib/$(Platform)_$(Configuration)_$(PlatformToolset)/</OutDir>
+    <IntDir>$(ProjectDir)../obj/$(Platform)_$(Configuration)_$(PlatformToolset)/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)../lib/$(Platform)_$(Configuration)_$(PlatformToolset)/</OutDir>
+    <IntDir>$(ProjectDir)../obj/$(Platform)_$(Configuration)_$(PlatformToolset)/</IntDir>
+    <TargetName>nativeexec</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>nativeexec</TargetName>
+    <IntDir>$(ProjectDir)../obj/$(Platform)_$(Configuration)_$(PlatformToolset)/</IntDir>
+    <OutDir>$(ProjectDir)../lib/$(Platform)_$(Configuration)_$(PlatformToolset)/</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)_2013.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>../include/NativeExecutive/;../../eirrepo/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)_2013.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>../include/NativeExecutive/;../../eirrepo/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)_2013.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>../include/NativeExecutive/;../../eirrepo/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdInc.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName)_2013.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>../include/NativeExecutive/;../../eirrepo/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <MASM Include="..\src\native_routines_x86.asm">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Win32'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="..\src\native_routines_x64.asm">
+      <ExcludedFromBuild Condition="'$(Platform)'!='x64'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\native_shared.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.barrier.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.cond.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.event.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.fiber.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.hazards.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.memory.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.qol.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.qol.rwlock.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.rwlock.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.sem.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.spinlock.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.task.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.thread.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.threadplugins.h" />
+    <ClInclude Include="..\include\NativeExecutive\CExecutiveManager.unfairmtx.h" />
+    <ClInclude Include="..\include\NativeExecutive\pthreads\internal\pthread.glibc.h" />
+    <ClInclude Include="..\include\NativeExecutive\pthreads\internal\pthread.native.h" />
+    <ClInclude Include="..\include\NativeExecutive\pthreads\pthread.h" />
+    <ClInclude Include="..\src\CExecutiveManager.cond.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.dbgheap.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.dbgheap.impl.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.eventplugin.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.evtwait.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.fiber.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.hazards.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.memory.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.memory.internals.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.native.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.rwlock.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.thread.activityreg.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.thread.compat.glib.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.thread.compat.glib.pthproto.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.thread.compat.glib.ver2_31.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.thread.compat.glib.ver2_32.hxx" />
+    <ClInclude Include="..\src\CExecutiveManager.thread.hxx" />
+    <ClInclude Include="..\src\CommonUtils.h" />
+    <ClInclude Include="..\src\internal\CExecutiveManager.barrier.internal.h" />
+    <ClInclude Include="..\src\internal\CExecutiveManager.cond.internal.h" />
+    <ClInclude Include="..\src\internal\CExecutiveManager.event.internal.h" />
+    <ClInclude Include="..\src\internal\CExecutiveManager.execgroup.internal.h" />
+    <ClInclude Include="..\src\internal\CExecutiveManager.fiber.internal.h" />
+    <ClInclude Include="..\src\internal\CExecutiveManager.internal.h" />
+    <ClInclude Include="..\src\internal\CExecutiveManager.rwlock.internal.h" />
+    <ClInclude Include="..\src\internal\CExecutiveManager.sem.internal.h" />
+    <ClInclude Include="..\src\internal\CExecutiveManager.spinlock.internal.h" />
+    <ClInclude Include="..\src\internal\CExecutiveManager.task.internal.h" />
+    <ClInclude Include="..\src\internal\CExecutiveManager.thread.internal.h" />
+    <ClInclude Include="..\src\internal\CExecutiveManager.unfairmtx.internal.h" />
+    <ClInclude Include="..\src\NativeUtils.h" />
+    <ClInclude Include="..\src\PluginUtils.hxx" />
+    <ClInclude Include="..\src\pthreads\CExecutiveManager.pthread.hxx" />
+    <ClInclude Include="..\src\pthreads\CExecutiveManager.pthread.internal.h" />
+    <ClInclude Include="..\src\StdInc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\CExecutiveManager.barrier.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.cond.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\CExecutiveManager.dbgheap.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.dbgheap.integchk.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.dbgheap.paged.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.event.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.event.linux.futex.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.event.win32.evthandle.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.event.win32.waitaddr.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.evtwait.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.execgroup.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.fep.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.fiber.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.hazards.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.memory.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.memory.msvc.dbg.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.memory.msvc.release.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.rentrwlock.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.rentrwlock.impl.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.rwlock.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.rwlock.impl.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.rwlock.win32.srw.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.sem.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.spinlock.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.stats.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.task.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.thread.activityreg.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.thread.compat.glib.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.thread.compat.glib.pthproto.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.thread.compat.glib.ver2_31.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.thread.compat.glib.ver2_32.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.thread.cpp" />
+    <ClCompile Include="..\src\CExecutiveManager.unfairmtx.cpp" />
+    <ClCompile Include="..\src\pthreads\CExecutiveManager.pthread.barrier.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\pthreads\CExecutiveManager.pthread.cleanup.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\pthreads\CExecutiveManager.pthread.cond.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\pthreads\CExecutiveManager.pthread.generic.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\pthreads\CExecutiveManager.pthread.mutex.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\pthreads\CExecutiveManager.pthread.rwlock.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\pthreads\CExecutiveManager.pthread.sem.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\pthreads\CExecutiveManager.pthread.spinlock.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\pthreads\CExecutiveManager.pthread.threads.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="customprops.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+  </ItemGroup>
+  <ImportGroup>
+    <Import Project="..\..\_repoconfig\$(ProjectName).props" Condition="Exists('..\..\_repoconfig\$(ProjectName).props')" />
+    <Import Project="$(SolutionDir)\$(ProjectName).props" Condition="Exists('$(SolutionDir)\$(ProjectName).props')" />
+  </ImportGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="$(NATEXEC_DISABLE_NATIVE_IMPL)=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>NATEXEC_DISABLE_NATIVE_IMPL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(NATEXEC_FIRST_ENTRY_POINT)=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>NATEXEC_FIRST_ENTRY_POINT;NATEXEC_FIRST_ENTRY_POINT_$(NATEXEC_FEP_TYPE);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(NATEXEC_GLOBALMEM_OVERRIDE)=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>NATEXEC_GLOBALMEM_OVERRIDE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(NATEXEC_LOG_GLOBAL_ALLOC)=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>NATEXEC_LOG_GLOBAL_ALLOC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(NATEXEC_EXCEPTION_COPYPUSH)=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>NATEXEC_EXCEPTION_COPYPUSH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(NATEXEC_NO_HEAPPTR_VERIFY)=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>NATEXEC_NO_HEAPPTR_VERIFY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(USE_HEAP_DEBUGGING)=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>USE_HEAP_DEBUGGING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(USE_FULL_PAGE_HEAP)=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>USE_FULL_PAGE_HEAP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(PAGE_HEAP_INTEGRITY_CHECK)=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>PAGE_HEAP_INTEGRITY_CHECK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(PAGE_HEAP_MEMORY_STATS)=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>PAGE_HEAP_MEMORY_STATS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(USE_HEAP_STACK_TRACE)=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>USE_HEAP_STACK_TRACE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(NATEXEC_ENABLE_PTHREADS_IMPLEMENTATION)=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>NATEXEC_ENABLE_PTHREADS_IMPLEMENTATION;NATEXEC_PTHREADS_DEFAULT_STACKSIZE=$(NATEXEC_PTHREADS_DEFAULT_STACKSIZE);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <UpToDateCheckOutput Include="NativeExecutive.vcxproj.user" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\eirrepo\sdk\Map.natvis" />
+    <Natvis Include="..\..\eirrepo\sdk\String.natvis" />
+    <Natvis Include="..\..\eirrepo\sdk\Vector.natvis" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  <Type Name="eir::endian::little_endian &lt;*,*&gt;">
+    <DisplayString>{*($T1*)data}</DisplayString>
+    <Expand>
+      <Item Name="Value">*($T1*)data</Item>
+    </Expand>
+  </Type>
+  <Type Name="eir::endian::big_endian &lt;unsigned char,*&gt;">
+    <DisplayString>{*(unsigned char*)data}</DisplayString>
+  </Type>
+  <Type Name="eir::endian::big_endian &lt;char,*&gt;">
+    <DisplayString>{*(char*)data}</DisplayString>
+  </Type>
+  <Type Name="eir::endian::big_endian &lt;unsigned short,*&gt;">
+    <DisplayString>{(unsigned short)( ( ( *(unsigned short*)data &amp; 0xFF00 ) &gt;&gt; 8 ) | ( ( *(unsigned short*)data &amp; 0xFF ) &lt;&lt; 8 ) )}</DisplayString>
+  </Type>
+  <Type Name="eir::endian::big_endian &lt;short,*&gt;">
+    <DisplayString>{(short)( ( ( *(unsigned short*)data &amp; 0xFF00 ) &gt;&gt; 8 ) | ( ( *(unsigned short*)data &amp; 0xFF ) &lt;&lt; 8 ) )}</DisplayString>
+  </Type>
+  <Type Name="eir::endian::big_endian &lt;unsigned int,*&gt;">
+    <DisplayString>{(unsigned int)( ( ( *(unsigned int*)data &amp; 0xFF000000 ) &gt;&gt; 24 ) | ( ( *(unsigned int*)data &amp; 0xFF0000 ) &gt;&gt; 8 ) | ( ( *(unsigned int*)data &amp; 0xFF00 ) &lt;&lt; 8 ) | ( ( *(unsigned int*)data &amp; 0xFF ) &lt;&lt; 24 ) )}</DisplayString>
+  </Type>
+  <Type Name="eir::endian::big_endian &lt;int,*&gt;">
+    <DisplayString>{(int)( ( ( *(unsigned int*)data &amp; 0xFF000000 ) &gt;&gt; 24 ) | ( ( *(unsigned int*)data &amp; 0xFF0000 ) &gt;&gt; 8 ) | ( ( *(unsigned int*)data &amp; 0xFF00 ) &lt;&lt; 8 ) | ( ( *(unsigned int*)data &amp; 0xFF ) &lt;&lt; 24 ) )}</DisplayString>
+  </Type>
+  <Type Name="eir::endian::big_endian &lt;unsigned __int64,*&gt;">
+    <DisplayString>{(unsigned __int64)( ( ( *(unsigned __int64*)data &amp; 0xFF00000000000000 ) &gt;&gt; 56 ) | ( ( *(unsigned __int64*)data &amp; 0xFF000000000000 ) &gt;&gt; 40 ) | ( ( *(unsigned __int64*)data &amp; 0xFF0000000000 ) &gt;&gt; 24 ) | ( ( *(unsigned __int64*)data &amp; 0xFF00000000 ) &gt;&gt; 8 ) | ( ( *(unsigned __int64*)data &amp; 0xFF000000 ) &lt;&lt; 8 ) | ( ( *(unsigned __int64*)data &amp; 0xFF0000 ) &lt;&lt; 24 ) | ( ( *(unsigned __int64*)data &amp; 0xFF00 ) &lt;&lt; 40 ) | ( ( *(unsigned __int64*)data &amp; 0xFF ) &lt;&lt; 56 ) )}</DisplayString>
+  </Type>
+  <Type Name="eir::endian::big_endian &lt;__int64,*&gt;">
+    <DisplayString>{(__int64)( ( ( *(unsigned __int64*)data &amp; 0xFF00000000000000 ) &gt;&gt; 56 ) | ( ( *(unsigned __int64*)data &amp; 0xFF000000000000 ) &gt;&gt; 40 ) | ( ( *(unsigned __int64*)data &amp; 0xFF0000000000 ) &gt;&gt; 24 ) | ( ( *(unsigned __int64*)data &amp; 0xFF00000000 ) &gt;&gt; 8 ) | ( ( *(unsigned __int64*)data &amp; 0xFF000000 ) &lt;&lt; 8 ) | ( ( *(unsigned __int64*)data &amp; 0xFF0000 ) &lt;&lt; 24 ) | ( ( *(unsigned __int64*)data &amp; 0xFF00 ) &lt;&lt; 40 ) | ( ( *(unsigned __int64*)data &amp; 0xFF ) &lt;&lt; 56 ) )}</DisplayString>
+  </Type>
+</AutoVisualizer>

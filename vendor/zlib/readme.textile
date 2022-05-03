@@ -1,0 +1,4 @@
+h1. ZLIB fixup fork
+
+We do special things to ensure a good compatibility between frameworks, especially
+in static-linking environments.

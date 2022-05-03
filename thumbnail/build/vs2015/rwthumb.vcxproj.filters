@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\thumbprov.cpp" />
+    <ClCompile Include="..\..\src\rwwin32streamwrap.cpp" />
+    <ClCompile Include="..\..\src\contextprov.cpp" />
+    <ClCompile Include="..\..\..\vendor\shextshared\Reg.cpp">
+      <Filter>shextshared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\vendor\shextshared\shell_minlink.cpp">
+      <Filter>shextshared</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{020cea54-df20-40b1-ada5-3f30c8e728c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{e1943a93-39ff-48a1-9c97-e81edaf792b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shextshared">
+      <UniqueIdentifier>{2932f45d-0705-4abf-847c-0c50c2fcdb48}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Reg.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StdInc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\thumbprov.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwwin32streamwrap.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\contextprov.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rwutils.hxx">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\resources\rcdesc.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\shell_minlink.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\vendor\shextshared\idltools.h">
+      <Filter>shextshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\vendor\shextshared\modrelink.h">
+      <Filter>shextshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\vendor\shextshared\Reg.h">
+      <Filter>shextshared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\vendor\shextshared\shell_minlink.h">
+      <Filter>shextshared</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\resources\resource.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\resources\rwlogo.ico">
+      <Filter>resources</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

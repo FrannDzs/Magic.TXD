@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*****************************************************************************
+*
+*  PROJECT:     Magic-RW
+*  LICENSE:     See LICENSE in the top level directory
+*  FILE:        build/vs2015/rwtools.natvis
+*  PURPOSE:     Debugger visualizations for the entire framework
+*
+*  Multi Theft Auto is available from http://www.multitheftauto.com/
+*  Project location: https://osdn.net/projects/magic-rw/
+*
+*****************************************************************************/
+-->
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  <Type Name="rw::LibraryVersion">
+    <DisplayString>{(unsigned int)rwLibMajor}.{(unsigned int)rwLibMinor}.{(unsigned int)rwRevMajor}.{(unsigned int)rwRevMinor}</DisplayString>
+  </Type>
+  <Type Name="rw::Raster">
+    <DisplayString Condition="this == nullptr">none</DisplayString>
+    <DisplayString>Raster: {((RwTypeSystem::typeInfoBase*)((GenericRTTI*)this->platformData - 1)->type_meta)->name,s}</DisplayString>
+    <Expand>
+      <Item Name="Ref Count">refCount</Item>
+      <CustomListItems>
+        <Variable Name="platformTypeData" InitialValue="((RwTypeSystem::typeInfoBase*)((GenericRTTI*)this->platformData - 1)->type_meta)"/>
+        <Variable Name="platformName" InitialValue="platformTypeData->name" />
+        <Item Name="Direct3D 9" Condition='strcmp(platformName,"Direct3D9") == 0'>(rw::NativeTextureD3D9*)this->platformData</Item>
+        <Item Name="Direct3D 8" Condition='strcmp(platformName,"Direct3D8") == 0'>(rw::NativeTextureD3D8*)this->platformData</Item>
+        <Item Name="PlayStation 2" Condition='strcmp(platformName,"PlayStation2") == 0'>(rw::NativeTexturePS2*)this->platformData</Item>
+        <Item Name="PSP" Condition='strcmp(platformName,"PSP") == 0'>(rw::NativeTexturePSP*)this->platformData</Item>
+        <Item Name='XBOX' Condition='strcmp(platformName,"XBOX") == 0'>(rw::NativeTextureXBOX*)this->platformData</Item>
+        <Item Name='Gamecube' Condition='strcmp(platformName,"Gamecube") == 0'>(rw::NativeTextureGC*)this->platformData</Item>
+        <Item Name='PowerVR' Condition='strcmp(platformName,"PowerVR") == 0'>(rw::NativeTexturePVR*)this->platformData</Item>
+        <Item Name='AMDCompress' Condition='strcmp(platformName,"AMDCompress") == 0'>(rw::NativeTextureATC*)this->platformData</Item>
+        <Item Name='s3tc_mobile' Condition='strcmp(platformName,"s3tc_mobile") == 0'>(rw::NativeTextureMobileDXT*)this->platformData</Item>
+        <Item Name='uncompressed_mobile' Condition='strcmp(platformName,"uncompressed_mobile") == 0'>(rw::NativeTextureMobileUNC*)this->platformData</Item>
+      </CustomListItems>
+    </Expand>
+  </Type>
+  <Type Name="rw::TextureBase">
+    <DisplayString>{name}</DisplayString>
+    <Expand>
+      <Item Name="Object">(RwObject*)this,nd</Item>
+      <Item Name="Raster">texRaster</Item>
+      <Item Name="Name">name</Item>
+      <Item Name="Mask Name" Condition="maskName[0] != 0">maskName</Item>
+      <Item Name="Filter Mode">filterMode</Item>
+      <Item Name="Horizontal Addressing" Condition="uAddressing != vAddressing">uAddressing</Item>
+      <Item Name="Vertical Addressing" Condition="uAddressing != vAddressing">vAddressing</Item>
+      <Item Name="Addressing" Condition="uAddressing == vAddressing">uAddressing</Item>
+      <Item Name="Dict">texDict</Item>
+    </Expand>
+  </Type>
+  <Type Name="rw::TexDictionary">
+    <DisplayString>Texture Dictionary ({numTextures})</DisplayString>
+    <Expand>
+      <Item Name="Object">(RwObject*)this,nd</Item>
+      <Item Name="[count]">numTextures</Item>
+      <CustomListItems>
+        <Variable Name="nodeptr" InitialValue="textures.root.next"/>
+        <Size>numTextures</Size>
+        <Loop>
+          <Break Condition="nodeptr == &amp;textures.root" />
+          <Item>(rw::TextureBase*)( (char*)nodeptr - (unsigned int)&amp;(((rw::TextureBase*)0)-&gt;texDictNode) )</Item>
+          <Exec>nodeptr = nodeptr->next</Exec>
+        </Loop>
+      </CustomListItems>
+    </Expand>
+  </Type>
+  <Type Name="rw::Interface" Inheritable="false">
+    <Expand>
+      <ExpandedItem>(rw::EngineInterface*)this</ExpandedItem>
+    </Expand>
+  </Type>
+  <Type Name="rw::Driver">
+    <DisplayString Condition="this == nullptr">none</DisplayString>
+    <DisplayString>Driver: {((RwTypeSystem::typeInfoBase*)((GenericRTTI*)this - 1)->type_meta)->name,s}</DisplayString>
+    <Expand HideRawView="true">
+      <CustomListItems>
+        <Variable Name="platformTypeData" InitialValue="((RwTypeSystem::typeInfoBase*)((GenericRTTI*)this - 1)->type_meta)"/>
+        <Variable Name="platformName" InitialValue="platformTypeData->name" />
+        <Item Name="Direct3D 12" Condition='strcmp(platformName,"Direct3D12") == 0'>(rw::d3d12NativeDriver*)( this + 1 )</Item>
+      </CustomListItems>
+    </Expand>
+  </Type>
+</AutoVisualizer>

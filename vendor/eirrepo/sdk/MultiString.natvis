@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+    <Type Name="eir::MultiString &lt;*&gt;::charStringProvider &lt;*&gt;">
+        <DisplayString>{this->strData}</DisplayString>
+        <Expand HideRawView="true">
+            <ExpandedItem>this->strData</ExpandedItem>
+        </Expand>
+    </Type>
+    <Type Name="eir::MultiString &lt;*&gt;">
+      <DisplayString>{*this->data.strData}</DisplayString>
+      <Expand HideRawView="true">
+          <ExpandedItem>this->data.strData</ExpandedItem>
+      </Expand>
+    </Type>
+</AutoVisualizer>

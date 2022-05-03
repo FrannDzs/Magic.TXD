@@ -1,0 +1,262 @@
+﻿MAGL|1|Lithuanian|Lietuviškai|LT|Xinerki
+
+#Translated by Xinerki
+
+# language
+Lang.Lang              Kalba:
+Lang.Authors           Vertėjas: _PARAM_1
+
+# textures list        
+Main.TexInfo.Level     lygis
+Main.TexInfo.Levels    lygiai
+Main.TexInfo.NoTex     Nėra Tekstūros
+Main.TexInfo.Invalid   klaidingas
+Main.Undo              Atšaukti veiksmą
+Main.Redo              Atkurti veiksmą
+Main.Cut               Iškirpti
+Main.Copy              Nukopijuoti
+Main.Paste             Įiklijuoti
+Main.Delete            Ištrinti
+Main.SelectA           Pasirinkti Viską.
+
+# main menu            
+Main.File              Failas
+Main.Edit              Taisa
+Main.Tools             Įrankai
+Main.Export            Eksportuoti
+Main.View              Peržiūrėti
+Main.Info              Informacija
+
+# main menu - File     
+Main.File.New          Naujas
+Main.File.Open         Atidaryti
+Main.File.Save         Išsaugoti
+Main.File.SaveAs       Išsaugoti kaip...
+Main.File.Close        Išjungti dabartinį
+Main.File.Quit         Išeiti
+
+# main menu - Edit   
+Main.Edit.Add          Pridėti
+Main.Edit.Replace      Pakeisti
+Main.Edit.Remove       Pašalinti
+Main.Edit.Rename       Pervardinti
+Main.Edit.Resize       Pakeisti dydį
+Main.Edit.Modify       Modifikuoti
+Main.Edit.SetupML      Įrengti "mip" lygius
+Main.Edit.ClearML      Išvalyti "mip" lygius
+Main.Edit.SetupRP      Pakeisti atkurimo nustatymus
+Main.Edit.SetupTV      Pakeisti TXD versiją
+Main.Edit.Options      Nustatymai
+
+# Rename
+Main.Rename.Desc       Tekstūros pavadinimas.
+Main.Rename.Name       Pavadinimas:
+Main.Rename.Set        Nustatyti
+Main.Rename.Cancel     Atšaukti
+
+# Resize
+Main.Resize.Desc       Tekstūros dydžio keitimas
+Main.Resize.Width      Plotis:
+Main.Resize.Height     Aukštis:
+Main.Resize.Set        Nustatyti
+Main.Resize.Cancel     Atšaukti
+
+# Modify
+Modify.Desc.Add        Pridėti tekstūrą...
+Modify.Desc.Replace    Pakeisti tekstūrą...
+Modify.Desc.Modify     Modifikuoti tekstūrą...
+Modify.Add             Pridėti
+Modify.Replace         Pakeisti
+Modify.Modify          Modifikuoti
+Modify.TexName         Tekstūros Pavadinimas:
+Modify.MskName         Kaukės pavadinimas:
+Modify.Plat            Platforma:
+Modify.RasFmt          Rastrinių Formatas:
+Modify.Origin          Originalas
+Modify.RawRas          Neapdirbtas Rastrinis
+Modify.Comp            Kompresuota:
+Modify.Pal             Paletizuota:
+Modify.PixFmt          Pikselio Formatas:
+Modify.GenML           Generuoti mipmap'us
+Modify.Scaled          Padidintas
+Modify.Fill            Užpildyti
+Modify.Bckgr           Fonas
+Modify.Cancel          Atšaukti
+
+[Modify.Help.DXTNotice]
+Jūs pasirinkote DXT kompresiją. DXT labai naudingas pasaulio tekstūroms.
+ Tekstūros išsaugotos kaip DXT naudos mažiau atminties, bet jie numažina
+ kokybę labai daug. Nerekomenduojama naudoti DXT and GUI tekstūrų.
+
+DXT1 naudingas tekstūroms, kurios naudoja permatomumą iškirptomis vietomis.
+DXT2/3 naudingas tekstūroms su aštriu permatomumu.
+DXT4/5 naudingas tekstūroms su švelniu permatomumu.
+Jeigu jūsų tekstūra neturi permatomumo, naudokite DXT1.
+
+Būkite atsargūs kurias tekstūras kompresuojate ir kurį tipą renkates.
+[END]
+
+[Modify.Help.PALNotice]
+Jūs pasirinkote paletes formatą (PAL). Tekstūros patampa paletizuotos
+pasrenkat pačias svarbiausias spalvas ir įdedant jas rinkinį. Tikra tekstūra
+turi indeksus į paletes buferį, žymiai nužeminant tekstūros dydį.
+
+Prisimintie, kad paletes formatas yra sena technologija ir nebepalaiko
+modernios aparatūros.
+[END]
+
+# Render Props
+Main.SetupRP.Desc      Rendering Props
+Main.SetupRP.Filter    Filtering:
+Main.SetupRP.UAddr     U Addressing:
+Main.SetupRP.VAddr     V Addressing:
+Main.SetupRP.Set       Nustatyti
+Main.SetupRP.Cancel    Atšaukti
+
+# Setup TXD Version
+Main.SetupTV.Desc      TXD Versijos Nustatymas
+Main.SetupTV.Set       Nustatyti
+Main.SetupTV.Plat      Platforma
+Main.SetupTV.Data      Datos tipas
+Main.SetupTV.Version   Versija
+Main.SetupTV.Build     Kurti
+Main.SetupTV.Accept    Taikyti
+Main.SetupTV.Cancel    Atšaukti
+Main.SetupTV.Custom    Nuosava
+
+# Options
+Main.Options.Desc      _MAGIC_TXD_NAME Nustatymai
+Main.Options.MainTab   Pagrindinis
+Main.Options.ShowLog   Rodyti TXD klaidas kai viena iššoka
+Main.Options.DispIcn   Rodyti žaidimo piktogramą.
+Main.Options.AdvTab    Sudėtingiau
+Main.Options.SerSpc    De-serializuoti be "blocklenghts"
+Main.Options.WarnLvl   Pavojaus lygis.
+Main.Options.WDisabled išjungta
+Main.Options.WLow      žemas
+Main.Options.WMedium   vidutinis
+Main.Options.WHigh     aukštas
+Main.Options.WAll      visi
+Main.Options.Accept    Priimti
+Main.Options.Cancel    Atšaukti
+
+# main menu - Tools    
+Main.Tools.MassCnv     Konvertuoti masiškai
+Main.Tools.MassExp     Eksportuoti masiškai
+Main.Tools.MassBld     Kurti masiškai
+
+# main menu - Export   
+Main.Export.ExpAll     Eksportuoti visus
+Main.Export.Desc       Įrašyti _PARAM_1 kaip...
+
+# Export All
+Main.ExpAll.Desc       Eksportuoti visas tekstūras...
+Main.ExpAll.Format     Formatas:
+Main.ExpAll.Export     Eksportuoti
+Main.ExpAll.Cancel     Atšaukti
+Main.ExpAll.ExpTarg    Pasirinkti eksportavimo taikinį...
+
+# Log
+Main.Log.Desc          Registras
+Main.Log.Save          Išsaugoti
+Main.Log.Copy          Copy
+Main.Log.CopyAll       Copy All
+Main.Log.Clear         Clear
+Main.Log.Close         Close
+Main.Log.SaveAs        Išsaugoti registrą kaip...
+
+# View   
+Main.View.FullImg      Rodyti visą paveikslą
+Main.View.Backgr       Fonas
+Main.View.DispML       Rodyti "mip" lygius
+Main.View.ShowLog      Rodyti registrą
+Main.View.DarkThm      Tamsi tema
+Main.View.LightTm      Šviesi tema
+
+# Info     
+Main.Info.Website      Puslapis
+Main.Info.About        Apie
+
+# File - Open
+Main.Open.Desc         Atidaryti TXD failą...
+
+# File - Save As
+Main.SaveAs.Desc       Išsaugoti TXD kaip...
+
+# Edit - Add
+Main.Edit.Add.Desc     Importuoti tekstūrą...
+
+# About
+Main.About.Desc        Apie mus
+Main.About.Credits     sukurta _AUTHOR_NAME_1 ir _AUTHOR_NAME_2
+Main.About.ComUse1     Šis įrankis NEGALI BŪTI naudojamas komerciškai be aiškaus, pasirašyto leidimo visų trečių šalių dalyvavusių šio įrankio kurimo. Teiraukites į licenzijas dėl informacijos.
+Main.About.ComUse2     _MAGIC_TXD_NAME komanda gerbia jūsų palaikymą!
+Main.About.SpecThx     Dar dėkojame: 
+
+# Save changes
+[Main.SavChange.Warn]
+Yra neišsaugotų pakeitimų.
+Ar norite juos išsaugoti?
+[END]
+Main.SavChange.Save    Išsaugoti
+Main.SavChange.Ignore  Ignoruoti
+Main.SavChange.Cancel  Atšaukti
+Main.SavChange.Title   Neišsaugoti pakeitimai
+
+# Tools
+Tools.Browse           Naršyti
+Tools.BrwDesc          Naršyti katalogą...
+Tools.GameRt           Žaidimo katalogas:
+Tools.Output           Išęjimo katalogas:
+Tools.Plat             Platforma
+Tools.Game             Žaidimas
+Tools.GenMips          Generuoti mipmap'us
+Tools.MaxMips          Maks.:
+
+# Mass export
+Tools.MassExp.Desc     Masinis eksportavimas
+Tools.MassExp.ImgFmt   Paveikslo formatas:
+Tools.MassExp.TxNmOnl  tik su tekstūros pavadinimu
+Tools.MassExp.PrTxdNm  su TXD pavadinimu pradžioje
+Tools.MassExp.SepFld   atskiruose kataloguose
+Tools.MassExp.Export   Eksportuoti
+Tools.MassExp.Cancel   Atšaukti
+
+# Mass build
+Tools.MassBld.Desc     Masinis kūrimas
+Tools.MassBld.Build    Kurti
+Tools.MassBld.Cancel   Atšaukti
+Tools.MassBld.CloseOnCmplt  Užsidaryti pabaigus
+Tools.MassBld.Cmprs    Kompresuota
+Tools.MassBld.DescQual Kokybė
+Tools.MassBld.DoPal    Paletizuota
+Tools.MassBld.DescPType    Tipas
+
+[Tools.MassBld.Welcome]
+Sveiki atvykę į Masinio Kūrimo įrankį! Šis įrankis kuria TXD failus iš<br>
+failu kataloguose. Jūs galite naudoti INI failus viduj jų, kad specializuoti<br>
+kurimo procesą. Pabandykite paeksperimentuoti su katalogais ir stebėkite<br>
+rezultatus!<br><br>
+Wiki: <a href="http://www.gtamodding.com/wiki/Magic.TXD/Build_System/" style="color: #0063b1">http://www.gtamodding.com/wiki/Magic.TXD/Build_System/</a>
+[END]
+
+# Mass convert
+Tools.MassCnv.Desc     Masinis konversavimas
+Tools.MassCnv.ClearML  Išvalyti mipmap'us
+Tools.MassCnv.ImpFilt  Pagerinti filtravimą
+Tools.MassCnv.CompTex  Kompresuoti tekstūras
+Tools.MassCnv.RecIMG   Rekonstruoti IMG archyvus
+Tools.MassCnv.CompIMG  Kompresuotas IMG
+Tools.MassCnv.Convert  Konvertuoti
+Tools.MassCnv.Cancel   Atšaukti
+
+# New txd
+New.Desc               Sukurti nauja txd
+New.Name               Pavadinimas
+New.Create             Sukurti
+New.Cancel             Atšaukti
+
+# Helper runtime generics.
+Helper.Confirm         Gerai
+Helper.Title           Įspejimas
+Helper.NotShowAgain    Neberodyti

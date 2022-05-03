@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+    <Type Name="eir::FixedString &lt;*&gt;">
+        <DisplayString>{chars,[len]na}</DisplayString>
+        <Expand>
+            <Item Name="[Length]">len</Item>
+            <ArrayItems>
+                <Size>len</Size>
+                <ValuePointer>chars</ValuePointer>
+            </ArrayItems>
+        </Expand>
+    </Type>
+</AutoVisualizer>

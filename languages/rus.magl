@@ -1,0 +1,262 @@
+﻿MAGL|1|Russian|Русский|RUS|Magic.TXD Team
+
+#Translated by DK22Pac and Flame
+
+# language
+Lang.Lang                Язык:
+Lang.Authors             от _PARAM_1
+
+# textures list
+Main.TexInfo.Level       уровень
+Main.TexInfo.Levels      уровней
+Main.TexInfo.Lvl2        уровня
+Main.TexInfo.Lvl3        уровня
+Main.TexInfo.Lvl4        уровня
+Main.TexInfo.NoTex       Нет текстуры
+Main.TexInfo.Invalid     без данных
+Main.Undo                Отмена
+Main.Redo                Повтор
+Main.Cut                 Вырезать
+Main.Copy                Копировать
+Main.Paste               Вставить
+Main.Delete              Удалить
+Main.SelectA             Выделить Всё
+
+# main menu
+Main.File                Файл
+Main.Edit                Правка
+Main.Tools               Инструменты
+Main.Export              Экспорт
+Main.View                Вид
+Main.Info                Инфо
+
+# main menu - File       
+Main.File.New            Новый
+Main.File.Open           Открыть
+Main.File.Save           Сохранить
+Main.File.SaveAs         Сохранить как...
+Main.File.Close          Закрыть текущий
+Main.File.Quit           Выход
+
+# main menu - Edit       
+Main.Edit.Add            Добавить
+Main.Edit.Replace        Заменить
+Main.Edit.Remove         Удалить
+Main.Edit.Rename         Переименовать
+Main.Edit.Resize         Изменить размер
+Main.Edit.Modify         Изменить формат
+Main.Edit.SetupML        Добавить мип-уровни
+Main.Edit.ClearML        Убрать мип-уровни
+Main.Edit.SetupRP        Настройки рендеринга
+Main.Edit.SetupTV        Установить версию TXD
+Main.Edit.Options        Опции
+
+# Rename
+Main.Rename.Desc         Имя текстуры
+Main.Rename.Name         Имя:
+Main.Rename.Set          Принять
+Main.Rename.Cancel       Отмена
+
+# Resize
+Main.Resize.Desc         Изменение размера текстуры
+Main.Resize.Width        Ширина:
+Main.Resize.Height       Высота:
+Main.Resize.Set          Принять
+Main.Resize.Cancel       Отмена
+
+# Modify
+Modify.Desc.Add          Добавить текстуру...
+Modify.Desc.Replace      Заменить текстуру...
+Modify.Desc.Modify       Изменить текстуру...
+Modify.Add               Добавить
+Modify.Replace           Заменить
+Modify.Modify            Изменить
+Modify.TexName           Имя текстуры:
+Modify.MskName           Имя маски:
+Modify.Plat              Платформа:
+Modify.RasFmt            Формат растра:
+Modify.Origin            Исходный
+Modify.RawRas            Стандартный
+Modify.Comp              Сжатый
+Modify.Pal               Палитра
+Modify.PixFmt            Формат пикселей:
+Modify.GenML             Генерировать мип-уровни
+Modify.Scaled            Масштаб
+Modify.Fill              Заполнить
+Modify.Bckgr             Фон
+Modify.Cancel            Отмена
+
+[Modify.Help.DXTNotice]
+Вы выбрали DXT-компрессию. DXT-компрессия обеспечивает очень эффективное сжатие текстур.
+Текстуры, сжатые DXT-алгоритмом, занимают гораздо меньше места, но вместе с этим, качество
+таких текстур ухудшается. Не рекомендуется сжимать текстуры 2d-интерфейса.
+
+DXT1 рекомендуется, если на текстуре нет прозрачных участков, либо когда все прозрачные 
+участки полностью прозрачны (альфа равна нулю)
+DXT2/3 рекомендуется, когда прозрачные участки текстуры имеют чёткие границы.
+DXT4/5 рекомендуется, когда прозрачные участки текстуры имеют размытые границы.
+
+Будьте внимательны при выборе формата и компрессии текстур!
+[END]
+
+[Modify.Help.PALNotice]
+Вы выбрали формат палитры. Палитровое изображение использует ограниченый набор цветов,
+хранящихся в специальной таблице - палитре. Каждый тексель текстуры представлен в виде
+индекса цвета в этой таблице, что значительно уменьшает размер текстуры.
+
+Обратите внимание, что формат палитры является старой технологией и не поддерживается
+новыми версиями RenderWare.
+[END]
+
+# Render Props
+Main.SetupRP.Desc        Настройки рендеринга
+Main.SetupRP.Filter      Фильтрация:
+Main.SetupRP.UAddr       U-Адресация:
+Main.SetupRP.VAddr       V-Адресация:
+Main.SetupRP.Set         Принять
+Main.SetupRP.Cancel      Отмена
+
+# Setup TXD Version dialog
+Main.SetupTV.Desc        Настройка версии TXD
+Main.SetupTV.Set         Сет
+Main.SetupTV.Plat        Платформа
+Main.SetupTV.Data        Тип данных
+Main.SetupTV.Version     Версия
+Main.SetupTV.Build       Сборка
+Main.SetupTV.Accept      Принять
+Main.SetupTV.Cancel      Отмена
+Main.SetupTV.Custom      Свой
+
+# Options
+Main.Options.Desc        Настройки _MAGIC_TXD_NAME
+Main.Options.MainTab     Основные
+Main.Options.ShowLog     Открыть лог при предупреждениях
+Main.Options.DispIcn     Показывать значок игры
+Main.Options.AdvTab      Расширенные
+Main.Options.SerSpc      Игнорировать размеры секций в TXD
+Main.Options.WarnLvl     Уровень предупреждений
+Main.Options.WDisabled   отключить все
+Main.Options.WLow        низкий
+Main.Options.WMedium     средний
+Main.Options.WHigh       высокий
+Main.Options.WAll        показать все
+Main.Options.Accept      Принять
+Main.Options.Cancel      Отмена
+
+# main menu - Tools      
+Main.Tools.MassCnv       Массовый конверт
+Main.Tools.MassExp       Массовый экспорт
+Main.Tools.MassBld       Массовая сборка
+
+# main menu - Export
+Main.Export.ExpAll       Все текстуры
+Main.Export.Desc         Сохранить _PARAM_1 как...
+
+# Export All
+Main.ExpAll.Desc         Экспорт всех текстур...
+Main.ExpAll.Format       Формат:
+Main.ExpAll.Export       Экспорт
+Main.ExpAll.Cancel       Отмена
+Main.ExpAll.ExpTarg      Выберите папку...
+
+# Log
+Main.Log.Desc            Лог
+Main.Log.Save            Сохранить
+Main.Log.Copy            Копировать
+Main.Log.CopyAll         Копировать всё
+Main.Log.Clear           Очистить
+Main.Log.Close           Закрыть
+Main.Log.SaveAs          Сохранить лог как...
+
+# View
+Main.View.FullImg        Показать полное изображение
+Main.View.Backgr         Прозрачный фон
+Main.View.DispML         Показать мип-уровни
+Main.View.ShowLog        Открыть лог
+Main.View.DarkThm        Тёмный интерфейс
+Main.View.LightTm        Светлый интерфейс
+
+# Info
+Main.Info.Website        Сайт программы
+Main.Info.About          О программе
+
+# File - Open
+Main.Open.Desc           Открыть TXD файл...
+
+# File - Save As
+Main.SaveAs.Desc         Сохранить TXD как...
+
+# Edit - Add
+Main.Edit.Add.Desc       Импортировать текстуру...
+
+# About
+Main.About.Desc          О нас
+Main.About.Credits       создатели: _AUTHOR_NAME_1 и _AUTHOR_NAME_2
+Main.About.ComUse1       Эта программа НЕ ДОЛЖНА использоваться в коммерческих целях без явного письменного разрешения всех третьих лиц, задействованных в разработке этой программы. Ознакомьтесь с лицензионными соглашениями для получения дополнительной информации.
+Main.About.ComUse2       Команда _MAGIC_TXD_NAME приветствует вашу поддержку!
+Main.About.SpecThx       Отдельная благодарность:
+
+# Save changes
+Main.SavChange.Warn      Открытый TXD был изменён. Сохранить изменения?
+Main.SavChange.Save      Сохранить
+Main.SavChange.Ignore    Пропустить
+Main.SavChange.Cancel    Отмена
+Main.SavChange.Title     Несохранённые изменения
+
+# Tools
+Tools.Browse             Выбрать
+Tools.BrwDesc            Выбор папки...
+Tools.GameRt             Исходная папка:
+Tools.Output             Выходная папка:
+Tools.Plat               Платформа
+Tools.Game               Игра
+Tools.GenMips            Генерировать мип-уровни
+Tools.MaxMips            Макс.:
+
+# Mass export
+Tools.MassExp.Desc       Массовый экспорт
+Tools.MassExp.ImgFmt     Формат изображений:
+Tools.MassExp.TxNmOnl    в названии только имя текстуры
+Tools.MassExp.PrTxdNm    в названии имя TXD
+Tools.MassExp.SepFld     разделить по папкам
+Tools.MassExp.Export     Экспорт
+Tools.MassExp.Cancel     Отмена
+
+# Mass build
+Tools.MassBld.Desc       Массовая сборка
+Tools.MassBld.Build      Собрать
+Tools.MassBld.Cancel     Отмена
+Tools.MassBld.CloseOnCmplt  Закрыть по завершении
+Tools.MassBld.Cmprs      Сжатие
+Tools.MassBld.DescQual   Качество
+Tools.MassBld.DoPal      Палитра
+Tools.MassBld.DescPType  Тип
+
+[Tools.MassBld.Welcome]
+Добро пожаловать в инструмент Массовой сборки! Этот инструмент создает TXD файлы из<br>
+файлов текстур, находящихся в папках. Для настройки процесса сборки можно использовать<br>
+INI файлы в этих папках. Попробуйте собрать TXD на основе какой-либо папки, чтобы увидеть,<br>
+как это работает!<br><br>
+Вики: <a href="http://www.gtamodding.com/wiki/Magic.TXD/Build_System/" style="color: #0063b1">http://www.gtamodding.com/wiki/Magic.TXD/Build_System/</a>
+[END]
+
+# Mass convert
+Tools.MassCnv.Desc       Массовый конверт
+Tools.MassCnv.ClearML    Убрать мип-уровни
+Tools.MassCnv.ImpFilt    Улучшить фильтрацию
+Tools.MassCnv.CompTex    Ужать текстуры
+Tools.MassCnv.RecIMG     Перестроить IMG-архивы
+Tools.MassCnv.CompIMG    Ужать IMG
+Tools.MassCnv.Convert    Конвертировать
+Tools.MassCnv.Cancel     Отмена
+
+# New txd
+New.Desc                 Создание нового TXD-архива
+New.Name                 Имя
+New.Create               Создать
+New.Cancel               Отмена
+
+# Helper runtime generics.
+Helper.Confirm           OK
+Helper.Title             Заметка
+Helper.NotShowAgain      Больше не показывать

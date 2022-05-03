@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*****************************************************************************
+*
+*  PROJECT:     Magic-RW
+*  LICENSE:     See LICENSE in the top level directory
+*  FILE:        build/vs2015/customprops.xml
+*  PURPOSE:     Project configuration options in the Visual Studio IDE
+*
+*  Multi Theft Auto is available from http://www.multitheftauto.com/
+*  Project location: https://osdn.net/projects/magic-rw/
+*
+*****************************************************************************/
+-->
+
+<ProjectSchemaDefinitions  xmlns="http://schemas.microsoft.com/build/2009/properties"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <Rule Name="rwlib_config" PageTemplate="generic">
+    <Rule.DisplayName>
+      <sys:String>rwlib Configuration</sys:String>
+    </Rule.DisplayName>
+    <Rule.Categories>
+      <Category Name="RW_NatTex">
+        <Category.DisplayName>
+          <sys:String>Native Textures</sys:String>
+        </Category.DisplayName>
+      </Category>
+      <Category Name="RW_Runtime">
+        <Category.DisplayName>
+          <sys:String>Runtime Configuration</sys:String>
+        </Category.DisplayName>
+      </Category>
+      <Category Name="RW_Imaging">
+        <Category.DisplayName>
+          <sys:String>Imaging Subsystem</sys:String>
+        </Category.DisplayName>
+      </Category>
+      <Category Name="RW_NativeImaging">
+        <Category.DisplayName>
+          <sys:String>Native Imaging</sys:String>
+        </Category.DisplayName>
+      </Category>
+      <Category Name="RW_ResInit" DisplayName="Resource Initialization" />
+    </Rule.Categories>
+    <Rule.DataSource>
+      <DataSource Persistence="UserFile" ItemType="" />
+    </Rule.DataSource>
+    <BoolProperty Name="RWLIB_INCLUDE_NATIVETEX_D3D8" Category="RW_NatTex" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>Direct3D 8 native texture</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Includes support for processing Direct3D 8 native textures. It is a lightweight native implementation.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_NATIVETEX_D3D9" Category="RW_NatTex" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>Direct3D 9 native texture</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Includes support for processing Direct3D 9 native textures. They are complicated containers of custom color data.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_NATIVETEX_PLAYSTATION2" Category="RW_NatTex" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>PlayStation 2 native texture</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Includes support for processing PlayStation 2 native textures by Sony. Specialized color containers that are optimized for the Graphics Synthesizer(tm) memory layout.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_NATIVETEX_PSP" Category="RW_NatTex" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>PSP native texture</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Includes support for processing PlayStation Portable native textures by Sony. Tiled or swizzled color data containers for the handheld's GPU.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_NATIVETEX_XBOX" Category="RW_NatTex" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>XBOX native texture</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Includes support for processing XBOX native textures by Microsoft. Supports DXT compression, 8bit palette colors and optional tiling for raw textures (nVidia).</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_NATIVETEX_GAMECUBE" Category="RW_NatTex" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>Gamecube native texture</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Includes support for processing Gamecube native textures by Nintendo. Tiled color data containers optimized for the console's GPU. They support 4bit and 8bit palette colors, raw colors up to 16bit and DXT1 compression.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_NATIVETEX_S3TC_MOBILE" Category="RW_NatTex" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>S3TC_mobile native texture (WD)</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Includes support for processing S3TC native textures for mobile devices by War Drum Studios. DXT1/3/5 compressed color buffers targeted for OpenGL architectures.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_NATIVETEX_POWERVR_MOBILE" Category="RW_NatTex" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>PowerVR native texture (WD)</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Includes support for processing PowerVR native textures for mobile devices by Imagination Technologies. Designed by War Drum Studios this native texture is capable of 2bit and 4bit color data compression.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_NATIVETEX_UNC_MOBILE" Category="RW_NatTex" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>Uncompressed_mobile native texture (WD)</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Includes support for uncompressed native textures for mobile devices by War Drum Studios. Stores color data in either RASTER_4444 or RASTER_565 depending on alpha channel or not.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_NATIVETEX_ATC_MOBILE" Category="RW_NatTex" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>ATC native texture (WD)</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Includes support for ATC native textures by Advanced Micro Devices (AMD). Designed by War Drum Studios this texture is designed for mobile devices powered by AMD GPUs.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_USE_XBOX_SDK" Category="RW_Runtime" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>Enable XBOX SDK</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Enables the use of internal original XBOX SDK headers (if provided) to improve tiling logic.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_IMAGING" Category="RW_Runtime" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>Enable imaging subsystem</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>The imaging subsystem is responsible for reading and writing general image formats, like PNG, TGA and JPEG. Disabling this option strips the executable from any third-party image format libraries.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_LIBIMAGEQUANT" Category="RW_Runtime" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>Enable libimagequant component</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Enables the libimagequant component by Pornel for high-quality image color data quantization. It is used to create palette textures.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_FRAMEWORK_ENTRYPOINTS" Category="RW_Runtime" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>Use framework entry-points</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Enables compilation and running through the RenderWare framework entry points. Can be used to create integrated RenderWare applications.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_ENABLE_PS2GSTRACE" Category="RW_Runtime" IsRequired="true"
+      DisplayName="Enable PS2 GS log"
+      Description="Enables logging PlayStation2 native texture GS parameters on deserialization. For debugging purposes; not thread safe." />
+      <EnumProperty Name="RWLIB_PS2GSTRACE_TYPE" Category="RW_Runtime" IsRequired="true"
+      DisplayName="PS2 GS Log Type"
+      Description="Decided which type of output the GS logger should generate.">
+        <EnumValue DisplayName="text" Name="TEXT" />
+        <EnumValue DisplayName="unit-test" Name="UNITTEST" />
+      </EnumProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_TGA_IMAGING" Category="RW_Imaging" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>TGA format</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Enables Targa image file format processing. It is using a native implementation.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_BMP_IMAGING" Category="RW_Imaging" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>BMP format</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Enables Bitmap image filr format processing. It is using a native implementation.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_PNG_IMAGING" Category="RW_Imaging" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>PNG format</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Enables Portable Network Graphics (PNG) file format processing. It is using a third-party library.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_JPEG_IMAGING" Category="RW_Imaging" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>JPEG format</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Enables Joint Photographic Experts Group (JPEG) file format processing. It is using a third-party library.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_GIF_IMAGING" Category="RW_Imaging" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>GIF format</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Enables Graphics Interchange Format (GIF) file format processing. Not implemented yet.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_TIFF_IMAGING" Category="RW_Imaging" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>TIFF format</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Enables Tagged Image File Format (TIFF) file format processing. It is using a third-party library.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_DDS_NATIVEIMG" Category="RW_NativeImaging" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>DDS format</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Enables DirectDraw Surface native image file format processing. It enables direct image data transfer to Direct3D 8, Direct3D 9 and XBOX native textures.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <BoolProperty Name="RWLIB_INCLUDE_PVR_NATIVEIMG" Category="RW_NativeImaging" IsRequired="true">
+      <BoolProperty.DisplayName>
+        <sys:String>PVR format</sys:String>
+      </BoolProperty.DisplayName>
+      <BoolProperty.Description>
+        <sys:String>Enables PowerVR version 2 native image file format processing by Imagination Technologies.</sys:String>
+      </BoolProperty.Description>
+    </BoolProperty>
+    <StringProperty Name="RWLIB_DEFAULT_REPOSITORY_DIR" Category="RW_Runtime" IsRequired="true"
+        DisplayName="Default Repository Directory"
+        Description="Relative directory from the current directory where the resource files of magic-rw are located."
+        Subtype="Folder"
+        />
+    <BoolProperty Name="RWLIB_RESINIT_DISABLE_LOCALIZATION" Category="RW_ResInit" IsRequired="true"
+        DisplayName="Disable Localization"
+        Description="Disables the loading of localization files at engine start-up. They can still be loaded manually during runtime."
+        />
+    <BoolProperty Name="RWLIB_DISABLE_THREADING" Category="RW_Runtime" IsRequired="true"
+        DisplayName="Disable Threading"
+        Description="Disables all threading related features of magic-rw. Automatically disabled if no NativeExecutive library was found." />
+    <EnumProperty Name="RWLIB_APPLICATION_ENTRYPOINT" Category="RW_Runtime" IsRequired="true"
+        DisplayName="Entrypoint Type"
+        Description="Decides which entrypoint to offer to the application. Can be disabled to allow the application to offer it's own entry point.">
+        <EnumValue Name="NONE" DisplayName="none" />
+        <EnumValue Name="CRT" DisplayName="main (CRT)" />
+        <EnumValue Name="WIN32" DisplayName="WinMain (Win32)" />
+    </EnumProperty>
+  </Rule>
+</ProjectSchemaDefinitions>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{a03f805a-7eb8-4e9a-b155-4076c8d9d96a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdkinclude">
+      <UniqueIdentifier>{5adcac59-8dab-4881-ae71-67f86e3bed5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\gtaconfig">
+      <UniqueIdentifier>{3b8a4068-1cbc-43e9-9cff-98da5ec3e3d1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\config.h" />
+    <ClInclude Include="..\src\csv.h" />
+    <ClInclude Include="..\src\ide.h" />
+    <ClInclude Include="..\src\ini.h" />
+    <ClInclude Include="..\src\ipl.h" />
+    <ClInclude Include="..\src\StdInc.h" />
+    <ClInclude Include="..\src\syntax.h" />
+    <ClInclude Include="..\include\gtaconfig\include.h">
+      <Filter>include\gtaconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\objdat.h" />
+    <ClInclude Include="..\include\gtaconfig\option.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\config.cpp" />
+    <ClCompile Include="..\src\csv.cpp" />
+    <ClCompile Include="..\src\ide.cpp" />
+    <ClCompile Include="..\src\ini.cpp" />
+    <ClCompile Include="..\src\ipl.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\syntax.cpp" />
+    <ClCompile Include="..\src\objdat.cpp" />
+    <ClCompile Include="..\src\option.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\eirrepo\sdk\UniChar.natvis" />
+    <Natvis Include="..\..\eirrepo\sdk\MemoryUtils.natvis" />
+  </ItemGroup>
+</Project>

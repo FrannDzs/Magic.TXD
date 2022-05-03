@@ -1,0 +1,9 @@
+OPTIONS <- {
+    FILESYS_DEFAULT_ENABLE_RAWFILE_BUFFERING = true,
+    FILESYS_MULTI_THREADING = true
+};
+
+if (IO.FileExists(_T("../../_repoconfig/FileSystem.sq")))
+{
+    Require(_T("../../_repoconfig/FileSystem.sq"));
+}

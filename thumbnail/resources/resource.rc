@@ -1,0 +1,7 @@
+#include "rcdesc.h"
+
+// Define the icons that we use.
+IDI_RWLOGO          ICON            "rwlogo.ico"
+
+// Define the bitmaps that we use.
+IDB_RWLOGO          BITMAP          "rwlogo.bmp"

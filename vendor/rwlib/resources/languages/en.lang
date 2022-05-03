@@ -1,0 +1,699 @@
+author The_GTA
+code en
+name English
+country United States of America
+
+SUBSYS_UNKNOWN              unknown
+SUBSYS_IMAGING              Imaging
+SUBSYS_DRAWING              Drawing
+SUBSYS_PIXELCONV            Pixel Conversion
+SUBSYS_NATIVE_TEXTURE       Native Texture
+SUBSYS_RASTER               Raster
+SUBSYS_DRIVER               Driver
+SUBSYS_DRIVERPROG           Driver Programming
+SUBSYS_MEMORY               Memory
+SUBSYS_PLUGIN               Plugin
+SUBSYS_NATIVE_IMAGING       Native Imaging
+SUBSYS_QOL                  Quality of Life
+SUBSYS_FILE                 File
+SUBSYS_LOCALIZATION         Localization
+SUBSYS_CONFIG               Config
+SUBSYS_STREAM               Stream
+SUBSYS_PALETTE              Palette
+SUBSYS_RESIZING             Resizing
+SUBSYS_TYPESYSTEM           Type System
+SUBSYS_RWOBJECTS            RwObjects
+SUBSYS_SERIALIZATION        Serialization
+SUBSYS_BLOCKAPI             Block API
+SUBSYS_EVENTSYSTEM          Event System
+SUBSYS_UTILS                Utilities
+SUBSYS_WINDOWING            Windowing
+
+STRUCTCHUNK_FRIENDLYNAME    anonymous struct chunk
+STRINGCHUNK_FRIENDLYNAME    ANSI string chunk
+USTRINGCHUNK_FRIENDLYNAME   Unicode string chunk
+INTERFACE_FRIENDLYNAME      engine
+OBJECT_FRIENDLYNAME         object
+RASTER_FRIENDLYNAME         raster
+STREAM_FRIENDLYNAME         stream
+RWLOCK_FRIENDLYNAME         rwlock
+RENTRWLOCK_FRIENDLYNAME     reentrant_rwlock
+UNFAIRMTX_FRIENDLYNAME      unfair_mutex
+SYNCEVENT_FRIENDLYNAME      sync_event
+NATIVETEX_FRIENDLYNAME      native texture
+TEXDICT_FRIENDLYNAME        texture dictionary
+
+OPNAME_UNK                  unknown
+OPNAME_CUSTOM               custom
+OPNAME_COPY_CONSTRUCT       copy-construct
+OPNAME_ASSIGN               assign
+OPNAME_READ                 read
+OPNAME_WRITE                write
+OPNAME_SEEK                 seek
+OPNAME_SKIP                 skip
+OPNAME_GETSIZE              get size
+OPNAME_MOVE                 move
+
+REASON_NOTIMPLEMENTED       not implemented
+
+TEMPL_WARN_OBJECT           [%(objectmsg)] %(message)
+
+TEMPL_SUBSYS                    [%(content)]
+TEMPL_TWOSUBSYS                 %(first) %(second)
+TEMPL_GENEXCEPT                 %(subsys) %(msgcontent)
+TEMPL_CONTEXT_OBJ               %(subsysname) %(objname)
+TEMPL_CONTEXT_MSG               %(subsysname) %(subsys_desc)
+TEMPL_OOM                       out of memory
+TEMPL_OOM_REQSIZE               out of memory (%(reqsize) bytes requested)
+TEMPL_NOTINIT                   not initialized
+TEMPL_NOTINIT_WHAT              %(what) not initialized
+TEMPL_UNSUPPOP                  not supported
+TEMPL_UNSUPPOP_OP               %(opname) not supported
+TEMPL_UNSUPPOP_REASON           not supported (reason: %(reason))
+TEMPL_UNSUPPOP_REASON_OP        %(opname) not supported (reason: %(reason))
+TEMPL_INVALIDCFG                invalid configuration
+TEMPL_INVALIDCFG_REASON         invalid configuration (reason: %(reason))
+TEMPL_STRUCTERR                 structural error
+TEMPL_STRUCTERR_REASON          structural error: %(reason)
+TEMPL_INVALIDOP                 invalid operation
+TEMPL_INVALIDOP_OP              invalid operation %(opname)
+TEMPL_INVALIDOP_OP_REASON       invalid operation %(opname): %(reason)
+TEMPL_INVALIDOP_REASON          invalid operation: %(reason)
+TEMPL_INVALIDPARAM              invalid parameter
+TEMPL_INVALIDPARAM_WHAT         invalid parameter: %(what)
+TEMPL_INVALIDPARAM_REASON       invalid parameter (reason: %(reason))
+TEMPL_INVALIDPARAM_WHAT_REASON  invalid parameter: %(what) (reason: %(reason))
+TEMPL_RESEXHAUST                request for resource failed
+TEMPL_RESEXHAUST_WHAT           request for resource %(what) failed
+TEMPL_INTERNERR                 internal error
+TEMPL_INTERNERR_REASON          internal error: %(reason)
+TEMPL_NOTFOUND                  not found
+TEMPL_NOTFOUND_WHAT             %(what) not found
+TEMPL_UNEXPCHUNK                expected block %(expected) but found %(found)
+
+TEMPL_CONTEXT_BLOCKAPI          chunk %(chunkname), offset %(offset)
+
+UNKEXCEPT                   unknown exception
+
+INVALIDPARAM_COLORMODEL     color model
+INVALIDPARAM_RASTERFMT      raster format
+INVALIDPARAM_COLOR          color item
+
+NATIVEIMG_REASON_IMGDATA_ALREADY_OWNED      image data already owned by another Raster
+NATIVEIMG_PARAM_NATIVETEXTYPE               native texture type
+NATIVEIMG_WARN_CREATEFAIL_WRITEIMG          failed to create NativeImage handle in raster writeImage routine
+NATIVEIMG_WARN_CREATEFAIL_READIMG           failed to create NativeImage handle in Raster readImage routine
+
+DDS_INVALIDBITDEPTH_RGBFMT          invalid bit depth for RGB format
+DDS_STRUCTERR_RGB_TO_D3DFORMAT      failed to map RGB DDS file to D3DFORMAT
+DDS_STRUCTERR_ALPHAYUV              DDS YUV texture with alpha not supported
+DDS_INVALIDBITDEPTH_YUVFMT          invalid bit depth for YUV format
+DDS_STRUCTERR_YUV_TO_D3DFORMAT      failed to map YUV DDS file to D3DFORMAT
+DDS_INVALIDBITDEPTH_LUMFMT          invalid bit depth for LUM format
+DDS_STRUCTERR_LUM_TO_D3DFORMAT      failed to map LUM DDS file to D3DFORMAT
+DDS_INVALIDBITDEPTH_ALPHAFMT        invalid bit depth for alpha format
+DDS_STRUCTERR_ALPHA_TO_D3DFORMAT    failed to map alpha DDS file to D3DFORMAT
+DDS_INVALIDBITDEPTH_PALFMT          invalid bit depth for palette format
+DDS_INTERNERR_UNKNOWNFMT            unknown DDS image pixel format type
+DDS_INTERNERR_NOVALIDMAPPING        could not map DDS file to a valid native raster representation
+DDS_INTERNERR_NATTEXMOVE            failed to push DDS native image color data to native texture due to unsupported DDS format
+DDS_INTERNERR_UNSUPPPAL             unsupported palette type in DDS native image texel acquisition from native texture
+DDS_INTERNERR_UNSUPPCOMPR           unknown compression type in DDS native image texel acquisition from native texture
+DDS_INTERNERR_UNSUPPDSTPAL          invalid destination palette type for DDS native image texel acquisition
+DDS_STRUCTERR_MAGIC                 invalid magic number
+DDS_STRUCTERR_HEADERFAIL            failed to read DDS header
+DDS_STRUCTERR_HEADERSIZE            invalid DDS header struct size
+DDS_STRUCTERR_HEADERPIXFMTSIZE      invalid DDS header pixel format struct size
+DDS_INTERNERR_NODEPTH               DDS files with depth are not supported (DDSD_DEPTH)
+DDS_STRUCTERR_COLORFMTDETECT        failed to determine DDS native image color format (RGB,YUV,LUM,alpha,fourCC,pal4,pal8)
+DDS_STRUCTERR_RDPALBUF              failed to read palette buffer in DDS native image deserialization
+DDS_STRUCTERR_MIPDIMS               invalid DDS file dimensions
+DDS_STRUCTERR_MIPSIZE               unknown mipmap data size of DDS native image
+DDS_STRUCTERR_RDMIPBUF              failed to read DDS native image mipmap buffer
+DDS_INVALIDCFG_WRITE_NODATA         attempt to write empty DDS native image
+DDS_INVALIDCFG_WRITE_UNKFMT         unknown DDS native image color format in DDS serialization
+DDS_INVALIDCFG_WRITE_BITDEPTH       invalid bit depth in DDS native image serialization
+DDS_WARN_MISSING_DDSD_CAPS          DDS file is missing DDSD_CAPS
+DDS_WARN_MISSING_DDSD_HEIGHT        DDS file is missing DDSD_HEIGHT
+DDS_WARN_MISSING_DDSD_WIDTH         DDS file is missing DDSD_WIDTH
+DDS_WARN_MISSING_DDSD_PIXELFORMAT   DDS file is missing DDSD_PIXELFORMAT
+DDS_WARN_AMBIGUOUSFMT_TEMPLATE      ambiguous DDS native image format: %(fmtlist) formats specified; %(fmtsel) format selected
+DDS_WARN_MIPMAPS_NOCOMPLEX          DDS file does have mipmaps but is not marked complex
+DDS_WARN_MISSING_DDSCAPS_TEXTURE    DDS file is missing DDSCAPS_TEXTURE
+
+PVR_INVALIDPARAM_RGBACOLORMODEL     invalid RGBA color model
+PVR_INVALIDPARAM_LUMCOLORMODEL      invalid LUM color model
+PVR_INVALIDPARAM_COLORMODEL         invalid color model
+PVR_INTERNERR_UNSUPPCOMPR           unsupported RW compression type in PVR native image texel acquisition
+PVR_INVALIDCFG_PVRCOMPRTYPE         invalid native texture compression type in PVR native image texel acquisition
+PVR_INTERNERR_UNSUPPCOLORFMT        unsupported color format type
+PVR_INTERNERR_NOPVRNATIVETEXTYPE    cannot handle PVRTC compressed PVR native images because the PowerVR native texture type is missing
+PVR_INTERNERR_UNSUPPCOMPR           unsupported PVR native image compression
+PVR_INVALIDCFG_PVRIMGTYPE           invalid PVR native image type
+PVR_INVALIDCFG_NOPO2                PVR native image must be power-of-two before compressing to PVRTC
+PVR_STRUCTERR_HEADERFAIL            invalid PVR native image (header not supported)
+PVR_STRUCTERR_PIXELFMT              invalid PVR native image (legacy) pixel format
+PVR_INTERNERR_NOCUBEMAP             cubemap PVR native images not supported yet
+PVR_INTERNERR_NOVOLUMETEX           volume texture PVR native images not supported yet
+PVR_INTERNERR_NOVERTFLIP            vertically flipped PVR native images not supported yet
+PVR_STRUCTERR_TWIDDLEFAIL           image says it is twiddled but width and height are not PoT and squared
+PVR_INTERNERR_NOTWIDDLE             twiddled PVR native images are not supported
+PVR_STRUCTERR_MIPDIMS               invalid image dimensions
+PVR_STRUCTERR_TRUNCATEDMIPDATA      too little surface data
+PVR_STRUCTERR_MIPDATAREAD           impartial mipmap surface read
+PVR_INTERNERR_EMPTYWRITE            attempt to write empty PVR native image file
+PVR_WARN_INVALID_BITSPERPIXEL       PVR native image has an invalid bitsPerPixel value
+PVR_WARN_MIPCOUNTPARSEMISMATCH      PVR native image specified more mipmap layers than could be read 
+PVR_WARN_REMAININGUNPARSEDSURFDATA  PVR native image has surface meta-data
+
+PIXELCONV_REASON_NOTCONV_RGBA           not convertible to RGBA
+PIXELCONV_REASON_NORASTERFMTCOLORMODEL  no color model for raster format
+PIXELCONV_INTERNERR_COLORFMT            unsupported pixel conversion color format
+PIXELCONV_INTERNERR_COLORMODEL          unsupported color model
+PIXELCONV_INVALIDCONF_RGBACOLORMODEL    invalid RGBA color model
+PIXELCONV_INVALIDCONF_LUMCOLORMODEL     invalid LUM color model
+PIXELCONV_REASON_PALFMT                 palette format
+PIXELCONV_INVALIDPARAM_RGBACOLOR        RGBA color item
+PIXELCONV_INVALIDPARAM_LUMCOLOR         LUM color item
+PIXELCONV_REASON_UNSUPPCOLORMODEL       unsupported color model
+
+CFG_ENVIRONMENT                     configuration block environment
+CFG_THREADEDCONFIG                  threaded configuration block
+CFG_REASON_PLGFAIL                  plugin failed assignment operator
+
+DRAWING_INTERNERR_RSTATECAPTURE     failed to allocate captured render states for 2D drawing layer
+DRAWING_INTERNERR_GSTATECAPTURE     failed to allocate graphics state for 2D drawing layer
+
+DRIVER_ENVNAME                      RenderWare GPU driver environment
+DRIVER_SWAPCHAIN_FRIENDLYNAME       swap chain
+DRIVER_PSO_FRIENDLYNAME             graphics PSO
+DRIVER_CMDBUF_FRIENDLYNAME          command buffer
+DRIVER_CMDALLOC_FRIENDLYNAME        command allocator
+DRIVER_CMDQUEUE_FRIENDLYNAME        command queue
+DRIVER_FENCE_FRIENDLYNAME           fence
+DRIVER_MEM_FRIENDLYNAME             driver memory
+DRIVER_CMDLISTTYPE_FRIENDLYNAME     command list type
+DRIVER_CMDALLOCTYPE_FRIENDLYNAME    command allocator type
+DRIVER_CMDBUFTYPE_FRIENDLYNAME      command buffer type
+DRIVER_MEMTYPE_FRIENDLYNAME         driver memory type
+
+D3D12_INTERNERR_CMDLISTFAIL                 failed to create D3D12 command list
+D3D12_INTERNERR_CMDALLOCFAIL                failed to create D3D12 command allocator
+D3D12_INTERNERR_CMDQUEUEFAIL                failed to create D3D12 command queue
+D3D12_INTERNERR_FENCEFAIL                   failed to create D3D12 fence
+D3D12_INTERNERR_DEVICEHANDLEFAIL            failed to create Direct3D 12 device handle
+D3D12_INTERNERR_MEMFAIL                     failed to allocate GPU memory
+D3D12_PSO_INTERNERR_ROOTPARAMMAP            failed to get mapping for root parameter
+D3D12_PSO_INTERNERR_DESCRANGE               failed to get descriptor range type
+D3D12_PSO_INTERNERR_ROOTPARAM_SHADERVIS     failed to get root parameter shader visibility
+D3D12_PSO_INTERNERR_STATICSAMP_FILTERMODE   failed to get static sampler filter mode
+D3D12_PSO_INTERNERR_STATICSAMP_UADDRMODE    failed to get static sampler U address mode
+D3D12_PSO_INTERNERR_STATICSAMP_VADDRMODE    failed to get static sampler V address mode
+D3D12_PSO_INTERNERR_STATICSAMP_WADDRMODE    failed to get static sampler W address mode
+D3D12_PSO_INTERNERR_STATICSAMP_SHADERVIS    failed to get static sampler shader visibility
+D3D12_INTERNERR_SERROOTSIGFAIL              failed to serialize D3D12 root signature: %(message)
+D3D12_INTERNERR_ROOTSIGFAIL                 failed to create D3D12 root signature
+D3D12_PSO_INTERNERR_SOURCEBLENDMOD          failed to get source blend modulator
+D3D12_PSO_INTERNERR_DSTBLENDMOD             failed to get dest blend modulator
+D3D12_PSO_INTERNERR_COLORBLENDOP            failed to get color blend op
+D3D12_PSO_INTERNERR_ALPHASOURCEBLEND        failed to get alpha source blend
+D3D12_PSO_INTERNERR_ALPHADSTBLEND           failed to get alpha dest blend
+D3D12_PSO_INTERNERR_ALPHABLENDOP            failed to get alpha blend op
+D3D12_PSO_INTERNERR_LOGICOP                 failed to get logic op
+D3D12_PSO_INTERNERR_RASFILLMODE             failed to get rasterizer state fill mode
+D3D12_PSO_INTERNERR_RASCULLMODE             failed to get rasterizer state cull mode
+D3D12_PSO_INTERNERR_DSTENCIL_DEPTHFUNC      failed to get depth stencil depth func
+D3D12_PSO_INTERNERR_DSTENCIL_FFACEFAILOP    failed to get depth stencil front-face fail op
+D3D12_PSO_INTERNERR_DSTENCIL_FFACEDFAILOP   failed to get depth stencil front-face depth fail op
+D3D12_PSO_INTERNERR_DSTENCIL_FFACEPASSOP    failed to get depth stencil front-face pass op
+D3D12_PSO_INTERNERR_DSTENCIL_FFACEFUNC      failed to get depth stencil front-face func
+D3D12_PSO_INTERNERR_DSTENCIL_FBACKFAILOP    failed to get depth stencil back-face fail op
+D3D12_PSO_INTERNERR_DSTENCIL_FBACKDFAILOP   failed to get depth stencil back-face depth fail op
+D3D12_PSO_INTERNERR_DSTENCIL_FBACKPASSOP    failed to get depth stencil back-face pass op
+D3D12_PSO_INTERNERR_DSTENCIL_FBACKFUNC      failed to get depth stencil back-face func
+D3D12_PSO_INTERNERR_MAPVERTEXATTRSEM        failed to map vertex attribute semantic
+D3D12_PSO_INTERNERR_VERTEXATTR_MAPDXGI      failed to map vertex attribute to DXGI_FORMAT
+D3D12_PSO_INTERNERR_TOPOLOGYMAP             failed to map primitive topology type
+D3D12_PSO_INTERNERR_RTVIEWFMTMAP            failed to map render target view raster format
+D3D12_PSO_INTERNERR_DSTENCILVIEWFMTMAP      failed to map depth stencil view raster format
+D3D12_INTERNERR_PSOFAIL                     failed to create D3D12 graphics pipeline state object
+D3D12_REASON_UNSUPPNATTEXTYPE               unsupported native texture type
+D3D12_INTERNERR_GETSWAPCHAINRTSURF          failed to get Direct3D 12 swap chain render target surface
+D3D12_INTERNERR_SWAPCHAINRESIZE             failed to resize swap chain back buffers
+D3D12_INTERNERR_DXGIENTRYNOTFOUND           cannot find DXGI entry point (CreateDXGIFactory1)
+D3D12_INTERNERR_DXGIFACTCREATE              failed to create DXGI factory
+D3D12_INTERNERR_SWAPCHAINFAIL               failed to create D3D12 swap chain
+D3D12_INTERNERR_SWAPCHAINNEWCAST            failed to cast old style swap chain to new style
+D3D12_INTERNERR_SWAPCHAIN_RTVDESCFAIL       failed to create RTV descriptor heap for D3D12 device swap chain
+
+DRIVER_PROGTYPE_FRIENDLYNAME        shader program type
+DRIVER_INTERNERR_COMPILATIONFAIL    shader compilation has failed: %(message)
+
+EVENTSYS_REFCNTFAIL                 failed to acquire object reference for event trigger
+
+ENGINE_WARN_DELETEINVALIDNATIVETEX  invalid native image handle pointer passed to DeleteNativeImage
+
+BMP_STRUCTERR_HEADERFAIL            could not read .bmp header
+BMP_STRUCTERR_CHECKSUMFAIL          invalid checksum
+BMP_STRUCTERR_RESERVEDNOTZERO       unknown bitmap extension / reserved not zero
+BMP_STRUCTERR_INFOHEADERFAIL        could not read .bmp info header
+BMP_STRUCTERR_INFOHEADERSIZE        unknown .bmp revision: invalid info header size
+BMP_STRUCTERR_PLANECOUNT            invalid amount of .bmp planes (must be 1)
+BMP_INTERNERR_NOCOMPRESSION         no support for compressed .bmp files (sorry)
+BMP_INTERNERR_NOMONOCHROME          cannot read monochrome .bmp files
+BMP_STRUCTERR_NORASTERFMTMAP        unsupported .bmp raster format
+BMP_STRUCTERR_RDPALDATA             failed to read .bmp palette data
+BMP_STRUCTERR_RDIMGDATA             failed to read .bmp image data rows
+BMP_INVALIDCFG_COMPRSERIALIZE       cannot serialize compressed pixel data in .bmp
+
+IMAGING_INTERNERR_RAWCONVFAIL       failed to convert to raw pixel format
+IMAGING_INTERNERR_PALEXPANDFAIL     could not expand palette mipmap for Bitmap deserialization
+
+JPEG_TEMPL_FATALERR                 JPEG fatal error: %(message)
+JPEG_STRUCTERR_BYTESKIPCOUNT        invalid byte skip count in JPEG deserialization
+JPEG_INTERNERR_UNKFMT               unknown JPEG format in deserialization
+JPEG_INVALIDCFG_NOCOMPRINPUT        cannot accept compressed pixels in JPEG serialization routine
+JPEG_INVALIDCFG_RASTERFMT           unsupported raster format in JPEG serialization
+JPEG_WARN_TEMPLATE                  JPEG: %(message)
+
+PNG_TEMPL_ERROR                     PNG fatal error: %(message)
+PNG_STRUCTERR_TRUNCATEDREAD         unfinished read exception
+PNG_INTERNALERR_READINFOCREATE      failed to create PNG read struct
+PNG_INTERNALERR_INFOCREATE          failed to create PNG info struct
+PNG_STRUCTERR_NOIMAGEMETA           missing image meta information
+PNG_STRUCTERR_UNKCOLORTYPE          unknown color type
+PNG_INTERNERR_UNKGRAYSCALE          unknown .png grayscale format
+PNG_INTERNERR_UNKTRUECOLOR          unknown .png truecolor format
+PNG_INTERNERR_UNKPALETTEFMT         unknown .png palette depth format
+PNG_INTERNERR_UNKLUMALPHA           unknown .png luminance alpha format
+PNG_INTERNERR_UNKTRUECOLORALPHA     unknown .png truecolor+alpha format
+PNG_INTERNERR_NODIRECTAPPLY         could not apply pixels from .png directly
+PNG_INTERNERR_NOPLTE                could not find PLTE chunk
+PNG_INTERNERR_TRUNCATEDWRITE        unfinished write exception
+PNG_INVALIDCFG_NOCOMPRINPUT         cannot serialize .png using compressed data
+PNG_INTERNERR_WRITEINTOCREATE       failed to create .png write struct
+PNG_INVALIDCFG_PALCOLORMODEL        failed to write palette .png with unknown color model
+PNG_INVALIDCFG_COLORMODEL           cannot serialize .png with an unknown color model
+PNG_WARN_TEMPLATE                   PNG warning: %(message)
+PNG_WARN_LOSSY16BITGRAYSCALE        lossy 16bit grayscale conversion to 8bit LUM8
+PNG_WARN_LOSSY16BITCOLORCONV        lossy 16bit color channel to 8bit color channel conversion
+PNG_WARN_LOSSY16BITLUMALPHACONV     lossy 16bit luminance alpha to 8bit conversion
+PNG_WARN_LOSSY16BITCOLORALPHACONV   lossy 16bit truecolor+alpha to 8bit conversion
+PNG_INTERNERR_STRIDEMISMATCH        unexpected rowstride returned by libpng
+
+TGA_STRUCTERR_HEADERFAIL            failed to read .tga header
+TGA_STRUCTERR_MISSINGPAL            invalid color mapped TGA that has no palette included
+TGA_STRUCTERR_COLORMAPDEPTH         invalid color map depth
+TGA_STRUCTERR_UNKIMAGETYPE          unknown TGA image type
+TGA_STRUCTERR_UNKFORMATMAPPING      unknown raster format mapping
+TGA_STRUCTERR_RDPALDATA             failed to read .tga palette data
+TGA_STRUCTERR_RDIMGDATA             failed to read .tga color/index data
+TGA_STRUCTERR_TRUNCATEDREAD         incomplete TGA read exception
+TGA_INVALIDCFG_NOCOMPRINPUT         cannot serialize TGA with compressed texels
+TGA_INVALIDCFG_NOFORMATMAPPING      could not find a raster format to write TGA image with
+
+TIFF_INTERNERR_SEEKMODE             invalid TIFF seek mode
+TIFF_INTERNERR_FMTSTRINGENC         libtiff format string encoding error
+TIFF_TEMPL_LIBTIFF                  libtiff %(type): %(message)
+TIFF_TEMPL_LIBTIFF_WITHMOD          libtiff %(type) (module: %(module): %(message)
+TIFF_INTERNERR_INPUTHANDLECREATE    failed to establish TIFF input I/O stream
+TIFF_STRUCTERR_PHOTOMETRICFAIL      failed to get photometric setting for TIFF
+TIFF_STRUCTERR_IMAGEWIDTHFAIL       failed to get image width setting for TIFF
+TIFF_STRUCTERR_IMAGELENGTHFAIL      failed to get image length setting for TIFF
+TIFF_STRUCTERR_BITPERSAMPLEFAIL     failed to get sample depth setting for TIFF
+TIFF_STRUCTERR_COMPRESSIONFAIL      failed to get compression setting for TIFF
+TIFF_STRUCTERR_SAMPLESPERPIXELFAIL  failed to get amount of samples per pixel for TIFF
+TIFF_STRUCTERR_ORIENTATIONFAIL      failed to get orientation setting for TIFF
+TIFF_STRUCTERR_EMPTYIMAGE           empty TIFF image (either dimension is zero)
+TIFF_STRUCTERR_NOSAMPLEDEPTH        TIFF has zero sample depth
+TIFF_STRUCTERR_NOSAMPLES            TIFF has no samples
+TIFF_STRUCTERR_SCANLINESIZEZERO     cannot read TIFF whose scanline size is zero
+TIFF_STRUCTERR_RDSCANLINE           failed to (directly) read TIFF row data
+TIFF_STRUCTERR_RDRGBAIMAGEORIENTED  failed to read virtual RGBA image data from TIFF
+TIFF_INVALIDCFG_NOCOMPRINPUT        cannot serialize compressed texels in TIFF serialization routine
+TIFF_INTERNERR_OUTPUTHANDLECREATE   failed to establish TIFF input I/O stream
+TIFF_INVALIDCFG_NORASTERFORMATMAP   could not map target raster format in TIFF serialization
+TIFF_INTERNERR_WRSCANLINE           failed to (directly) write TIFF row data
+
+OBJEXT_STRUCTERR_EXTTOOBIG          extension block too big to store in memory
+OBJEXT_WARN_NOTFOUND                could not find extension block; ignoring
+OBJEXT_WARN_READINGERROR            error while reading RenderWare object extension storage (ignoring)
+
+RWUTIL_REASON_UNKDEPTH              unknown bit depth
+RWUTIL_WARN_CHUNKSTRINGTOOLONG      too long string in string chunk
+RWUTIL_WARN_STRINGCHUNK_NOTFOUND    could not find string chunk
+RWUTIL_STREAM_TRUNCATEDWRITE_TEMPL  truncated write of %(what)
+
+SERIALIZATION_MANAGER_FRIENDLYNAME              serializer
+SERIALIZATION_INTERNERR_CONSTRFAIL              failed to create object for deserialization
+SERIALIZATION_INTERNERR_TEXTURE_INVALIDOBJ      invalid RwObject at texture serialization (not a texture base)
+SERIALIZATION_INTERNERR_TEXTURE_NORASTER        could not serialize texture: no raster attached
+SERIALIZATION_INTERNERR_TEXTURE_AMBIGUOUSPROV   texture native block compatibility conflict (two or more absolute providers)
+SERIALIZATION_INTERNERR_TEXTURE_NOPROV          unknown texture native block
+SERIALIZATION_INTERNERR_TEXTURE_RASATTACHFAIL   failed to link the raster object
+SERIALIZATION_INTERNERR_TEXTURE_RASCREATEFAIL   failed to create raster object for deserialization
+SERIALIZATION_INTERNERR_TEXDICT_INVALIDOBJ      invalid type at TXD serialization
+SERIALIZATION_INVALIDCFG_TEXDICT_TOOMANYTEX     texture dictionary has too many textures for writing
+SERIALIZATION_STRUCTERR_UNKBLOCK                unknown RenderWare stream block
+SERIALIZATION_STRUCTERR_NOPODDESER              found POD block but an object was requested
+
+TEXTURE_WARN_INVFILTERINGMODEFIX                texture has an invalid filtering mode (fixed)
+TEXTURE_WARN_INVFILTERMODE                      texture has an invalid filter mode; defaulting to linear
+TEXTURE_WARN_INVUADDRMODE                       texture has an invalid uAddressing mode; defaulting to wrap
+TEXTURE_WARN_INVVADDRMODE                       texture has an invalid vAddressing mode; defaulting to wrap
+
+TEXDICT_WARN_NOMETAINFO                         could not find texture dictionary meta information
+TEXDICT_WARN_TEXNATIVEDECODE_TEMPLATE           texture native reading failure: %(errmsg)
+TEXDICT_WARN_TEXNATIVEDECODEFAIL                failed to deserialize texture native block in texture dictionary
+
+STREAM_INVALIDPARAM_SEEKMODE        seek mode
+STREAM_CUSTOM_FRIENDLYNAME          custom stream
+
+THREADING_WARN_FATALTHREADEXIT_TEMPLATE     fatal thread exception: %(message)
+
+WINDOWING_INTERNERR_WNDCREATE       window creation failed
+WINDOWING_WIN32_FRIENDLYNAME        win32 windowing system
+WINDOWING_INTERNERR_THRCREATEFAIL   failed to create window messaging thread
+WINDOWING_WIN32WND_FRIENDLYNAME     win32 window
+
+STREAM_STRUCTERR_CHECKAHEADFAIL     stream does not have required bytes
+
+AMDCOMPRESS_STRUCTERR_PLATFORMID            invalid platform type
+AMDCOMPRESS_STRUCTERR_ATCCOMPRTYPE          texture has an invalid ATC compression type
+AMDCOMPRESS_STRUCTERR_COMPRBLOCKSIZEFAIL    failed to determine compression block size for texture
+AMDCOMPRESS_STRUCTERR_INVMIPDIMMS           texture has invalid dimensions
+AMDCOMPRESS_STRUCTERR_MIPDAMAGE             texture has damaged mipmaps
+AMDCOMPRESS_STRUCTERR_EMPTY                 texture is empty
+AMDCOMPRESS_INTERNERR_DECOMPRFAIL           failed to decompress AMDCompress native texture surface data
+AMDCOMPRESS_INTERNERR_COMPRFAIL             failed to compress AMDCompress native texture surface data
+AMDCOMPRESS_INVALIDCFG_INVMIPDIMMS          invalid mipmap dimensions in ATC native texture pixel acquisition
+AMDCOMPRESS_INTERNERR_MIPDATACONVFAIL       failed to decompress in ATC native texture mipmap manager
+AMDCOMPRESS_INTERNERR_WRITEEMPTY            attempt to write ATC native texture which has no mipmap layers
+AMDCOMPRESS_WARN_NOIMGDATASTRUCT            could not find image data struct inside of ATC native texture
+
+RASTER_REASON_INVNATIVEDATA         invalid native data
+RASTER_INVALIDCFG_RASTERNOTCOMPR    attempted to compress but raster does not support compression
+RASTER_INTERNERR_UNKBESTDXT         could not decide on an optimal DXT compression type
+RASTER_INTERNERR_MIPGEN_INVMIPDIMMS invalid raster dimensions in mipmap generation
+RASTER_INVALIDCFG_NOCONSTREFFAIL    attempt to decrease constant ref count of Raster while it is not const referenced
+RASTER_INVALIDCFG_MODIFYCONST       cannot modify raster because immutable
+RASTER_INVALIDCFG_MIPLAYERZEROFAIL  failed to get mipmap layer zero data in image writing
+RASTER_INTERNERR_MIPSERIALIZEFAIL   failed to serialize mipmap layer
+RASTER_INTERNERR_DESERFAIL_IMGFMT   failed to deserialize mipmap layer (unknown image format)
+RASTER_WARN_NOTYPEINFO              no raster type info present in CreateRaster
+RASTER_WARN_NOTINITIALIZED          no raster environment present in CreateRaster
+RASTER_WARN_INVOBJATDELETE          invalid raster object pushed to DeleteRaster
+RASTER_WARN_NATIVETEXCREATEFAIL     failed to create native texture data for texture deserialization
+RASTER_WARN_AMBIGUOUSNATTEX         ambiguous native texture block
+
+RESIZING_INVALIDCFG_NATTEX_MIPDIMMS         dimensions given for raster resize routine are invalid for that native texture type
+RESIZING_INVALIDCFG_INVMIPDIMMS             invalid mipmap dimensions given for resizing
+RESIZING_DOWNSAMPLEFLTRNAME_FRIENDLYNAME    downsample filter name
+RESIZING_UPSCALEFLTRNAME_FRIENDLYNAME       upscale filter name
+RESIZING_INVALIDCFG_DOWNSAMPLEFLTR_NOMINIFY selected downsampling filter does not support minification
+RESIZING_INVALIDCFG_UPSCALEFLTR_NOMAGNIFY   selected upscaling filter does not support magnification
+
+RESIZING_FILTER_LINEAR_INVCOLORMODEL                invalid color model
+RESIZING_FILTER_LINEAR_INVALIDCFG_NOTWODIMMUPSCALE  linear filtering does not support two dimensional upscaling
+RESIZING_FILTER_LINEAR_INTERNERR_SRCCOLORFAIL       failed to get source color in linear filtering
+
+MIPTRUNC_INTERNERR_INVCOMPR         invalid compression type at mipmap layer truncation
+MIPTRUNC_INTERNERR_MIPDIMMS         invalid mipmap dimensions at mipmap layer truncation
+
+NATIVETEX_INTERNALERR_COMPRFAIL         failed to compress native texture
+NATIVETEX_INTERNERR_MIPCONVFAIL         failed to convert fetched mipmap layer to uncompressed format
+NATIVETEX_WARN_REGWITHNOTYPE            tried to register native texture type with no platform type around
+
+D3D8_STRUCTERR_PLATFORMID           invalid platform type in Direct3D 8 texture reading
+D3D8_STRUCTERR_COMPRTYPE            invalid Direct3D 8 texture compression format
+D3D8_STRUCTERR_INVALIDEPTH          texture has an invalid depth
+D3D8_STRUCTERR_INVMIPDIMMS          texture has invalid dimensions
+D3D8_STRUCTERR_EMPTY                texture is empty
+D3D8_INTERNERR_COMPRTYPE            unsupported DXT compression
+D3D8_INTERNERR_UNKFRAMEWORKCOMPR    unknown pixel compression type
+D3D8_INVALIDCFG_MIPDIMMS            invalid mipmap dimensions in Direct3D 8 native texture pixel data acquisition
+D3D8_INTERNERR_WRITEEMPTY           attempt to write Direct3D 8 native texture with no mipmap layers
+D3D8_INTERNERR_WRITEINVCOLORORDER   texture has an invalid color order for writing
+D3D8_WARN_MIPDAMAGE                 texture has damaged mipmaps (ignoring)
+D3D8_WARN_ZEROSIZEDMIPMAPS          texture has zero sized mipmaps
+D3D8_WARN_MIPRULEVIOLATION          texture violates mipmap rules
+D3D8_WARN_INVAUTOMIPMAP             texture has an invalid auto-mipmap flag (fixing)
+D3D8_WARN_NONATIVEIMGSTRUCT         failed to find texture native image struct in D3D texture native
+
+D3D9_STRUCTERR_PLATFORMID           invalid platform type in Direct3D 9 texture reading
+D3D9_STRUCTERR_NOMIPMAPS            texture has a mipmap count of zero
+D3D9_STRUCTERR_AMBIGUOUS_PALCOMPR   texture has an ambiguous format: identified as both palettized and compressed
+D3D9_STRUCTERR_INVPALDEPTH          texture has an invalid palette bit depth (either 4bit or 8bit is supported)
+D3D9_INTERNERR_BITDEPTHRESOLVE      failed to resolve internal bit depth for texture
+D3D9_STRUCTERR_PALTEXNOFORMAT       texture is a palette texture but has no Direct3D raster format link
+D3D9_STRUCTERR_INVMIPDIMMS          texture has invalid dimensions
+D3D9_STRUCTERR_EMPTY                texture is empty
+D3D9_INVALIDCFG_NORASTERFMT         cannot fetch pixels from Direct3D 9 raster as it has no representation in RenderWare
+D3D9_INTERNERR_UNKCOMPR             unknown pixel compression type
+D3D9_INVALIDCFG_MIPDIMMS            invalid mipmap dimensions in Direct3D 9 native texture pixel acquisition
+D3D9_INTERNERR_WRITEEMPTY           attempt to write Direct3D 9 native texture which has no mipmap layers
+D3D9_INVALIDCFG_FETCHPIXUNKFMT      cannot fetch mipmap layer from Direct3D 9 native texture since it has an unknown D3DFORMAT
+D3D9_INVALIDCFG_ADDPIXUNKFMT        cannot add mipmap layers to Direct3D 9 native texture as it has an unknown D3DFORMAT
+D3D9_WARN_PALFMTMISMATCH            texture is a palette texture but did not set D3DFMT_P8
+D3D9_WARN_D3DFORMAT_UNK             texture has an unknown D3DFORMAT link (%(d3dfmt))
+D3D9_WARN_INVRASTERFMT              texture has an invalid raster format (ignoring)
+D3D9_WARN_EXTENDEDFMT_MISMATCH      texture has extended D3DFORMAT link but does not enable 'isNotRwCompatible'
+D3D9_WARN_MIPDAMAGE                 texture has damaged mipmaps (ignoring)
+D3D9_WARN_ZEROSIZEDMIPMAPS          texture has zero sized mipmaps
+D3D9_WARN_MIPRULEVIOLATION          texture violates mipmap rules
+D3D9_WARN_INVAUTOMIPMAP             texture has an invalid auto-mipmap flag (fixing)
+D3D9_WARN_NOIMGDATASTRUCT           failed to find texture native image struct in D3D native texture
+D3D9_WARN_INVCOMPRPARAMS            texture has invalid compression parameters (ignoring)
+D3D9_WARN_INVCOLORDEPTHVALUE        texture has an invalid color depth value (ignoring)
+
+DXTMOBILE_STRUCTERR_PLATFORMID      invalid platform type in s3tc_mobile texture reading
+DXTMOBILE_STRUCTERR_INTERNALFMT     texture has an invalid internalFormat parameter
+DXTMOBILE_STRUCTERR_IMGDATASECTSIZE texture has an invalid image data section size
+DXTMOBILE_STRUCTERR_MIPDIMMS        texture has invalid dimensions
+DXTMOBILE_STRUCTERR_MIPDAMAGE       texture has damaged mipmap layers
+DXTMOBILE_STRUCTERR_MIPDATASIZE     texture has an invalid image data section size
+DXTMOBILE_STRUCTERR_EMPTY           texture is empty
+DXTMOBILE_STRUCTERR_NOSTRUCT        could not find texture image data block in s3tc_mobile texture native
+DXTMOBILE_INVALIDCFG_INTERNFMT      invalid internalFormat in s3tc_mobile native texture
+DXTMOBILE_INTERNERR_WRITEEMPTY      attempt to write S3TC mobile native texture which has no mipmap layers
+DXTMOBILE_INVALIDCFG_INVMIPDIMMS    invalid mipmap dimensions in S3TC native texture pixel acquisition
+DXTMOBILE_INTERNERR_BESTDXTDETECT   could not decide on a DXT compression type in s3tc_mobile native texture pixel assignment
+DXTMOBILE_INVALIDCFG_COMPRTYPE      invalid input compression type in s3tc_mobile texture native pixel assignment
+DXTMOBILE_WARN_IMGSECTBYTESLEFT     texture has image section meta-data
+
+GAMECUBE_STRUCTERR_NOSTRUCT             unknown gamecube native block; expected chunk struct
+GAMECUBE_STRUCTERR_PLATFORMID           invalid platform type in gamecube texture reading
+GAMECUBE_STRUCTERR_INVPALFMT            invalid palette format in GC native texture deserialization
+GAMECUBE_STRUCTERR_AMBIGUOUSPALCOMPR    encountered impossible GC native texture that has palette and compression enabled
+GAMECUBE_STRUCTERR_OLDVER_FMTMAP        invalid GC native texture format mapping (old version)
+GAMECUBE_STRUCTERR_UNKGCNATTEXFMT       texture has an unknown Gamecube native texture format
+GAMECUBE_STRUCTERR_UNKGCPALFMT          texture has an unknown palette pixel format
+GAMECUBE_STRUCTERR_AMBIGUOUSPAL         texture has ambiguous palette format description
+GAMECUBE_INTERNERR_CLUSTERPROPSFAIL     failed to get cluster-props for GC native texture internalFormat
+GAMECUBE_STRUCTERR_INVMIPDIMMS          texture has invalid texture dimensions
+GAMECUBE_STRUCTERR_NOMIPMAPS            texture has no mipmaps
+GAMECUBE_STRUCTERR_NOSTRUCT             unknown gamecube native block; expected chunk struct
+GAMECUBE_INVALIDCFG_PALFMTMAP           invalid palette mapping in GC native texture deserialization
+GAMECUBE_INTERNERR_MAPPALFMTTOCOLOR     failed to map Gamecube palette format to color model
+GAMECUBE_INTERNERR_MAPINTERNFMTTOCOLOR  failed to map Gamecube internalFormat to color model
+GAMECUBE_INTERNERR_UNKCOLORMODEL        unknown color model
+GAMECUBE_INTERNERR_UNKINTERNFMT         unknown GC native texture mipmap internalFormat
+GAMECUBE_INTERNERR_UNKSWIZZLEFMT        attempt to swizzle unknown GC native texture format
+GAMECUBE_INTERNERR_MAPPALTOINTERNFMT    failed to get internalFormat from palette format
+GAMECUBE_INTERNERR_MAPSRCPALTOINTERNFMT failed to get source internalFormat from palette format
+GAMECUBE_INTERNERR_MAPDSTPALTOINTERNFMT failed to get destination internalFormat from palette format
+GAMECUBE_INTERNERR_WRITEEMPTY           attempt to write an empty texture
+GAMECUBE_INTERNERR_SER_NOFMTMAP_O       failed to set format mapping for GC native texture (old version)
+GAMECUBE_INTERNERR_NOPIXFMT             failed to get output raster format for GC native texture pixel fetch
+GAMECUBE_INVALIDCFG_MIPDIMMS            failed verification of size rules in GC native texture pixel acquisition
+GAMECUBE_INVALIDCFG_PALTYPE             invalid palette type in GC native texture texel acquisition
+GAMECUBE_INVALIDCFG_COMPRTYPE           invalid compression type of texel data in GC native texture texel acquisition
+GAMECUBE_INTERNERR_NOFMTMAP             failed to determine destination internalFormat for GC native texture texel acquisition
+GAMECUBE_INTERNERR_NOCLUSTERPROPS       failed to get cluster-props for GC native texture consistency update
+GAMECUBE_WARN_IMGSECTDATAOVERFLOW       texture has less image data bytes than the mipmaps require
+GAMECUBE_WARN_IMGSECTBYTESLEFT          texture has image data section meta data (ignoring)
+GAMECUBE_WARN_RASFMTPALETTEMISMATCH     texture has a raster format descriptor that does not match its palettePixelFormat parameter
+GAMECUBE_WARN_RASFMTINTERNMISMATCH      texture has a raster format descriptor that does not match its internalFormat parameter
+GAMECUBE_WARN_INVDEPTH                  texture has an invalid depth (ignoring)
+GAMECUBE_WARN_INVPALTYPE                texture has an invalid palette type (ignoring)
+
+PALETTE_REMAP_INVALIDCFG_UNSUPPPALDEPTH         unsupported palette item depth in native palette remapping algorithm
+PALETTE_INTERNERR_UNKPALFMT                     unknown palette type
+PALETTE_INTERNERR_UNKPALDEPTH                   invalid palette depth
+PALETTE_INTERNERR_LIBIMGQUANT_QUANTIZEFAIL      failed to palettize color buffer using libimagequant
+PALETTE_INTERNERR_LIBIMGQUANT_REMAPFAIL         failed to write remapped index buffer using libimagequant
+PALETTE_PALTYPE_FRIENDLYNAME                    palette type
+PALETTE_REASON_INPUT_PALUNSUPPBYRASTER          raster does not accept palette data
+PALETTE_REASON_STORAGE_PALUNSUPPBYRASTER        raster cannot store palette data
+PALETTE_INTERNERR_PIXELCONVFAIL                 pixel conversion failed in palettization routine
+PALETTE_LIBIMGQUANT_ATTRFAIL                    failed to create libimagequant attribute struct
+PALETTE_LIBIMGQUANT_IMGHANDLEFAIL               failed to create libimagequant image handle
+PALETTE_LIBIMGQUANT_COLORADDFAIL                failed to add color to libimagequant palette buffer
+PALETTE_LIBIMGQUANT_REMAPFAIL                   failed to remap image using libimagequant
+
+PIXELCONV_INVALIDCFG_ALREADYCOMPR               attempting to compress an already compressed texture
+PIXELCONV_DXTTYPE_FRIENDLYNAME                  DXT compression type
+
+PS2_STRUCTERR_PLATFORMID                        invalid platform checksum in PS2 texture reading
+PS2_STRUCTERR_NOMASTERHEADERSTRUCT              could not find texture native master header struct
+PS2_STRUCTERR_NOMETAINFOHEADERSTRUCT            could not find texture meta information struct
+PS2_STRUCTERR_INVRASTERFMT                      invalid raster format in PS2 texture
+PS2_STRUCTERR_INVDEPTH                          texture has an invalid depth
+PS2_INTERNERR_UNKIMGDECODE                      unknown image decoding format
+PS2_INTERNERR_UNKIMGENCODE                      unknown image encoding format
+PS2_STRUCTERR_INVMIPDIMMS                       texture has invalid dimensions
+PS2_INTERNERR_DIMMSENCODEFAIL                   failed to get encoded dimensions for mipmap
+PS2_STRUCTERR_GIFPACKETOVERFLOW                 invalid image data bounds for PS2 native texture
+PS2_STRUCTERR_EMPTY                             texture is empty
+PS2_STRUCTERR_INVPALFMT                         invalid palette raster format
+PS2_STRUCTERR_PAL_GIFPACKETOVERFLOW             invalid palette data bounds for PS2 native texture
+PS2_INTERNERR_TEXMEMALLOCFAIL                   failed to allocate PS2 texture virtual memory
+PS2_INTERNERR_TEXFMTDETECTFAIL                  invalid texture format
+PS2_INTERNERR_UNSWIZZLEFAIL                     failed to transform PS2 mipmap layer into a linear raster format (unswizzle)
+PS2_INTERNERR_TRUNCATEFAIL                      failed to truncate PS2 mipmap layer in mipmap transcoding routine
+PS2_INTERNERR_SWIZZLEFAIL                       failed to transform PS2 mipmap layer into GPU raster format (swizzle)
+PS2_INTERNERR_SWIZZLEDIMMSFAIL                  failed to get PS2 swizzle format dimensions for linear encoding
+PS2_INVALIDCFG_MIPDIMMS                         invalid mipmap dimension(s) in PS2 native texture pixel acquisition
+PS2_INVALIDCFG_TOOMANYMIPMAPS                   cannot add mipmap in PS2 texture because too many
+PS2_INTERNERR_UNKSWIZZLEPALTYPE                 invalid palette type in PS2 hardware swizzle detection
+PS2_INTERNERR_CLUTUNSWIZZLE                     failed to unswizzle the CLUT
+PS2_INTERNERR_CLUTSWIZZLE                       failed to swizzle the CLUT
+PS2_INTERNERR_EXCEEDGIFPACKETSIZE               failed to write texture because the data size exceeds the GIF image packet hardware register write count
+PS2_INTERNERR_UPDATE_UNKSWIZZLE                 unknown swizzle encoding of PS2 texture
+PS2_INTERNERR_UPDATE_UNKIMGDATAENC              unknown image data encoding of PS2 texture
+PS2_INTERNERR_WRITEEMPTY                        attempt to write PS2 native texture which has no mipmap layers
+PS2_INTERNERR_MISSEDTEXUPDATE                   invalid PS2 texture encoding in native texture serialization (failed update?)
+PS2_INTERNERR_WRITE_INVPALDIMMS                 invalid PS2 native texture palette dimensions
+PS2_INTERNERR_WRITE_TOOMANYMIPMAPS              too many mipmaps at serialization
+PS2_INTERNERR_WRITE_FMTFAIL                     incompatible PS2 texture format
+PS2_WARN_INVREG_TRXPOS_SSAX                     PS2 native texture TRXPOS register: invalid value for ssax
+PS2_WARN_INVREG_TRXPOS_SSAY                     PS2 native texture TRXPOS register: invalid value for ssay
+PS2_WARN_INVREG_TRXPOS_DIR                      PS2 native texture TRXPOS register: invalid value for dir
+PS2_WARN_INVREG_TRXREG_TRANSMISSIONAREAWIDTH    PS2 native texture TRXREG register: invalid transmission area width
+PS2_WARN_INVREG_TRXREG_TRANSMISSIONAREAHEIGHT   PS2 native texture TRXREG register: invalid transmission area height
+PS2_WARN_INVREG_TRXDIR_XDIR                     PS2 native texture TRXDIR register: invalid xdir value
+PS2_STRUCTERR_MISSINGREG_TRXPOS                 PS2 native texture is missing TRXPOS register
+PS2_STRUCTERR_MISSINGREG_TRXREG                 PS2 native texture is missing TRXREG register
+PS2_STRUCTERR_MISSINGREG_TRXDIR                 PS2 native texture is missing TRXDIR register
+PS2_WARN_GIFPACKET_CORRUPTION                   texture has corrupted image GIF packets
+PS2_WARN_IMGDATABYTESLEFT                       texture has image meta data (ignoring)
+PS2_WARN_GIFPACKET_CLUT_CORRUPTION              texture has corrupted palette GIF packets
+PS2_WARN_PALDATABYTESLEFT                       texture has palette meta data (ignoring)
+PS2_WARN_TOOSMALLGPUDATA                        too small GPU data size for texture
+PS2_WARN_INVGPUDATASIZE                         invalid GPU data size for texture
+PS2_WARN_INVREG_TEX0                            texture has invalid TEX0 register
+PS2_WARN_INVREG_TEX1                            texture has invalid TEX1 register
+PS2_WARN_INVREG_MIPTBP1                         texture has invalid MIPTBP1 register
+PS2_WARN_INVREG_MIPTBP2                         texture has invalid MIPTBP2 register
+PS2_WARN_INVMIPTRANSOFFSETS                     texture has invalid mipmap transmission offsets
+PS2_WARN_INVCLUTTRANSOFFSET                     texture has invalid CLUT transmission offset
+PS2_WARN_NOGSIMGPACKETBLOCK                     could not find GS image packet block in PS2 native texture
+PS2_WARN_NOGSNATIVEDATABLOCK                    could not find GS native data block in PS2 native texture
+PS2_STRUCTERR_INVBASEPIXSTORAGEFMT              invalid mipmap pixel storage format in TEX0 register
+PS2_STRUCTERR_INVCLUTPIXSTORAGEFMT              invalid CLUT pixel storage format in TEX0 register
+PS2_STRUCTERR_INVTEXCOLORCOMPONENT              invalid texture color component value in TEX0 register
+PS2_STRUCTERR_INVCLUTSTORAGEMODE                invalid CLUT storage mode in TEX0 register
+PS2_STRUCTERR_INVPALTYPE                        invalid palette type
+PS2_WARN_GIFPACKETEARLYEOP                      found EOP=1 marker in GS primitive chain (setting to 0)
+PS2_WARN_IMGTAG_PRIMNOTZERO                     PRIM value of IMAGE mode GIFtag is not 0 (ignoring)
+PS2_WARN_IMGTAG_REGSNOTZERO                     REGS value of IMAGE mode GIFtag is not 0 (ignoring)
+PS2_WARN_IMGTAG_NREGNOTZERO                     NREG value of IMAGE mode GIFtag is not 0 (ignoring)
+PS2_WARN_IMGTAG_PRENOTZERO                      PRE value of IMAGE mode GIFtag is not 0 (ignoring)
+PS2_STRUCTERR_INVGIFTAGREGID                    invalid GIFtag register descriptor encountered
+PS2_STRUCTERR_INVPACKREGTYPE                    invalid register found in PACKED mode GS primitive data
+PS2_INTERNERR_GSOPTEMPTYTEX                     cannot generate GS parameters for texture with zero levels
+PS2_WARN_TEX0MAXMIPLEVELWRONG                   invalid TEX0 MXL value: more mipmaps found in texture than specified (set to automatic value)
+PS2_WARN_UNUSUALTEXGSREGISTER                   unsual texture GS register type found (ignoring)
+PS2_WARN_UNUSUALTEXGIFTAGREGISTER               unsual texture GIFtag register type found (ignoring)
+PS2_WARN_TEXMETACHUNKDATALEFT                   unexpected bytes left over after initial meta-data struct
+PS2_STRUCTERR_PIXSTORAGEFMTMISMATCH             pixel storage format does not match raster format
+PS2_STRUCTERR_INVGSPALDIMMS                     GS palette texture dimensions do not match the expected dimensions
+PS2_WARN_TRXDIRWITHOUTCFGREGS                   TRXDIR register before TRXREG/TRXPOS
+PS2_INVPARAM_PUBMEMLAYOUT                       invalid public PS2 memory layout type
+PS2_INVPARAM_PUBCLUTMEMLAYOUT                   invalid public PS2 CLUT memory layout type
+PS2_WARN_DATAINUNUSEDTEX1LOW                    unused fields in low part of TEX1 register are not zero (ignoring)
+PS2_WARN_TEX1MTBAUNSUPP                         MTBA field of TEX0 register is not supported
+PS2_WARN_UNUSEDTEX1LOWFIELD                     non-zero unused TEX1 low field: %(what)
+PS2_WARN_UNKINTERNVER                           unknown internal Sky raster version
+
+PSP_STRUCTERR_PLATFORMID                        invalid platform checksum in PSP texture reading
+PSP_STRUCTERR_INVDEPTH                          invalid PSP native texture depth
+PSP_STRUCTERR_UNKRASFMT                         unknown raster format for PSP native texture
+PSP_STRUCTERR_UNKCOLORENCFMT                    unknown PSP hardware color buffer format in PSP native texture deserialization
+PSP_STRUCTERR_INVMIPDIMMS                       invalid texture dimensions for PSP native texture
+PSP_STRUCTERR_EMPTY                             texture is empty
+PSP_INTERNERR_WRITEEMPTY                        attempt to write an empty PSP native texture
+PSP_INTERNERR_DEPTHMISMATCH                     invalid srcDepth and dstDepth in PSP native texture mipmap encoding
+PSP_INTERNERR_UNSWIZZLEFAIL                     failed to unswizzle PSP native texture color buffer
+PSP_INTERNERR_FMTDETECTFAIL                     attempt to fetch pixel data from unknown PSP native texture
+PSP_INTERNERR_MIPFETCHFAIL                      failed to fetch any color data from PSP native texture
+PSP_INTERNERR_SWIZZLEFAIL                       failed to swizzle mipmap data for PSP native texture
+PSP_INVALIDCFG_NOCOMPRINPUT                     cannot process compressed texel data in PSP native texture color data acquisition
+PSP_INVALIDCFG_MIPDIMMS                         received texel data that violates native size rules in PSP native texture color data acquisition
+PSP_INVALIDCFG_EMPTY                            attempt to acquire empty texel data in PSP native texture color data acquisition
+PSP_INTERNERR_FMTDETECTFAIL                     failed to determine PSP native texture hardware color buffer format in texel acquisition routine
+PSP_INTERNERR_MIPACQUIREFAIL                    failed to set any color data to PSP native texture
+PSP_INTERNERR_DECODEFAIL                        failed to decode PSP mipmap layer
+PSP_INVALIDCFG_ADDMIP_NOCOMPRINPUT              cannot receive mipmap layer in compressed format for PSP native texture
+PSP_INTERNERR_ENCODEFAIL                        failed to encode PSP mipmap layer
+PSP_WARN_UNKFIELDNOTZERO                        unknown field non-zero in PSP native texture
+PSP_WARN_METADATASKIP                           skipped meta-data at the end of PSP native texture GPU data block
+
+POWERVR_STRUCTERR_PLATFORMID                    invalid platform type in PVR texture reading
+POWERVR_STRUCTERR_INTERNALFMT                   texture has an invalid PVR compression type
+POWERVR_STRUCTERR_IMGSTREAMSECTSIZE             texture has an invalid image stream section size
+POWERVR_INTERNERR_COMPRDIMMS                    failed to determine compression block dimensions
+POWERVR_STRUCTERR_INVMIPDIMMS                   texture has invalid dimensions
+POWERVR_STRUCTERR_MIPDAMAGE                     texture has damaged mipmaps
+POWERVR_STRUCTERR_EMPTY                         texture is empty
+POWERVR_INTERNERR_PVRTEXHEADERFAIL              failed to create PVRTexLib texture header
+POWERVR_INTERNERR_PVRTEXFAIL                    failed to create PVRTexLib texture handle
+POWERVR_INTERNERR_COMPRFAIL                     failed to compress texture data to PVRTC using PVRTexLib
+POWERVR_INTERNERR_WRITEEMPTY                    attempt to write PowerVR native texture which has no mipmap layers
+POWERVR_INTERNERR_DECOMPRFAIL                   failed to decompress PVRTC compressed data using PVRTexLib
+POWERVR_INTERNERR_INVFMTRASMAP                  failed to determine raster format for PVR texture decompression
+POWERVR_INTERNERR_INVFMTCACHEMAP                failed to decompress PVRTC due to unknown internalFormat
+POWERVR_INVALIDCFG_MIPDIMMS                     invalid mipmap dimensions in PowerVR native texture pixel acquisition
+POWERVR_INTERNERR_COMPRESS_INVFMTCACHEMAP       failed to compress PVRTC due to unknown internalFormat
+POWERVR_INTERNERR_COMPRBLOCKDIMMS               failed to get PVR block compression dimensions
+POWERVR_INTERNERR_DECOMPRESSFAIL                failed to decompress in PVR native texture mipmap manager
+POWERVR_WARN_NOTEXIMGDATACHUNK                  could not find texture image data chunk in PVR texture native
+
+UNCMOBILE_STRUCTERR_PLATFORMID                  invalid platform type in uncompressed_mobile texture reading
+UNCMOBILE_STRUCTERR_INVMIPDIMMS                 texture has invalid dimensions
+UNCMOBILE_STRUCTERR_IMGDATASECTSIZE             texture has an invalid image data stream section size
+UNCMOBILE_STRUCTERR_EMPTY                       texture is empty
+UNCMOBILE_STRUCTERR_NOSTRUCT                    could not find tex image data block in uncompressed mobile texture native
+UNCMOBILE_INTERNERR_WRITEEMPTY                  attempt to write UNC mobile native texture which has no mipmap layers
+UNCMOBILE_INVALIDCFG_MIPDIMMS                   invalid mipmap dimensions in uncompressed_mobile native texture pixel acquisition
+UNCMOBILE_WARN_IMGDATASECTBYTESLEFT             texture has image data section meta-data (ignoring)
+
+XBOX_STRUCTERR_PLATFORMID                       invalid platform type in XBOX texture reading
+XBOX_STRUCTERR_INVDEPTH                         texture has an invalid depth
+XBOX_STRUCTERR_INVMIPDIMMS                      texture has invalid dimensions
+XBOX_STRUCTERR_DXTTYPE                          texture has an unknown compression type (DXT)
+XBOX_STRUCTERR_IMGDATASECTIONSIZE               texture has an invalid image data section size parameter
+XBOX_STRUCTERR_EMPTY                            texture is empty
+XBOX_INTERNERR_UNKCOMPRTYPE                     invalid compression type on valid XBOX native texture
+XBOX_INVALIDCFG_MIPDIMMS                        invalid mipmap dimensions in XBOX native texture pixel acquisition
+XBOX_INTERNERR_WRITEEMPTY                       attempt to write XBOX native texture which has no mipmap layers
+XBOX_INTERNERR_WRITE_COLORORDER                 texture has an invalid color ordering for writing
+XBOX_WARN_IMGDATASECTBYTESLEFT                  texture has image data section meta-data (ignoring)
+XBOX_WARN_ZEROSIZEDMIPMAPS                      texture has zero sized mipmaps
+XBOX_WARN_INVAUTOMIPMAP                         texture has an invalid auto-mipmap flag (fixing)
+XBOX_WARN_NOTEXIMGDATASTRUCT                    could not find texture image data struct in XBOX native texture
+
+BLOCKAPI_STRUCTERR_UNFINISHEDREAD               unfinished block read exception
+BLOCKAPI_INTERNERR_NORDBLOCKCTX                 no block context for reading operation
+BLOCKAPI_INVALIDCFG_NOBLOCKCONTEXT              not in a block context
+BLOCKAPI_STRUCTERR_UNFINISHEDWRITE              unfinished block write exception
+BLOCKAPI_INTERNERR_NOWRBLOCKCTX                 no block context for writing operation
+BLOCKAPI_INTERNERR_NOSTREAMFORSKIP              no valid stream for skip operation
+BLOCKAPI_INTERNERR_NOSTREAMFORSEEK              could not seek native; no stream context
+BLOCKAPI_INTERNERR_NOSTREAMFORTELL              could not locate stream pointer; no stream context
+BLOCKAPI_INTERNERR_NOSTREAMFORENGINE            could not get engine interface; no stream context
+BLOCKAPI_STRUCTERR_OOBACCESS                    out-of-bounds block access
+BLOCKAPI_STRUCTERR_BLKLENGTHEXCEEDSFILE         virtual block length does not match file dimensions
+BLOCKAPI_WARN_BLOCKTRUNCATION                   RenderWare stream block truncation
+BLOCKAPI_INTERNERR_ERRORCOND                    block provider in error condition
+BLOCKAPI_WARN_EATENEXCEPTION                    block provider exception supressed: %(except)

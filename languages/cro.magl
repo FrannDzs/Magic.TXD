@@ -1,0 +1,264 @@
+﻿MAGL|1|Croatian|Hrvatski|CRO|GodFather
+
+# translated by GodFather (http://gtaforums.com/user/606114-nikdelgad/)
+# partial machine translation
+
+# language
+Lang.Lang              Language:
+Lang.Authors           by _PARAM_1
+
+# textures list        
+Main.TexInfo.Level     level
+Main.TexInfo.Levels    leveli
+Main.TexInfo.NoTex     Nema teksture
+Main.TexInfo.Invalid   Netočno
+Main.Undo              Poništi
+Main.Redo              Nanovo
+Main.Cut               Sjeći
+Main.Copy              Kopirati
+Main.Paste             Staviti
+Main.Delete            Brisanje
+Main.SelectA           Odaberi sve
+
+# main menu            
+Main.File              Datoteka
+Main.Edit              Uredi
+Main.Tools             Alati
+Main.Export            Izvoz
+Main.View              Pregled
+Main.Info              Info
+
+# main menu - File     
+Main.File.New          Novo
+Main.File.Open         Otvori
+Main.File.Save         Spremi
+Main.File.SaveAs       Spremi kao...
+Main.File.Close        Zatvori trenutni
+Main.File.Quit         Izađi
+
+# main menu - Edit   
+Main.Edit.Add          Dodaj
+Main.Edit.Replace      Zamjeni
+Main.Edit.Remove       Obriši
+Main.Edit.Rename       Preimenuj
+Main.Edit.Resize       Promjena velièine
+Main.Edit.Modify       Manipulirati
+Main.Edit.SetupML      Postaviti mip-levels
+Main.Edit.ClearML      Očisti mip-levels
+Main.Edit.SetupRP      Postavi rendering opcije
+Main.Edit.SetupTV      Postavi TXD verziju
+Main.Edit.Options      Opcije
+
+# Rename
+Main.Rename.Desc       Ime teksture
+Main.Rename.Name       Ime:
+Main.Rename.Set        Postavi
+Main.Rename.Cancel     Odustani
+
+# Resize
+Main.Resize.Desc       Promjena velièine teksture
+Main.Resize.Width      Širina:
+Main.Resize.Height     Visina:
+Main.Resize.Set        Postavi
+Main.Resize.Cancel     Odustani
+
+# Modify
+Modify.Desc.Add        Dodaj teksturu...
+Modify.Desc.Replace    Zamjeni teksturu...
+Modify.Desc.Modify     Izmjeni teksturu...
+Modify.Add             Dodaj
+Modify.Replace         Zamjeni
+Modify.Modify          Izmjeni
+Modify.TexName         Ime teksture:
+Modify.MskName         Naziv maske:
+Modify.Plat            Platforma:
+Modify.RasFmt          Raster Format:
+Modify.Origin          Original
+Modify.RawRas          Raw Raster
+Modify.Comp            zbijen
+Modify.Pal             palettized
+Modify.PixFmt          Pixel Format:
+Modify.GenML           Generiraj mipmaps
+Modify.Scaled          Umanjena
+Modify.Fill            Ispuni
+Modify.Bckgr           Pozadina
+Modify.Cancel          Odustani
+
+[Modify.Help.DXTNotice]
+Odabrali ste DXT kompresije. DXT je vrlo učinkovite kompresije za
+svijet teksture. Tekstura pohranjene u DXT koriste daleko manje
+prostora, ali su znatno degradira kvalitetu slike. Ne preporučuje za
+komprimiranje GUI teksture.
+
+DXT1 je dobar za teksture koji koriste alfa za osigurač regije.
+DXT2/3 je dobar za teksture s oštrim Alfa. 
+DXT4/5 je dobar za teksture s glatkim Alfa.
+Ako vaše slike bez alfa, samo po DXT1.
+
+Pažljivo odaberite spajanje.
+[END]
+
+[Modify.Help.PALNotice]
+Odabrali ste Paleta za formatiranje. Slike su palettized odabirom
+najvažnije boje i stavljajući ih u polje. Stvarni teksture površina
+sadrži indekse u međuspremnik palete, uvelike smanjuje veličinu tekstura.
+
+Imajte na umu da je paleta format je ostavština tehnologije i više
+nije podržana od strane moderne opreme.
+[END]
+
+# Render Props
+Main.SetupRP.Desc      Rendering Props
+Main.SetupRP.Filter    Filtriraj:
+Main.SetupRP.UAddr     U Adrese:
+Main.SetupRP.VAddr     V Adrese:
+Main.SetupRP.Set       Postavi
+Main.SetupRP.Cancel    Odustani
+
+# Setup TXD Version
+Main.SetupTV.Desc      TXD Verzija Postava
+Main.SetupTV.Set       Postavi
+Main.SetupTV.Plat      Platforma
+Main.SetupTV.Data      Tip podatka
+Main.SetupTV.Version   Verzija
+Main.SetupTV.Build     Build
+Main.SetupTV.Accept    Prihvati
+Main.SetupTV.Cancel    Odustani
+Main.SetupTV.Custom    Custom
+
+# Options
+Main.Options.Desc      _MAGIC_TXD_NAME Opcije
+Main.Options.MainTab   Glavni
+Main.Options.ShowLog   Prikaži TXD log na upozorenju
+Main.Options.DispIcn   Prikaži ikonu igre
+Main.Options.AdvTab    Napredno
+Main.Options.SerSpc    Čitanje bez blokova
+Main.Options.WarnLvl   Razina upozorenja
+Main.Options.WDisabled isključen
+Main.Options.WLow      niska
+Main.Options.WMedium   srednje
+Main.Options.WHigh     visoke
+Main.Options.WAll      sve
+Main.Options.Accept    Prihvati
+Main.Options.Cancel    Odustani
+
+# main menu - Tools    
+Main.Tools.MassCnv     Mass pretvori
+Main.Tools.MassExp     Mass izvoz
+Main.Tools.MassBld     Mass build
+
+# main menu - Export   
+Main.Export.ExpAll     Export all
+Main.Export.Desc       Spremi _PARAM_1 kao...
+
+# Export All
+Main.ExpAll.Desc       Izvedi sve teksture...
+Main.ExpAll.Format     Format:
+Main.ExpAll.Export     Izvoz
+Main.ExpAll.Cancel     Odustani
+Main.ExpAll.ExpTarg    Odaberi izvoz lokaciju...
+
+# Log
+Main.Log.Desc          Log
+Main.Log.Save          Spremi
+Main.Log.Copy          Kopiraj
+Main.Log.CopyAll       Kopiraj Sve
+Main.Log.Clear         Očisti
+Main.Log.Close         Zatvori
+Main.Log.SaveAs        Spremi Log kao...
+
+# View   
+Main.View.FullImg      Prikaži punu sliku
+Main.View.Backgr       Pozadina
+Main.View.DispML       Prikaži mip-levels
+Main.View.ShowLog      Prikaži log
+Main.View.DarkThm      Tamna tema
+Main.View.LightTm      Svijetla tema
+
+# Info     
+Main.Info.Website      Web stranica
+Main.Info.About        O nama
+
+# File - Open
+Main.Open.Desc         Otvori TXD datoteku...
+
+# File - Save As
+Main.SaveAs.Desc       Spremi TXD kao...
+
+# Edit - Add
+Main.Edit.Add.Desc     Uvezi teksturu...
+
+# About
+Main.About.Desc        O nama
+Main.About.Credits     napravio _AUTHOR_NAME_1 i _AUTHOR_NAME_2
+Main.About.ComUse1     Ovaj alat NE SMIJETE koristiti komercijalno bez dozvole autora koji su sudjelovali u ovom programu. Pregledaj licence za više informacija.
+Main.About.ComUse2     _MAGIC_TXD_NAME tim pozdravlja vašu podršku!
+Main.About.SpecThx     Specijalne zahvale za:
+
+# Save changes
+[Main.SavChange.Warn]
+Postoje nespremljene promjene u otvorenim TXD arhiva.
+Želite li ih sada spremiti?
+[END]
+Main.SavChange.Save    Spremi
+Main.SavChange.Ignore  Zanemari
+Main.SavChange.Cancel  Odustani
+Main.SavChange.Title   Nespremljene promjene
+
+# Tools
+Tools.Browse           Pregledaj
+Tools.BrwDesc          Pregledaj direktoriji...
+Tools.GameRt           Lokacija igre:
+Tools.Output           Izlazna lokacija:
+Tools.Plat             Platforma
+Tools.Game             Igra
+Tools.GenMips          Generiraj mipmaps
+Tools.MaxMips          Maksimum:
+
+# Mass export
+Tools.MassExp.Desc     Maivni izvoz
+Tools.MassExp.ImgFmt   Format slike:
+Tools.MassExp.TxNmOnl  samo sa imenom teksture
+Tools.MassExp.PrTxdNm  pre-prended sa TXD imenom
+Tools.MassExp.SepFld   u razlièine datoteke
+Tools.MassExp.Export   Izvoz
+Tools.MassExp.Cancel   Odustani
+
+# Mass build
+Tools.MassBld.Desc     Mass Build
+Tools.MassBld.Build    Build
+Tools.MassBld.Cancel   Odustani
+Tools.MassBld.CloseOnCmplt  Zatvori nakon dovršetka
+Tools.MassBld.Cmprs    Stisnut
+Tools.MassBld.DescQual Kvaliteta
+Tools.MassBld.DoPal    Paleta boja
+Tools.MassBld.DescPType    Tip
+
+[Tools.MassBld.Welcome]
+Dobro došli u alat za izgradnju mase! Ovaj alat stvara TXD datoteke<br>
+iz datoteka unutar hijerarhije mapa. INI datoteke u tim mapama možete<br>
+koristiti za specijalizirani proces izgradnje. Pokušajte zgrada neki<br>
+slučajan mape i vidjeti rezultate!<br><br>
+Wiki: <a href="http://www.gtamodding.com/wiki/Magic.TXD/Build_System/" style="color: #0063b1">http://www.gtamodding.com/wiki/Magic.TXD/Build_System/</a>
+[END]
+
+# Mass convert
+Tools.MassCnv.Desc     Mass Pretvorbe
+Tools.MassCnv.ClearML  Očisti mipmaps
+Tools.MassCnv.ImpFilt  Poboljšaj filtraciju
+Tools.MassCnv.CompTex  Sažmi teksture
+Tools.MassCnv.RecIMG   Rekonstruiraj IMG arhive
+Tools.MassCnv.CompIMG  Sažmi IMG
+Tools.MassCnv.Convert  Pretvori
+Tools.MassCnv.Cancel   Odustani
+
+# New txd
+New.Desc               Napravi novi txd
+New.Name               Ime
+New.Create             Napravi
+New.Cancel             Odustani
+
+# Helper runtime generics.
+Helper.Confirm         OK
+Helper.Title           Poruka
+Helper.NotShowAgain    Ne pokazuj više

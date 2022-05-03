@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3912347B-E2B6-3935-864E-E8C67FC8A20F}</ProjectGuid>
+    <RootNamespace>Test1</RootNamespace>
+    <ProjectName>magic-txd</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolSet>v142</PlatformToolSet>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>Test1</PrimaryOutput>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolSet>v142</PlatformToolSet>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>Test1</PrimaryOutput>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolSet>v142</PlatformToolSet>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>Test1</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolSet>v142</PlatformToolSet>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>Test1</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup>
+    <QT_VERSION_SRCTARGET>5.15</QT_VERSION_SRCTARGET>
+    <QT_VERSION_RC_SRCTARGET>3</QT_VERSION_RC_SRCTARGET>
+    <LocalDebuggerWorkingDirectory>..\output</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  <ImportGroup>
+    <Import Project="defaults.props" />
+  </ImportGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="customprops.xml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\output\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\obj\magictxd\$(Platform)_$(Configuration)_$(PlatformToolset)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)..\obj\magictxd\$(Platform)_$(Configuration)_$(PlatformToolset)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">magictxd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">magictxd_x64</TargetName>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\output\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\obj\magictxd\$(Platform)_$(Configuration)_$(PlatformToolset)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)..\obj\magictxd\$(Platform)_$(Configuration)_$(PlatformToolset)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">magictxd_d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">magictxd_d_x64</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)..\output\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)..\output\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>-Zm200 -w34100 -w34189</AdditionalOptions>
+      <AssemblerListingLocation>
+      </AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level1</WarningLevel>
+      <AdditionalIncludeDirectories>../include/;../src/config/;../vendor/FileSystem/include/;../vendor/rwlib/include/;../vendor/eirrepo/;../magic_api/;../vendor/gtaconfig/include/;../vendor/NativeExecutive/include/;../vendor/shextshared/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>mainwindow.h</PrecompiledHeaderFile>
+      <SDLCheck>false</SDLCheck>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)_$(PlatformToolset).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(OutDir)$(TargetName)_$(PlatformToolset).pgd</ProfileGuidedDatabase>
+      <Version>1</Version>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <EntryPointSymbol>_native_executive_fep</EntryPointSymbol>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>-Zm200 -w34100 -w34189</AdditionalOptions>
+      <AssemblerListingLocation>
+      </AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level1</WarningLevel>
+      <AdditionalIncludeDirectories>../include/;../src/config/;../vendor/FileSystem/include/;../vendor/rwlib/include/;../vendor/eirrepo/;../magic_api/;../vendor/gtaconfig/include/;../vendor/NativeExecutive/include/;../vendor/shextshared/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>mainwindow.h</PrecompiledHeaderFile>
+      <SDLCheck>false</SDLCheck>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)_$(PlatformToolset).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(OutDir)$(TargetName)_$(PlatformToolset).pgd</ProfileGuidedDatabase>
+      <Version>1</Version>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <EntryPointSymbol>_native_executive_fep</EntryPointSymbol>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>-Zm200 -w34100 -w34189</AdditionalOptions>
+      <AssemblerListingLocation>
+      </AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level1</WarningLevel>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>../include/;../src/config/;../vendor/FileSystem/include/;../vendor/rwlib/include/;../vendor/eirrepo/;../magic_api/;../vendor/gtaconfig/include/;../vendor/NativeExecutive/include/;../vendor/shextshared/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>mainwindow.h</PrecompiledHeaderFile>
+      <SDLCheck>false</SDLCheck>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)_$(PlatformToolset).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(OutDir)$(TargetName)_$(PlatformToolset).pgd</ProfileGuidedDatabase>
+      <Version>1</Version>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <EntryPointSymbol>_native_executive_fep</EntryPointSymbol>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <ProjectReference />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>-Zm200 -w34100 -w34189</AdditionalOptions>
+      <AssemblerListingLocation>
+      </AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level1</WarningLevel>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>../include/;../src/config/;../vendor/FileSystem/include/;../vendor/rwlib/include/;../vendor/eirrepo/;../magic_api/;../vendor/gtaconfig/include/;../vendor/NativeExecutive/include/;../vendor/shextshared/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>mainwindow.h</PrecompiledHeaderFile>
+      <SDLCheck>false</SDLCheck>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)_$(PlatformToolset).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(OutDir)$(TargetName)_$(PlatformToolset).pgd</ProfileGuidedDatabase>
+      <Version>1</Version>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <EntryPointSymbol>_native_executive_fep</EntryPointSymbol>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <ProjectReference />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\vendor\gtaconfig\build\gtaconfig.vcxproj" />
+    <ProjectReference Include="..\vendor\FileSystem\build\FileSystem.vcxproj" />
+    <ProjectReference Include="..\vendor\rwlib\build\vs2015\rwtools.vcxproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\aboutdialog.cpp" />
+    <ClCompile Include="..\src\createtxddlg.cpp" />
+    <ClCompile Include="..\src\embedded_resources.cpp" />
+    <ClCompile Include="..\src\expensivetasks.cpp" />
+    <ClCompile Include="..\src\exportallwindow.cpp" />
+    <ClCompile Include="..\src\friendlyicons.cpp" />
+    <ClCompile Include="..\src\guiserialization.cpp" />
+    <ClCompile Include="..\src\guiserialization.store.cpp" />
+    <ClCompile Include="..\src\helperruntime.cpp" />
+    <ClCompile Include="..\src\languages.common.cpp" />
+    <ClCompile Include="..\src\languages.cpp" />
+    <ClCompile Include="..\src\MagicExport.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\mainwindow.actions.cpp" />
+    <ClCompile Include="..\src\mainwindow.asynclog.cpp" />
+    <ClCompile Include="..\src\mainwindow.events.cpp" />
+    <ClCompile Include="..\src\mainwindow.loadinganim.cpp" />
+    <ClCompile Include="..\src\mainwindow.menu.cpp" />
+    <ClCompile Include="..\src\mainwindow.parallel.cpp" />
+    <ClCompile Include="..\src\mainwindow.rwplugins.cpp" />
+    <ClCompile Include="..\src\mainwindow.safety.cpp" />
+    <ClCompile Include="..\src\mainwindow.serialize.cpp" />
+    <ClCompile Include="..\src\mainwindow.themes.cpp" />
+    <ClCompile Include="..\src\mainwindow.txdprocessing.cpp" />
+    <ClCompile Include="..\src\massbuild.cpp" />
+    <ClCompile Include="..\src\massconvert.cpp" />
+    <ClCompile Include="..\src\massexport.cpp" />
+    <ClCompile Include="..\src\optionsdialog.cpp" />
+    <ClCompile Include="..\src\progresslogedit.cpp" />
+    <ClCompile Include="..\src\qtfilesystem.cpp" />
+    <ClCompile Include="..\src\qtutils.cpp" />
+    <ClCompile Include="..\src\renderpropwindow.cpp" />
+    <ClCompile Include="..\src\rwfswrap.cpp" />
+    <ClCompile Include="..\src\rwimageimporter.cpp" />
+    <ClCompile Include="..\src\rwversiondialog.cpp" />
+    <ClCompile Include="..\src\streamcompress.cpp" />
+    <ClCompile Include="..\src\streamcompress.lzo.cpp" />
+    <ClCompile Include="..\src\streamcompress.mh2z.cpp" />
+    <ClCompile Include="..\src\taskcompletionwindow.cpp" />
+    <ClCompile Include="..\src\texadddialog.cpp" />
+    <ClCompile Include="..\src\texformatextensions.cpp" />
+    <ClCompile Include="..\src/mainwindow.cpp" />
+    <ClCompile Include="..\src\texnamewindow.cpp" />
+    <ClCompile Include="..\src\textureviewport.cpp" />
+    <ClCompile Include="..\src\tools\configtree.cpp" />
+    <ClCompile Include="..\src\tools\txdbuild.cpp" />
+    <ClCompile Include="..\src\tools\txdexport.cpp" />
+    <ClCompile Include="..\src\tools\txdgen.cpp" />
+    <ClCompile Include="..\src\txdlog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\aboutdialog.h" />
+    <ClInclude Include="..\include\createtxddlg.h" />
+    <ClInclude Include="..\include\defs.h" />
+    <ClInclude Include="..\include\embedded_resources.h" />
+    <ClInclude Include="..\include\expensivetasks.h" />
+    <ClInclude Include="..\include\exportallwindow.h" />
+    <ClInclude Include="..\include\guiserialization.h" />
+    <ClInclude Include="..\include\helperruntime.h" />
+    <ClInclude Include="..\include\languages.h" />
+    <ClInclude Include="..\include\MagicExport.h" />
+    <ClInclude Include="..\include\mainwindow.actions.h" />
+    <ClInclude Include="..\include\mainwindow.asynclog.h" />
+    <ClInclude Include="..\include\mainwindow.events.h" />
+    <ClInclude Include="..\include\mainwindow.loadinganim.h" />
+    <ClInclude Include="..\include\mainwindow.parallel.h" />
+    <ClInclude Include="..\include\qtfilesystem.h" />
+    <ClInclude Include="..\include\qtutils.h" />
+    <ClInclude Include="..\include\massbuild.h" />
+    <ClInclude Include="..\include\massconvert.h" />
+    <ClInclude Include="..\include\massexport.h" />
+    <ClInclude Include="..\include\optionsdialog.h" />
+    <ClInclude Include="..\include\qtsharedlogic.h" />
+    <ClInclude Include="..\include\renderpropwindow.h" />
+    <ClInclude Include="..\include\resizewindow.h" />
+    <ClInclude Include="..\include\resource.h" />
+    <ClInclude Include="..\include\rwfswrap.h" />
+    <ClInclude Include="..\include\rwimageimporter.h" />
+    <ClInclude Include="..\include\rwversiondialog.h" />
+    <ClInclude Include="..\include\streamcompress.h" />
+    <ClInclude Include="..\include\taskcompletionwindow.h" />
+    <ClInclude Include="..\include\testmessage.h" />
+    <ClInclude Include="..\include\texnamewindow.h" />
+    <ClInclude Include="..\include\textureviewport.h" />
+    <ClInclude Include="..\include\texadddialog.h" />
+    <ClInclude Include="..\include\txdlog.h" />
+    <ClInclude Include="..\include\versionsets.h" />
+    <ClInclude Include="..\include\versionshared.h" />
+    <ClInclude Include="..\magic_api\magfapi.h" />
+    <ClInclude Include="..\magic_api\MagicFormats.h" />
+    <ClInclude Include="..\src\guiserialization.hxx" />
+    <ClInclude Include="..\src\languages.hxx" />
+    <ClInclude Include="..\src\mainwindow.loadinganim.hxx" />
+    <ClInclude Include="..\src\progresslogedit.h" />
+    <ClInclude Include="..\src\qtinteroputils.hxx" />
+    <ClInclude Include="..\src\qtrwutils.hxx" />
+    <ClInclude Include="..\src\texformathelper.hxx" />
+    <ClInclude Include="..\include\mainwindow.h" />
+    <ClInclude Include="../include/texinfoitem.h" />
+    <ClInclude Include="../include/styles.h" />
+    <ClInclude Include="..\src\texnameutils.hxx" />
+    <ClInclude Include="..\src\toolshared.hxx" />
+    <ClInclude Include="..\src\tools\configtree.h" />
+    <ClInclude Include="..\src\tools\dirtools.h" />
+    <ClInclude Include="..\src\tools\imagepipe.hxx" />
+    <ClInclude Include="..\src\tools\shared.h" />
+    <ClInclude Include="..\src\tools\txdbuild.h" />
+    <ClInclude Include="..\src\tools\txdexport.h" />
+    <ClInclude Include="..\src\tools\txdgen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="qt5.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\icon\magictxd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\magic-txd.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\resources\dark.shell" />
+    <None Include="..\resources\light.shell" />
+    <None Include="defaults.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="customprops.xml" />
+  </ItemGroup>
+  <ImportGroup>
+    <Import Project="..\..\..\_repoconfig\$(ProjectName).props" Condition="Exists('..\..\..\_repoconfig\$(ProjectName).props')" />
+  </ImportGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ItemDefinitionGroup Condition="'$(MGTXD_ENABLE_EMBEDDED_RESOURCES)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>MGTXD_ENABLE_EMBEDDED_RESOURCES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(MGTXD_PERSONALIZED_DETAILS)'!=''">
+    <ClCompile>
+      <PreprocessorDefinitions>MGTXD_PERSONALIZED_DETAILS=R"($(MGTXD_PERSONALIZED_DETAILS))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(MGTXD_BETA_BUILD)'=='true'">
+    <ClCompile>
+      <PreprocessorDefinitions>MGTXD_BETA_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="$(Configuration)=='Debug'">
+    <DEBUG>true</DEBUG>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Platform)=='Win32'">
+    <QT_ARCH_DIR>x86</QT_ARCH_DIR>
+    <QT_INSTALLER_ARCH_DIR>msvc2019</QT_INSTALLER_ARCH_DIR>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Platform)=='x64'">
+    <QT_ARCH_DIR>x64</QT_ARCH_DIR>
+    <QT_INSTALLER_ARCH_DIR>msvc2019_64</QT_INSTALLER_ARCH_DIR>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(MGTXD_WIN32_SYSTEM_QT)=='true'">
+    <QT_SELECT_SDK_DIR>$(MGTXD_WIN32_SYSTEM_QT_PATH)\$(MGTXD_WIN32_SYSTEM_QT_VERSION)\$(QT_INSTALLER_ARCH_DIR)</QT_SELECT_SDK_DIR>
+<LocalDebuggerEnvironment>
+QT_PLUGIN_PATH=$(QT_SELECT_SDK_DIR)\plugins
+PATH=$(QT_SELECT_SDK_DIR)\bin;%PATH%
+$(LocalDebuggerEnvironment)
+</LocalDebuggerEnvironment>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="$(MGTXD_WIN32_SYSTEM_QT)=='true'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(QT_SELECT_SDK_DIR)\include\;$(QT_SELECT_SDK_DIR)\include\QtCore\;$(QT_SELECT_SDK_DIR)\include\QtCore\$(MGTXD_WIN32_SYSTEM_QT_VERSION)\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies Condition="$(DEBUG)=='true'">Qt5Cored.lib;Qt5Widgetsd.lib;Qt5Guid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="$(DEBUG)!='true'">Qt5Core.lib;Qt5Widgets.lib;Qt5Gui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QT_SELECT_SDK_DIR)\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="$(MGTXD_WIN32_SYSTEM_QT)=='false'">
+    <ClCompile>
+      <PreprocessorDefinitions>QT_STATIC;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../vendor/Qt$(QT_VERSION_SRCTARGET)/include/;../vendor/Qt$(QT_VERSION_SRCTARGET)/include/QtCore/;../vendor/Qt$(QT_VERSION_SRCTARGET)/include/QtCore/$(QT_VERSION_SRCTARGET).$(QT_VERSION_RC_SRCTARGET)/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;imm32.lib;winmm.lib;Dwmapi.lib;UxTheme.lib;Userenv.lib;Netapi32.lib;Version.lib;Wtsapi32.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="$(DEBUG)=='true'">Qt5PlatformCompositorSupportd.lib;Qt5ThemeSupportd.lib;Qt5FontDatabaseSupportd.lib;Qt5EventDispatcherSupportd.lib;Qt5AccessibilitySupportd.lib;Qt5WindowsUIAutomationSupportd.lib;qwindowsd.lib;qtmaind.lib;qtpcre2d.lib;qtfreetyped.lib;Qt5Cored.lib;Qt5Widgetsd.lib;Qt5Guid.lib;qtharfbuzzd.lib;qtlibpngd.lib;qgifd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="$(DEBUG)!='true'">Qt5PlatformCompositorSupport.lib;Qt5ThemeSupport.lib;Qt5FontDatabaseSupport.lib;Qt5EventDispatcherSupport.lib;Qt5AccessibilitySupport.lib;Qt5WindowsUIAutomationSupport.lib;qwindows.lib;qtmain.lib;qtpcre2.lib;qtfreetype.lib;Qt5Core.lib;Qt5Widgets.lib;Qt5Gui.lib;qtharfbuzz.lib;qtlibpng.lib;qgif.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\vendor\Qt$(QT_VERSION_SRCTARGET)\lib\vs2019\$(QT_ARCH_DIR)\plugins\platforms\;..\vendor\Qt$(QT_VERSION_SRCTARGET)\lib\vs2019\$(QT_ARCH_DIR)\plugins\imageformats\;..\vendor\Qt$(QT_VERSION_SRCTARGET)\lib\vs2019\$(QT_ARCH_DIR)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;shell32.lib;user32.lib;gdi32.lib;advapi32.lib;Ole32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

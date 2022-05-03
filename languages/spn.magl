@@ -1,0 +1,261 @@
+﻿MAGL|1|Spanish|Español|ESP|Matias_Montanna
+
+# language
+Lang.Lang              Idioma:
+Lang.Authors           por _PARAM_1
+ 
+# textures list        
+Main.TexInfo.Level     nivel
+Main.TexInfo.Levels    niveles
+Main.TexInfo.NoTex     Sin textura
+Main.TexInfo.Invalid   invalido
+Main.Undo              Deshacer
+Main.Redo              Rehacer
+Main.Cut               Cortar
+Main.Copy              Copiar
+Main.Paste             Pegar
+Main.Delete            Eliminar
+Main.SelectA           Seleccionar todo
+
+# main menu            
+Main.File              Archivo
+Main.Edit              Editar
+Main.Tools             Herramientas
+Main.Export            Exportar
+Main.View              Ver
+Main.Info              Información
+
+# main menu - File     
+Main.File.New          Nuevo
+Main.File.Open         Abrir
+Main.File.Save         Guardar
+Main.File.SaveAs       Guardar como...
+Main.File.Close        Cerrar
+Main.File.Quit         Salir
+
+# main menu - Edit   
+Main.Edit.Add          Añadir
+Main.Edit.Replace      Reemplazar
+Main.Edit.Remove       Eliminar
+Main.Edit.Rename       Renombrar
+Main.Edit.Resize       Ajustar tamaño
+Main.Edit.Modify       Modificar textura
+Main.Edit.SetupML      Ajustar niveles de mip
+Main.Edit.ClearML      Limpiar niveles de mip
+Main.Edit.SetupRP      Ajustar propiedades de renderizado
+Main.Edit.SetupTV      Ajustar versión TXD
+Main.Edit.Options      Opciones
+
+# Rename
+Main.Rename.Desc       Nombre de textura
+Main.Rename.Name       Nombre:
+Main.Rename.Set        Ajustar
+Main.Rename.Cancel     Cancelar
+
+# Resize
+Main.Resize.Desc       Ajuste de tamaño
+Main.Resize.Width      Ancho:
+Main.Resize.Height     Altura:
+Main.Resize.Set        Ajustar
+Main.Resize.Cancel     Cancelar
+
+# Modify
+Modify.Desc.Add        Añadir textura...
+Modify.Desc.Replace    Reemplazar textura...
+Modify.Desc.Modify     Modificar textura...
+Modify.Add             Añadir
+Modify.Replace         Reemplazar
+Modify.Modify          Modificar
+Modify.TexName         Nombre de textura:
+Modify.MskName         Nombre de capa:
+Modify.Plat            Plataforma:
+Modify.RasFmt          Formato de pixeles:
+Modify.Origin          Original
+Modify.RawRas          Estándar
+Modify.Comp            Compresión
+Modify.Pal             Paleta
+Modify.PixFmt          Formato de pixel:
+Modify.GenML           Generar mipmaps
+Modify.Scaled          Dimensionado
+Modify.Fill            Relleno
+Modify.Bckgr           Fondo
+Modify.Cancel          Cancelar
+
+[Modify.Help.DXTNotice]
+Has seleccionado la Compresión DXT. DXT es un tipo de forma muy eficiente de compresión para las texturas del juego.
+Utilizar DXT da menos uso de espacio, pero degrada la calidad de la imagen de manera significativa. 
+NO es recomendable comprimir las texturas del GUI.
+
+DXT1 es bueno para las texturas que tengan uso de transparencia sólo para delimitar su área visible.
+DXT2/3 es bueno para las texturas con transparencia nítida.
+DXT4/5 es bueno para las texturas con transparencia suave.
+Si tu imagen no tiene ninguna transparencia, solo tienes que elegir DXT1.
+
+¡Ten cuidado con las texturas que tú comprimas y el tipo que elijas!
+[END]
+
+[Modify.Help.PALNotice]
+Has seleccionado el formato de paleta. 
+El algoritmo de la paletización elige los colores más importantes de la paleta para ponerlos en orden. La actual
+textura de la superficie contiene índices en la memoria intermedia de la paleta, en gran medida
+disminuyendo el tamaño de la textura.
+
+Ten en cuenta que el formato de paleta es tecnología heredada y ya no es compatible
+por el hardware moderno.
+[END]
+
+# Render Props
+Main.SetupRP.Desc      Opciones de renderización
+Main.SetupRP.Filter    Filtro:
+Main.SetupRP.UAddr     U-Direccionamiento:
+Main.SetupRP.VAddr     V-Direccionamiento:
+Main.SetupRP.Set       Ajustar
+Main.SetupRP.Cancel    Cancelar
+
+# Setup TXD Version
+Main.SetupTV.Desc      Ajustar versión TXD
+Main.SetupTV.Set       Configuración
+Main.SetupTV.Plat      Plataforma
+Main.SetupTV.Data      Tipo de dato
+Main.SetupTV.Version   Versión
+Main.SetupTV.Build     Compilación
+Main.SetupTV.Accept    Aceptar
+Main.SetupTV.Cancel    Cancelar
+Main.SetupTV.Custom    Personalizado
+
+# Options
+Main.Options.Desc      Opciones de _MAGIC_TXD_NAME
+Main.Options.MainTab   Inicio
+Main.Options.ShowLog   Mostrar registro TXD en alerta
+Main.Options.DispIcn   Mostrar icono del juego
+Main.Options.AdvTab    Avanzado
+Main.Options.SerSpc    Deserializar sin longitudes del bloque
+Main.Options.WarnLvl   Nivel de avisos
+Main.Options.WDisabled desactivado
+Main.Options.WLow      bajo
+Main.Options.WMedium   medio
+Main.Options.WHigh     alto
+Main.Options.WAll      todo
+Main.Options.Accept    Aceptar
+Main.Options.Cancel    Cancelar
+
+# main menu - Tools    
+Main.Tools.MassCnv     Convertir en masa
+Main.Tools.MassExp     Exportar en masa
+Main.Tools.MassBld     Compilar en masa
+
+# main menu - Export   
+Main.Export.ExpAll     Exportar todo
+Main.Export.Desc       Guardar _PARAM_1 como...
+
+# Export All
+Main.ExpAll.Desc       Exportar todas las texturas...
+Main.ExpAll.Format     Formato:
+Main.ExpAll.Export     Exportar
+Main.ExpAll.Cancel     Cancelar
+Main.ExpAll.ExpTarg    Seleccionar Buscar Directorio...
+
+# Log
+Main.Log.Desc          Registro
+Main.Log.Save          Guardar
+Main.Log.Copy          Copiar
+Main.Log.CopyAll       Copiar todo
+Main.Log.Clear         Limpiar
+Main.Log.Close         Cerrar
+Main.Log.SaveAs        Guardar registro como...
+
+# View   
+Main.View.FullImg      Ver imagen completa
+Main.View.Backgr       Fondo
+Main.View.DispML       Mostrar niveles de mip
+Main.View.ShowLog      Mostrar registro
+Main.View.DarkThm      Tema oscuro
+Main.View.LightTm      Tema claro
+
+# Info     
+Main.Info.Website      Sitio web
+Main.Info.About        Sobre
+
+# File - Open
+Main.Open.Desc         Abrir archivo TXD...
+
+# File - Save As
+Main.SaveAs.Desc       Guardar TXD como...
+
+# Edit - Add
+Main.Edit.Add.Desc     Importar textura...
+
+# About
+Main.About.Desc        Sobre nosotros
+Main.About.Credits     Creado por _AUTHOR_NAME_1 y _AUTHOR_NAME_2
+Main.About.ComUse1     Esta herramienta no debe utilizarse para fines comerciales sin la autorización explícita y por escrito de todos los terceros que contribuyeron a esta herramienta. Ver las licencias para más información.
+Main.About.ComUse2     ¡El equipo de _MAGIC_TXD_NAME agradece vuestro apoyo!
+Main.About.SpecThx     Agradecimientos especiales a
+
+# Save changes
+[Main.SavChange.Warn]
+Hay cambios sin guardar en el archivo TXD abierto.
+¿Quieres guardar ahora?
+[END]
+Main.SavChange.Save    Guardar
+Main.SavChange.Ignore  Ignorar
+Main.SavChange.Cancel  Cancelar
+Main.SavChange.Title   Cambios sin guardar
+
+# Tools
+Tools.Browse           Buscar
+Tools.BrwDesc          Buscar Directorio...
+Tools.GameRt           Ruta de juego:
+Tools.Output           Ruta de salida:
+Tools.Plat             Plataforma
+Tools.Game             Juego
+Tools.GenMips          Generar mipmaps
+Tools.MaxMips          Máximo:
+
+# Mass export
+Tools.MassExp.Desc     Exportación en masa
+Tools.MassExp.ImgFmt   Formato de imagen:
+Tools.MassExp.TxNmOnl  Sólo con el nombre de la textura
+Tools.MassExp.PrTxdNm  Comenzar con el nombre del TXD
+Tools.MassExp.SepFld   En carpetas separadas
+Tools.MassExp.Export   Exportar
+Tools.MassExp.Cancel   Cancelar
+
+# Mass build
+Tools.MassBld.Desc     Compilar en masa
+Tools.MassBld.Build    Compilar
+Tools.MassBld.Cancel   Cancelar
+Tools.MassBld.CloseOnCmplt  Cerrar al completar
+Tools.MassBld.Cmprs    Compresión
+Tools.MassBld.DescQual Calidad
+Tools.MassBld.DoPal    Paleta
+Tools.MassBld.DescPType    Tipo
+
+[Tools.MassBld.Welcome]
+¡Bienvenido a la herramienta de compilación en masa! Esta herramienta crea archivos TXD<br>
+a partir de archivos IMG dentro de una ruta de carpetas. Puede utilizar los archivos INI<br>
+dentro de esas carpetas que se especializan el proceso de compilación. ¡Intenta compilar algunas carpetas al azar<br>
+y ver los resultados!<br><br>
+Wiki: <a href="http://www.gtamodding.com/wiki/Magic.TXD/Build_System/" style="color: #0063b1">http://www.gtamodding.com/wiki/Magic.TXD/Build_System/</a>
+[END]
+
+# Mass convert
+Tools.MassCnv.Desc     Convertir en masa
+Tools.MassCnv.ClearML  Limpiar mipmaps
+Tools.MassCnv.ImpFilt  Mejorar filtro
+Tools.MassCnv.CompTex  Comprimir texturas
+Tools.MassCnv.RecIMG   Reconstruir archivos IMG
+Tools.MassCnv.CompIMG  Comprimir IMG
+Tools.MassCnv.Convert  Convertir
+Tools.MassCnv.Cancel   Cancelar
+
+# New txd
+New.Desc               Crear nuevo TXD
+New.Name               Nombre
+New.Create             Crear
+New.Cancel             Cancelar
+
+# Helper runtime generics.
+Helper.Confirm         OK
+Helper.Title           Aviso
+Helper.NotShowAgain    No mostrar de nuevo

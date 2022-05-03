@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="RWLIB Default Workspace">
+		<Project filename="rwlib.cbp">
+			<Depends filename="../../NativeExecutive/build/NativeExecutive.cbp" />
+			<Depends filename="../vendor/squish-1.11/build/squish.cbp" />
+			<Depends filename="../vendor/libimagequant/build/libimagequant.cbp" />
+			<Depends filename="../vendor/libtiff/build/libtiff.cbp" />
+			<Depends filename="../vendor/amdtc/Compressonator/Linux/CompressonatorLib.cbp" />
+		</Project>
+		<Project filename="../../NativeExecutive/build/NativeExecutive.cbp" />
+		<Project filename="../vendor/squish-1.11/build/squish.cbp" />
+		<Project filename="../vendor/libimagequant/build/libimagequant.cbp" />
+		<Project filename="../vendor/libtiff/build/libtiff.cbp" />
+		<Project filename="../vendor/amdtc/Compressonator/Linux/CompressonatorLib.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

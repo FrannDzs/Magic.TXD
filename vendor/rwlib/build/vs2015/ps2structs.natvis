@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*****************************************************************************
+*
+*  PROJECT:     Magic-RW
+*  LICENSE:     See LICENSE in the top level directory
+*  FILE:        build/vs2015/ps2structs.natvis
+*  PURPOSE:     Debugger visualizations for the PlayStation 2 internal structures
+*
+*  Multi Theft Auto is available from http://www.multitheftauto.com/
+*  Project location: https://osdn.net/projects/magic-rw/
+*
+*****************************************************************************/
+-->
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+    <Type Name="rw::ps2RasterFormatFlags">
+        <Expand>
+            <Item Name="[Raster Type]">rasterType</Item>
+            <Item Name="[Private Flags]">privateFlags</Item>
+            <Item Name="[Format]">(eRasterFormatPS2)formatNum</Item>
+            <Item Name="[Auto Mipmaps]">(bool)autoMipmaps</Item>
+            <Item Name="[Palette Type]">(ePaletteTypePS2)palType</Item>
+            <Item Name="[Has Mipmaps]">(bool)hasMipmaps</Item>
+            <Item Name="[Column Permutation]">(bool)columnPermutation</Item>
+            <Item Name="[Allocated]">(bool)allocated</Item>
+        </Expand>
+    </Type>
+    <Type Name="rw::GIFtag">
+        <Expand>
+            <Item Name="[NLOOP]">this->nloop</Item>
+            <Item Name="[EOP]">(rw::GIFtag::eEOP)this->eop</Item>
+            <Item Name="[PRE]">(rw::GIFtag::ePRE)this->pre</Item>
+            <Item
+                Condition="(rw::GIFtag::ePRE)this->pre != rw::GIFtag::ePRE::IGNORE_PRIM"
+                Name="[PRIM]">
+                    this->prim
+            </Item>
+            <Item Name="[FLG]">(rw::GIFtag::eFLG)this->flg</Item>
+            <Item Name="[Num Regs]">( this->nreg == 0 ? 16 : this->nreg )</Item>
+            <Synthetic Name="[Registers]">
+                <Expand>
+                    <IndexListItems>
+                        <Size>( this->nreg == 0u ? 16u : this->nreg )</Size>
+                        <ValueNode>(rw::eGIFTagRegister)( ( this->regs.regs &amp; ( 0xF &lt;&lt; ( $i * 4 ) ) ) &gt;&gt; ( $i * 4 ) )</ValueNode>
+                    </IndexListItems>
+                </Expand>
+            </Synthetic>
+        </Expand>
+    </Type>
+    <Type Name="rw::GIFtag::RegisterList">
+        <Expand>
+            <IndexListItems>
+                <Size>16</Size>
+                <ValueNode>(rw::eGIFTagRegister)( ( this->regs &amp; ( 0xF &lt;&lt; ( $i * 4 ) ) ) &gt;&gt; ( $i * 4 ) )</ValueNode>
+            </IndexListItems>
+        </Expand>
+    </Type>
+    <Type Name="rw::GIFtag_aplusd">
+        <Expand>
+            <Item Name="[Register]">(eGSRegister)regID</Item>
+            <ExpandedItem Condition="(eGSRegister)regID == eGSRegister::TEX0_1 || (eGSRegister)regID == eGSRegister::TEX0_2">
+                (ps2GSRegisters::TEX0_REG&amp;)this->gsregvalue
+            </ExpandedItem>
+            <ExpandedItem Condition="(eGSRegister)regID == eGSRegister::TEX1_1 || (eGSRegister)regID == eGSRegister::TEX1_2">
+                (ps2GSRegisters::TEX1_REG&amp;)this->gsregvalue
+            </ExpandedItem>
+            <ExpandedItem Condition="(eGSRegister)regID == eGSRegister::TRXPOS">
+                (ps2GSRegisters::TRXPOS_REG&amp;)this->gsregvalue
+            </ExpandedItem>
+            <ExpandedItem Condition="(eGSRegister)regID == eGSRegister::TRXDIR">
+                (ps2GSRegisters::TRXDIR_REG&amp;)this->gsregvalue
+            </ExpandedItem>
+            <ExpandedItem Condition="(eGSRegister)regID == eGSRegister::TRXREG">
+                (ps2GSRegisters::TRXREG_REG&amp;)this->gsregvalue
+            </ExpandedItem>
+            <ExpandedItem Condition="(eGSRegister)regID == eGSRegister::MIPTBP1_1 || (eGSRegister)regID == eGSRegister::MIPTBP1_2">
+                (ps2GSRegisters::MIPTBP1_REG&amp;)this->gsregvalue
+            </ExpandedItem>
+            <ExpandedItem Condition="(eGSRegister)regID == eGSRegister::MIPTBP2_1 || (eGSRegister)regID == eGSRegister::MIPTBP2_2">
+                (ps2GSRegisters::MIPTBP2_REG&amp;)this->gsregvalue
+            </ExpandedItem>
+        </Expand>
+    </Type>
+    <Type Name="rw::NativeTexturePS2::GSPrimitive">
+        <Expand>
+            <Item Name="[NLOOP]">nloop</Item>
+            <Item Name="[PRE]">hasPrimValue</Item>
+            <Item Name="[PRIM]">primValue</Item>
+            <Item Name="[FLG]">type</Item>
+            <Item Name="[NREG]">(unsigned int)nregs</Item>
+            <Synthetic Name="[Registers]">
+                <Expand>
+                    <IndexListItems>
+                        <Size>this->nregs</Size>
+                        <ValueNode>(rw::eGIFTagRegister)( ( this->registers.regs &amp; ( 0xF &lt;&lt; ( $i * 4 ) ) ) &gt;&gt; ( $i * 4 ) )</ValueNode>
+                    </IndexListItems>
+                </Expand>
+            </Synthetic>
+            <Synthetic Name="[Data]">
+                <Expand>
+                    <CustomListItems>
+                        <!-- Problem: .natvis does not support the alignof C++ keyword so we have to hack here.-->
+                        <Variable Name="dataPtr" InitialValue="(void*)( this + 1 )" />
+                        <Variable Name="col_iter" InitialValue="(uint32)0"/>
+                        <Variable Name="row_iter" InitialValue="(uint32)0"/>
+                        <Variable Name="item_ptr" InitialValue="(void*)nullptr"/>
+                        <Variable Name="name_desc" InitialValue="eGIFTagRegister::PRIM"/>
+                        <Variable Name="gsreg_type" InitialValue="eGSRegister::PRIM" />
+                        <Loop Condition="row_iter &lt; nloop">
+                            <Exec>col_iter = 0</Exec>
+                            <Loop Condition="col_iter &lt; nregs">
+                                <Exec>name_desc = (rw::eGIFTagRegister)( ( this->registers.regs &amp; ( 0xF &lt;&lt; ( col_iter * 4 ) ) ) &gt;&gt; ( col_iter * 4 ) )</Exec>
+                                <If Condition="this->type == GIFtag::eFLG::PACKED_MODE">
+                                    <Exec>item_ptr = (GSPrimitivePackedItem*)dataPtr + row_iter * nregs + col_iter</Exec>
+                                    <!-- Packed register writes. -->
+                                    <Item Name="({col_iter} [{name_desc}], {row_iter})" Condition="name_desc == eGIFTagRegister::TEX0_1 || name_desc == eGIFTagRegister::TEX0_2">
+                                        (ps2GSRegisters::TEX0_REG&amp;)( (GSPrimitivePackedItem*)item_ptr )->gifregvalue_lo
+                                    </Item>
+                                    <If Condition="name_desc == eGIFTagRegister::A_PLUS_D">
+                                        <Item Name="({col_iter} [{name_desc}], {row_iter})">*(GIFtag_aplusd*)item_ptr</Item>
+                                    </If>
+                                    <Else>
+                                        <Item Name="({col_iter} [{name_desc}], {row_iter})">*(GSPrimitivePackedItem*)item_ptr</Item>
+                                    </Else>
+                                </If>
+                                <Elseif Condition="this->type == GIFtag::eFLG::REGLIST_MODE">
+                                    <Exec>item_ptr = (GSPrimitiveReglistItem*)dataPtr + row_iter * nregs + col_iter</Exec>
+                                    <!-- Direct register writes. -->
+                                    <Item Name="({col_iter} [{name_desc}], {row_iter})" Condition="name_desc == eGIFTagRegister::TEX0_1 || name_desc == eGIFTagRegister::TEX0_2">
+                                        (ps2GSRegisters::TEX0_REG&amp;)( (GSPrimitiveReglistItem*)item_ptr )->gsregvalue
+                                    </Item>
+                                </Elseif>
+                                <Exec>col_iter++</Exec>
+                            </Loop>
+                            <Exec>row_iter++</Exec>
+                        </Loop>
+                    </CustomListItems>
+                </Expand>
+            </Synthetic>
+        </Expand>
+    </Type>
+    <Type Name="rw::ps2GSRegisters::TEX0_REG">
+        <Expand>
+            <Item Name="[TBP0]">textureBasePointer</Item>
+            <Item Name="[TBW]">textureBufferWidth</Item>
+            <Item Name="[PSM]">(eMemoryLayoutType)pixelStorageFormat</Item>
+            <Item Name="[TW log2]">textureWidthLog2</Item>
+            <Item Name="[TH log2]">textureHeightLog2</Item>
+            <Item Name="[TCC]">(eTextureColorComponent)texColorComponent</Item>
+            <Item Name="[TFX]">(eTextureFunction)texFunction</Item>
+            <Item Name="[CBP]">clutBufferBase</Item>
+            <Item Name="[CPSM]">(eCLUTMemoryLayoutType)clutStorageFmt</Item>
+            <Item Name="[CSM]">(eCLUTStorageMode)clutMode</Item>
+            <Item Name="[CSA]">clutEntryOffset</Item>
+            <Item Name="[CLD]">clutLoadControl</Item>
+        </Expand>
+    </Type>
+    <Type Name="rw::ps2GSRegisters::TRXPOS_REG">
+        <Expand>
+            <Item Name="[SSAX]">ssax</Item>
+            <Item Name="[SSAY]">ssay</Item>
+            <Item Name="[DSAX]">dsax</Item>
+            <Item Name="[DSAY]">dsay</Item>
+            <Synthetic Name="[DIR]" Condition="dir == 0">
+                <DisplayString>Upper Left to Lower Right</DisplayString>
+            </Synthetic>
+            <Synthetic Name="[DIR]" Condition="dir == 1">
+                <DisplayString>Lower Left to Upper Right</DisplayString>
+            </Synthetic>
+            <Synthetic Name="[DIR]" Condition="dir == 2">
+                <DisplayString>Upper Right to Lower Left</DisplayString>
+            </Synthetic>
+            <Synthetic Name="[DIR]" Condition="dir == 3">
+                <DisplayString>Lower Right to Upper Left</DisplayString>
+            </Synthetic>
+        </Expand>
+    </Type>
+    <Type Name="rw::ps2GSRegisters::TRXDIR_REG">
+        <Expand>
+            <Synthetic Name="[XDIR]" Condition="xdir == 0">
+                <DisplayString>Host to Local</DisplayString>
+            </Synthetic>
+            <Synthetic Name="[XDIR]" Condition="xdir == 1">
+                <DisplayString>Local to Host</DisplayString>
+            </Synthetic>
+            <Synthetic Name="[XDIR]" Condition="xdir == 2">
+                <DisplayString>Local to Local</DisplayString>
+            </Synthetic>
+            <Synthetic Name="[XDIR]" Condition="xdir == 3">
+                <DisplayString>Disabled</DisplayString>
+            </Synthetic>
+        </Expand>
+    </Type>
+    <Type Name="rw::ps2GSRegisters::TRXREG_REG">
+        <Expand>
+            <Item Name="[RRW]">transmissionAreaWidth</Item>
+            <Item Name="[RRH]">transmissionAreaHeight</Item>
+        </Expand>
+    </Type>
+    <Type Name="rw::NativeTexturePS2::GSPrimitivePackedItem">
+        <Expand>
+            <Item Name="[Register]">regID</Item>
+            <ExpandedItem Condition="regID == eGSRegister::TEX0_1 || regID == eGSRegister::TEX0_2">
+                (ps2GSRegisters::TEX0_REG&amp;)this->content
+            </ExpandedItem>
+            <ExpandedItem Condition="regID == eGSRegister::TEX1_1 || regID == eGSRegister::TEX1_2">
+                (ps2GSRegisters::TEX1_REG&amp;)this->content
+            </ExpandedItem>
+            <ExpandedItem Condition="regID == eGSRegister::TRXPOS">
+                (ps2GSRegisters::TRXPOS_REG&amp;)this->content
+            </ExpandedItem>
+            <ExpandedItem Condition="regID == eGSRegister::TRXDIR">
+                (ps2GSRegisters::TRXDIR_REG&amp;)this->content
+            </ExpandedItem>
+            <ExpandedItem Condition="regID == eGSRegister::TRXREG">
+                (ps2GSRegisters::TRXREG_REG&amp;)this->content
+            </ExpandedItem>
+            <ExpandedItem Condition="regID == eGSRegister::MIPTBP1_1 || this->regID == eGSRegister::MIPTBP1_2">
+                (ps2GSRegisters::MIPTBP1_REG&amp;)this->content
+            </ExpandedItem>
+            <ExpandedItem Condition="regID == eGSRegister::MIPTBP2_1 || this->regID == eGSRegister::MIPTBP2_2">
+                (ps2GSRegisters::MIPTBP2_REG&amp;)this->content
+            </ExpandedItem>
+        </Expand>
+    </Type>
+    <Type Name="rw::NativeTexturePS2::GSTexture">
+        <Expand>
+            <Item Name="[Width]">width</Item>
+            <Item Name="[Height]">height</Item>
+            <Synthetic Name="[Primitives]">
+                <Expand>
+                    <CustomListItems>
+                        <Variable Name="list_iter" InitialValue="this->list_header_primitives.root.next"/>
+                        <Loop Condition="list_iter != &amp;this->list_header_primitives.root">
+                            <Item>*(GSPrimitive*)( (char*)list_iter - (size_t)&amp;( (GSPrimitive*)0 )->listNode )</Item>
+                            <Exec>list_iter = list_iter->next</Exec>
+                        </Loop>
+                    </CustomListItems>
+                </Expand>
+            </Synthetic>
+        </Expand>
+    </Type>
+</AutoVisualizer>

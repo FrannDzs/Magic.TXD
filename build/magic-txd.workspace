@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Magic.TXD Workspace">
+		<Project filename="magic-txd.cbp">
+			<Depends filename="../vendor/FileSystem/build/FileSystem.cbp" />
+			<Depends filename="../vendor/gtaconfig/build/gtaconfig.cbp" />
+			<Depends filename="../vendor/NativeExecutive/build/NativeExecutive.cbp" />
+			<Depends filename="../vendor/rwlib/build/rwlib.cbp" />
+		</Project>
+		<Project filename="../vendor/FileSystem/build/FileSystem.cbp">
+			<Depends filename="../vendor/NativeExecutive/build/NativeExecutive.cbp" />
+			<Depends filename="../vendor/zlib/build/zlib.cbp" />
+		</Project>
+		<Project filename="../vendor/gtaconfig/build/gtaconfig.cbp">
+			<Depends filename="../vendor/FileSystem/build/FileSystem.cbp" />
+		</Project>
+		<Project filename="../vendor/libjpeg/build/libjpeg.cbp" />
+		<Project filename="../vendor/libpng/build/libpng.cbp">
+			<Depends filename="../vendor/zlib/build/zlib.cbp" />
+		</Project>
+		<Project filename="../vendor/NativeExecutive/build/NativeExecutive.cbp" />
+		<Project filename="../vendor/zlib/build/zlib.cbp" />
+		<Project filename="../vendor/rwlib/build/rwlib.cbp">
+			<Depends filename="../vendor/libjpeg/build/libjpeg.cbp" />
+			<Depends filename="../vendor/libpng/build/libpng.cbp" />
+			<Depends filename="../vendor/NativeExecutive/build/NativeExecutive.cbp" />
+			<Depends filename="../vendor/rwlib/vendor/amdtc/Compressonator/Linux/CompressonatorLib.cbp" />
+			<Depends filename="../vendor/rwlib/vendor/libimagequant/build/libimagequant.cbp" />
+			<Depends filename="../vendor/rwlib/vendor/libtiff/build/libtiff.cbp" />
+			<Depends filename="../vendor/rwlib/vendor/squish-1.11/build/squish.cbp" />
+		</Project>
+		<Project filename="../vendor/rwlib/vendor/amdtc/Compressonator/Linux/CompressonatorLib.cbp" />
+		<Project filename="../vendor/rwlib/vendor/libimagequant/build/libimagequant.cbp" />
+		<Project filename="../vendor/rwlib/vendor/libtiff/build/libtiff.cbp" />
+		<Project filename="../vendor/rwlib/vendor/squish-1.11/build/squish.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

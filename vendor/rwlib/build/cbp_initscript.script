@@ -1,0 +1,30 @@
+function SetBuildOptions(base)
+{
+    if (IO.DirectoryExists(_T("../../libpng/")))
+    {
+        base.AddIncludeDir(_T("../../libpng/include"));
+        base.AddLinkerOption(_T("../../libpng/lib/linux/$(TARGET_NAME)/libpng.a"));
+        base.AddCompilerOption(_T("-D RWLIB_INCLUDE_PNG_IMAGING"));
+    }
+    
+    if (IO.DirectoryExists(_T("../../libjpeg")))
+    {
+        base.AddIncludeDir(_T("../../libjpeg/src"));
+        base.AddLinkerOption(_T("../../libjpeg/lib/linux/$(TARGET_NAME)/libjpeg.a"));
+        base.AddCompilerOption(_T("-D RWLIB_INCLUDE_JPEG_IMAGING"));
+    }
+    
+    if (IO.DirectoryExists(_T("../../libtiff")))
+    {
+        base.AddIncludeDir(_T("../../libtiff/libtiff"));
+        base.AddLinkerOption(_T("../../libtiff/lib/linux/$(TARGET_NAME)/libtiff.a"));
+        base.AddCompilerOption(_T("-D RWLIB_INCLUDE_TIFF_IMAGING"));
+    }
+    
+    if (IO.DirectoryExists(_T("../../NativeExecutive")))
+    {
+        base.AddIncludeDir(_T("../../NativeExecutive/include"));
+        base.AddLinkerOption(_T("../../NativeExecutive/lib/linux/$(TARGET_NAME)/libnatexec.a"));
+        base.AddCompilerOption(_T("-D RWLIB_ENABLE_THREADING"));
+    }
+}
