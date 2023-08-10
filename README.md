@@ -1,107 +1,84 @@
 # Magic.TXD
-> RenderWare TXD editor created by DK22Pac and The_GTA
 
-*Aims to support RW texture files of all commercially released RW games, such as 3D-era GTA.*
+> RenderWare TXD Editor created by DK22Pac and The_GTA
 
-*Based on the magic-rw and Qt framework.*
+Magic.TXD is a powerful tool designed to edit RenderWare texture files from various commercially released RW games, including the 3D-era Grand Theft Auto games.
 
-**Official source:** https://osdn.net/projects/magic-txd/
+It is built upon the magic-rw library and the Qt framework.
 
-# How to build and deploy Magic.TXD
-In this article I want to show you how to compile Magic.TXD and effectively run it from source. We need at least **two hours of your spare time** for initial building setup, which includes
+**Official Source:** [https://osdn.net/projects/magic-txd/](https://osdn.net/projects/magic-txd/)
 
-1. downloading the source code from the Subversion repository
-2. building Qt from source
-3. compiling Eir + other vendors
-4. compiling Magic.TXD itself
-5. setting up the output directory
+## Building and Deploying Magic.TXD
 
-Once finished it should be fast to rebuild it, for example if adding new functionality. So let’s begin!
+In this guide, we'll walk you through the process of compiling and deploying Magic.TXD from source. Please set aside approximately **two hours** for the initial setup, which involves the following steps:
 
-## Step 1: Fetching the Source Code
-On Windows you should install [TortoiseSVN](https://tortoisesvn.net/ "TortoiseSVN") to get the entire codebase downloaded (inluding svn:externals). On Linux you require the **subversion apt-get package** from your distribution.
+1. Downloading the source code from the Subversion repository.
+2. Building Qt from source.
+3. Compiling Eir and other vendors.
+4. Compiling Magic.TXD itself.
+5. Setting up the output directory.
 
-`sudo apt-get install subversion`
+Once the initial setup is complete, rebuilding Magic.TXD for adding new functionality should be much faster.
 
-`sudp apt-get install perl`
+### Step 1: Fetching the Source Code
 
-You need Perl to run **the Qt repository initialization script**. On Windows you should install [ActiveState Perl](https://www.activestate.com/activeperl "ActiveState Perl") with perl.exe visible through the **PATH enviroment variable**.
+- For Windows: Install [TortoiseSVN](https://tortoisesvn.net/) and use it to download the complete codebase.
+- For Linux: Install the **subversion** package using `sudo apt-get install subversion`.
 
-Then SVN checkout from the official HTTPS link: https://svn.osdn.net/svnroot/magic-txd/
+Make sure to have Perl installed as it's needed to run the Qt repository initialization script.
 
-## Step 2: Building Qt
-Since we **link statically to the Qt framework** you must compile it from source using your main compiler. Our building process supports the following compilers:
+Checkout the source code from the official HTTPS link: [https://svn.osdn.net/svnroot/magic-txd/](https://svn.osdn.net/svnroot/magic-txd/)
 
-1. [GCC](https://gcc.gnu.org/ "GCC") using [Code::Blocks](http://www.codeblocks.org/ "Code::Blocks")
-2. [MSBUILD](https://docs.microsoft.com/de-de/visualstudio/msbuild/msbuild "MSBUILD") using [Visual Studio](https://www.visualstudio.com/es/ "Visual Studio")
+### Step 2: Building Qt
 
-Your compiler has to at least support the **C++20 standard**.
+Since Magic.TXD links statically to the Qt framework, you need to compile Qt from source. The supported compilers are GCC (with Code::Blocks) and MSBUILD (with Visual Studio), both supporting at least the C++20 standard.
 
-Now head over to your Magic.TXD SVN working copy. Then browse into the **vendor/Qt5.15** path (latest version at time of writing).
+- Navigate to your Magic.TXD SVN working copy.
+- Go to the **vendor/Qt5.15** path (latest version at the time of writing).
 
-### Windows building
-On Windows you need to execute one of the **bldscript_*.bat** files that matches your development environment. If you only want to run Qt then it is recommended to build for **only your target architecture** (x86 for 32bit, x64 for 64bit). Full deployment requires all architectures, but remember that Qt building takes a **long time**.
+#### Windows Building
 
-Before you execute it you must select a **building location** since Qt building can be **heavy on your disk space**. By default the building system assumes you have a **D:/** HDD drive with at least 10GB free space. Otherwise create a **_user.bat** file in your Qt vendor directory with the following content:
+- Run one of the **bldscript_*.bat** files matching your development environment.
+- To build only for your target architecture, execute for x86 (32bit) or x64 (64bit).
+- You can customize the building location by creating a **_user.bat** file in your Qt vendor directory.
 
-`set _TMPOUTPATH=E:/qt_compile/`
+#### Linux Building
 
-`set _TMPOUTPATH_GIT=E:/qt5_git/`
+- Ensure you have all required system packages installed (see command in the guide for Qt5.15).
+- Open a terminal in the Qt vendor directory and execute `./buildscript.sh`.
 
-where **E:/** points to your HDD disk drive with enough free space.
+### Step 3: Compiling Magic.TXD
 
-![image](https://user-images.githubusercontent.com/76663897/188028110-f87a8f06-9e2b-42de-b2c8-88d1693c458b.png)
+Open your supported IDE tool and load the build workspace/solution file from the Magic.TXD build directory.
 
-Once finished building you should see a **new folder** that contains the static Qt build. Go into it and copy the entire contents of the **lib folder** into the target architecture folder inside of the Magic.TXD Qt vendor directory -> lib folder. Then copy the **plugins** folder into the same target folder aswell.
+- On Windows, choose a target architecture matching your compiled Qt version.
+- On Linux, the target architecture doesn't matter.
 
-### Linux building
-On Linux you need to make sure that you downloaded all required **system packages**, for example using **apt-get** on Ubuntu. This can be done using the following command (for Qt5.15):
+Build the **magic-txd project**, and the associated dependencies will be automatically built.
 
-`sudo apt-get install libx11-dev libx11-xcb-dev libfreetype6-dev libice-dev libicu-dev libxcb1-dev libsm-dev libxi-dev libdbus-1-dev libglib2.0-dev libxrender-dev libfontconfig1-dev libxkbcommon-x11-dev libxkbcommon-dev '^libxcb.*-dev' libglu1-mesa-dev libxrender-dev libfontconfig1-dev libxext-dev libxfixes-dev`
+### Step 4: Setting up the Output Directory
 
-After that you have to **open a terminal** in the Qt vendor directory and execute
-
-`./buildscript.sh`
-
-This script should compile the required Qt components and **automatically place them inside the lib folder** (if everything went right which you can never be 100% sure on Linux).
-
-## Step 3: Compiling Magic.TXD
-Open one of the **supported IDE tools** and open the associated build workspace/solution file inside of the Magic.TXD build directory. On Windows you should select a target architecture for which you compiled Qt. On Linux it does not matter.
-
-Then just build the **magic-txd project**. Since we are using the workspace/solution file it will automatically build all dependencies that got checked-out alongside Magic.TXD inside of the vendor directory, like magic-rw or FileSystem.
-
-Magic.TXD executable files are located inside of the **output directory**.
-
-## Step 4: Setting up the output directory
-Since this folder is the executable path you need to copy all resources into here, just like you would find them inside of the **Program Files installation folder** on Windows.
+The output directory contains the executable files. Copy the following folders into it, similar to a Program Files installation folder on Windows:
 
 1. **resources** folder
 2. **languages** folder
 3. **data** folder
 
-Then just start the **Magic.TXD** executable. Have fun!
+Run the **Magic.TXD** executable and start editing textures!
 
 ## Important Hints
-We change Qt version every once in a few months. Please be wary when this happens and recompile Qt in the event.
 
-## Used technology:
+We periodically update the Qt version. When this happens, recompile Qt.
 
-[Compressonator](http://gpuopen.com/gaming-product/compressonator/) by Advanced Micro Devices
+## Used Technology:
 
-[libimagequant](https://github.com/pornel/pngquant/tree/master/lib) libimagequant by [pornel](https://github.com/pornel)
-
-[libjpeg](http://libjpeg.sourceforge.net/) by Tom Lane and the Independent JPEG Group (IJG)
-
-[libpng](http://www.libpng.org/pub/png/libpng.html) 
-
-[libsquish](https://sourceforge.net/projects/libsquish/)
-
-[libtiff](http://www.libtiff.org/) by Sam Leffler, Frank Warmerdam, Andrey Kiselev, Mike Welles and Dwight Kelly.
-
-[LZO](http://www.oberhumer.com/opensource/lzo/) by Markus F.X.J. Oberhumer
-
-[PVRTexLib](https://community.imgtec.com/developers/powervr/graphics-sdk/) by Imagination Technologies Limited
-
-[Qt5](https://www.qt.io/)
-
-[zlib](https://www.zlib.net/) by Jean-loup Gailly and Mark Adler
+- [Compressonator](http://gpuopen.com/gaming-product/compressonator/) by Advanced Micro Devices
+- [libimagequant](https://github.com/pornel/pngquant/tree/master/lib) by pornel
+- [libjpeg](http://libjpeg.sourceforge.net/) by Tom Lane and the Independent JPEG Group (IJG)
+- [libpng](http://www.libpng.org/pub/png/libpng.html)
+- [libsquish](https://sourceforge.net/projects/libsquish/)
+- [libtiff](http://www.libtiff.org/) by Sam Leffler, Frank Warmerdam, Andrey Kiselev, Mike Welles, and Dwight Kelly.
+- [LZO](http://www.oberhumer.com/opensource/lzo/) by Markus F.X.J. Oberhumer
+- [PVRTexLib](https://community.imgtec.com/developers/powervr/graphics-sdk/) by Imagination Technologies Limited
+- [Qt5](https://www.qt.io/)
+- [zlib](https://www.zlib.net/) by Jean-loup Gailly and Mark Adler
